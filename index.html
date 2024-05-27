@@ -10,8 +10,41 @@
 </head>
 <style>
     body::after{content:'ver1';font-size:1rem;border-bottom-right-radius: 1rem;position:fixed;top:0;left:0;padding:0 0.5rem;background:rgba(256,256,256,0.3);color:#000;display:block}
+ .header, .header nav, .header ul{height:6.3rem}
+  .top_bg1{background-color:#DAF5FF}
+  .top_bg2{background-color:#F7EDDA}
+  .top_bg3{background-color:#F8E6E7}
+  .top_bg4{background-color:#E0EAF3}
+  .top_bg5{background-color:#F0F8E9}  
+  .header_title{font-size:1.8rem;color:#aaa}
+  .btn_home{font-size:2.1rem;color:#000;font-weight:500}
+  .con_top{height:50.5rem}
+  .con_top + section{margin-top:-3rem;background-color:#fff}
 </style>
 <body>
-  testtesttest
+<div class="wrap top_bg1">
+  <header class="header">
+      <nav class="padd">
+        <ul class="flex_between">
+          <li>
+            <h1 class="header_title">NH투자증권 제공 서비스</h1>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="btn_home">종료</a>
+          </li>
+        </ul>
+      </nav>
+  </header>
+  <div class="container">
+    <section class="con_top padd">
+      201-02-123456
+    </section>
+    <section class="padd">
+      모으고 싶은 종목을 찾아보세요!
+    </section>
+    
+  </div>
+  
+</div>
 </body>
 </html>
