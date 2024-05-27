@@ -1,4 +1,4 @@
-html{font-size:2.76vw;-ms-overflow-style: scrollbar;-webkit-tap-highlight-color: transparent;scroll-behavior:smooth}
+html{font-size:1.85185185vw;-ms-overflow-style: scrollbar;-webkit-tap-highlight-color: transparent;scroll-behavior:smooth}
 @media (max-width:280px){html{font-size:7.7px} html,body,.wrap{min-width:280px}}
 @media (min-width:541px){html{font-size:10px}}
 body{line-height:1.437}
@@ -44,10 +44,24 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 :focus,:active {outline:none;-webkit-tap-highlight-color:transparent}
 
 
+@keyframes ani1 {
+    40% {top:-9rem}
+    50% {top:-11rem}
+    60% {top:-9rem}
+    70% {top:-10rem}
+    80% {top:-9rem}
+    90% {top:-9.5rem}
+    100% {top:-9rem}
+}
 
+.sec_bar{border-bottom:0.8rem solid #F5F5F5;padding-bottom:3rem;margin-bottom:3rem}
 
+/*padd*/
+.padd{padding-left:2.4rem;padding-right:2.4rem}
 
 /* position */
+.sticky_top{position:sticky;top:0;z-index:3}
+.sticky_bottom{position:sticky;bottom:0;z-index:3}
 .por{position: relative}
 .poa{position: absolute}
 .pof{position: fixed}

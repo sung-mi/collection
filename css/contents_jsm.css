@@ -16,24 +16,4 @@
 /* main top */
 
 
-@keyframes ani1 {
-    40% {top:-9rem}
-    50% {top:-11rem}
-    60% {top:-9rem}
-    70% {top:-10rem}
-    80% {top:-9rem}
-    90% {top:-9.5rem}
-    100% {top:-9rem}
-}
 
-/* namuh banner */
-
-.sec_bar{border-bottom:0.8rem solid #F5F5F5;padding-bottom:3rem;margin-bottom:3rem}
-
-/* btns */
-
-
-/*common*/
-.sticky_top{position:sticky;top:0;z-index:3}
-.sticky_bottom{position:sticky;bottom:0;z-index:3}
-.padd{padding-left:1.6rem;padding-right:1.6rem}
