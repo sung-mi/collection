@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>swiper</title>
-	<meta charset="euc-kr">
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
 	<link rel="stylesheet" href="../css/contents_jsm.css">   
@@ -62,10 +62,10 @@
 		<nav class="padd">
             <ul class="flex_col mb30">
 				<li>
-					<h1 class="header-title">ÁÖ½Ä¸ğÀ¸±â °¡ÀÌµå</h1>
+					<h1 class="header-title">ì£¼ì‹ëª¨ìœ¼ê¸° ê°€ì´ë“œ</h1>
 				</li>
 				<li class="ar">
-					<a href="list.html" class="home-btn">¸ñ·Ï</a>
+					<a href="list.html" class="home-btn">ëª©ë¡</a>
 				</li>
 			</ul>
 		</nav>
@@ -78,7 +78,7 @@
 			<section class="padd line_btm" style="padding-bottom:3rem">
 				<nav class="padd">
                     <ul class="flex_between">
-						<li class="item"><a role="tab" aria-selected="false" href="input.html"  title="ÇöÀç ÅÇ">input</a></li>
+						<li class="item"><a role="tab" aria-selected="false" href="input.html"  title="í˜„ì¬ íƒ­">input</a></li>
 						<li class="item"><a role="tab" aria-selected="false" href="icon.html">icon&button</a></li>
 						<li class="item"><a role="tab" aria-selected="false" href="tabs.html">tabs</a></li>
 						<li class="item"><a role="tab" aria-selected="false" href="popup.html">popup</a></li>
@@ -92,7 +92,7 @@
 			
 			<section class="padd mt30 g_line">
 				<div class="mb10">
-					<h3 class="menu_title">ÀÏ¹İ swiper ¼³Á¤ ¿¹½Ã</h3>
+					<h3 class="menu_title">ì¼ë°˜ swiper ì„¤ì • ì˜ˆì‹œ</h3>
 			        <div class="mt30">
 				        <div class="swiper-container swipe1" id="swipe1"> 
 							<ul class="swiper-wrapper"> 
@@ -141,7 +141,7 @@ var swipe1 = new Swiper('#swipe1', {
 			.paging>a{width:2rem;height:2rem;text-align:center;color:#fff;margin:0 0.1rem}
 			</style>
 			<section class="padd mt30 ">
-				<h3 class="menu_title">ÀÚµ¿·Ñ¸µ swiper ¼³Á¤ ¿¹½Ã</h3>
+				<h3 class="menu_title">ìë™ë¡¤ë§ swiper ì„¤ì • ì˜ˆì‹œ</h3>
 		        <div class="swiper-container swipe2 mt30" id="swipe2"> 
 					<ul class="swiper-wrapper"> 
 						<li class="swiper-slide"><a href="javascript:void(0)" style="background:pink">1</a></li> 
@@ -178,16 +178,16 @@ var swipe1 = new Swiper('#swipe1', {
         	        pagination: { 
         	            el: '.paging', 
         	            clickable: true, 
-        	            type : 'bullets', // ¹öÆ° ¸ğ¾ç °áÁ¤ "bullets", "fraction"   
-        	            renderBullet : function (index, className) {  // classNameÀÌ ±âº»°ªÀÌ µé¾î°¡°Ô ÇÊ¼ö ¼³Á¤    
+        	            type : 'bullets', // ë²„íŠ¼ ëª¨ì–‘ ê²°ì • "bullets", "fraction"   
+        	            renderBullet : function (index, className) {  // classNameì´ ê¸°ë³¸ê°’ì´ ë“¤ì–´ê°€ê²Œ í•„ìˆ˜ ì„¤ì •    
         	    			return '<a href="#" class="' + className + '">' + (index + 1) + '</a>'  
         	    		},  
-        	            renderFraction: function (currentClass, totalClass) { 	// typeÀÌ fractionÀÏ ¶§ »ç¿ë    
+        	            renderFraction: function (currentClass, totalClass) { 	// typeì´ fractionì¼ ë•Œ ì‚¬ìš©    
        	        		return '<span class="' + currentClass + '"></span>' +           
        	        				'<span class="' + totalClass + '"></span>';  
        	        		}
         	        },
-        	        navigation: {   // ¹öÆ° »ç¿ëÀÚ ÁöÁ¤	
+        	        navigation: {   // ë²„íŠ¼ ì‚¬ìš©ì ì§€ì •	
         	        	nextEl: '.next',	
         	        	prevEl: '.prev',
         	        }
@@ -220,16 +220,16 @@ var swipe1 = new Swiper('#swipe1', {
 		pagination: { 
 		    el: '.paging', 
 		    clickable: true, 
-		    type : 'bullets', // ¹öÆ° ¸ğ¾ç °áÁ¤ "bullets", "fraction"   
-		    renderBullet : function (index, className) {  // classNameÀÌ ±âº»°ªÀÌ µé¾î°¡°Ô ÇÊ¼ö ¼³Á¤    
+		    type : 'bullets', // ë²„íŠ¼ ëª¨ì–‘ ê²°ì • "bullets", "fraction"   
+		    renderBullet : function (index, className) {  // classNameì´ ê¸°ë³¸ê°’ì´ ë“¤ì–´ê°€ê²Œ í•„ìˆ˜ ì„¤ì •    
 			return '<a href="#" class="' + className + '">' + (index + 1) + '</a>'  
 		},  
-		    renderFraction: function (currentClass, totalClass) { 	// typeÀÌ fractionÀÏ ¶§ »ç¿ë    
+		    renderFraction: function (currentClass, totalClass) { 	// typeì´ fractionì¼ ë•Œ ì‚¬ìš©    
 			return '<span class="' + currentClass + '"></span>' +           
 					'<span class="' + totalClass + '"></span>';  
 			}
 		},
-		navigation: {   // ¹öÆ° »ç¿ëÀÚ ÁöÁ¤	
+		navigation: {   // ë²„íŠ¼ ì‚¬ìš©ì ì§€ì •	
 			nextEl: '.next',	
 			prevEl: '.prev',
 		}
@@ -243,8 +243,8 @@ var swipe1 = new Swiper('#swipe1', {
 			
 			<section class="padd mt30 ">
 				<div class="mb10">
-				 	<h3 class="menu_title">º¯¼ö¿¡ ´ã¾Æ¼­ È°¿ë ¿¹½Ã</h3>
-			        <span>*swiper ¿É¼Ç ¼³Á¤À» º¯¼ö¿¡ ´ã¾Æ¼­ »ç¿ë ÇÒ ¼öµµ ÀÖ½À´Ï´Ù. º¯¼ö¿¡ ´ã¾Æ¼­ »ç¿ë ½Ã¿¡ ¼³Á¤À» ÀçÈ°¿ëÇÏ±â ÆíÇÏ´Ù´Â ÀåÁ¡ÀÌ ÀÖ½À´Ï´Ù.</span>
+				 	<h3 class="menu_title">ë³€ìˆ˜ì— ë‹´ì•„ì„œ í™œìš© ì˜ˆì‹œ</h3>
+			        <span>*swiper ì˜µì…˜ ì„¤ì •ì„ ë³€ìˆ˜ì— ë‹´ì•„ì„œ ì‚¬ìš© í•  ìˆ˜ë„ ìˆìŠµë‹ˆë‹¤. ë³€ìˆ˜ì— ë‹´ì•„ì„œ ì‚¬ìš© ì‹œì— ì„¤ì •ì„ ì¬í™œìš©í•˜ê¸° í¸í•˜ë‹¤ëŠ” ì¥ì ì´ ìˆìŠµë‹ˆë‹¤.</span>
 					
 				</div>			
 				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
@@ -261,23 +261,23 @@ var swipe1 = new Swiper('#swipe1', {
 			
 			<section class="padd mt30 ">
 				<div class="mb10">
-					<h3 class="menu_title">±âº» ¼³Á¤</h3>
-			        <span>*±âº»ÀûÀ¸·Î ½½¶óÀÌµå¸¦ »ç¿ëÇÒ ¶§ °ÅÀÇ ÇÊ¼ö·Î ¼³Á¤ÇÏ´Â ¼³Á¤ ¿ä¼Òµé ÀÔ´Ï´Ù. ÇÑ È­¸é¿¡ º¸¿©ÁÙ ½½¶óÀÌµåÀÇ °¹¼ö ¼³Á¤, ½½¶óÀÌµå °£ÀÇ »çÀÌ ¿©¹é, ¹İº¹ ¿©ºÎ µî ±âº»ÀûÀÎ ¼³Á¤</span>
+					<h3 class="menu_title">ê¸°ë³¸ ì„¤ì •</h3>
+			        <span>*ê¸°ë³¸ì ìœ¼ë¡œ ìŠ¬ë¼ì´ë“œë¥¼ ì‚¬ìš©í•  ë•Œ ê±°ì˜ í•„ìˆ˜ë¡œ ì„¤ì •í•˜ëŠ” ì„¤ì • ìš”ì†Œë“¤ ì…ë‹ˆë‹¤. í•œ í™”ë©´ì— ë³´ì—¬ì¤„ ìŠ¬ë¼ì´ë“œì˜ ê°¯ìˆ˜ ì„¤ì •, ìŠ¬ë¼ì´ë“œ ê°„ì˜ ì‚¬ì´ ì—¬ë°±, ë°˜ë³µ ì—¬ë¶€ ë“± ê¸°ë³¸ì ì¸ ì„¤ì •</span>
 					
 				</div>			
 				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
 				<textarea style="width:100%;height:24rem;font-size:1.2rem;display:none">
 <!-- 
-	slidesPerView : 'auto', // ÇÑ ½½¶óÀÌµå¿¡ º¸¿©ÁÙ °¹¼ö
-	spaceBetween : 6, // ½½¶óÀÌµå »çÀÌ ¿©¹é
-	loop : false, // ½½¶óÀÌµå ¹İº¹ ¿©ºÎ
-	loopAdditionalSlides : 1, // ½½¶óÀÌµå ¹İº¹ ½Ã ¸¶Áö¸· ½½¶óÀÌµå¿¡¼­ ´ÙÀ½ ½½¶óÀÌµå°¡ º¸¿©ÁöÁö ¾Ê´Â Çö»ó ¼öÁ¤
-	pagination : false, // pager ¿©ºÎ
-	autoplay : {  // ÀÚµ¿ ½½¶óÀÌµå ¼³Á¤ , ºñ È°¼ºÈ­ ½Ã false  
-	delay : 3000,   // ½Ã°£ ¼³Á¤  
-	disableOnInteraction : false,  // false·Î ¼³Á¤ÇÏ¸é ½º¿ÍÀÌÇÁ ÈÄ ÀÚµ¿ Àç»ıÀÌ ºñÈ°¼ºÈ­ µÇÁö ¾ÊÀ½
+	slidesPerView : 'auto', // í•œ ìŠ¬ë¼ì´ë“œì— ë³´ì—¬ì¤„ ê°¯ìˆ˜
+	spaceBetween : 6, // ìŠ¬ë¼ì´ë“œ ì‚¬ì´ ì—¬ë°±
+	loop : false, // ìŠ¬ë¼ì´ë“œ ë°˜ë³µ ì—¬ë¶€
+	loopAdditionalSlides : 1, // ìŠ¬ë¼ì´ë“œ ë°˜ë³µ ì‹œ ë§ˆì§€ë§‰ ìŠ¬ë¼ì´ë“œì—ì„œ ë‹¤ìŒ ìŠ¬ë¼ì´ë“œê°€ ë³´ì—¬ì§€ì§€ ì•ŠëŠ” í˜„ìƒ ìˆ˜ì •
+	pagination : false, // pager ì—¬ë¶€
+	autoplay : {  // ìë™ ìŠ¬ë¼ì´ë“œ ì„¤ì • , ë¹„ í™œì„±í™” ì‹œ false  
+	delay : 3000,   // ì‹œê°„ ì„¤ì •  
+	disableOnInteraction : false,  // falseë¡œ ì„¤ì •í•˜ë©´ ìŠ¤ì™€ì´í”„ í›„ ìë™ ì¬ìƒì´ ë¹„í™œì„±í™” ë˜ì§€ ì•ŠìŒ
 	},
-	navigation: {   // ¹öÆ° »ç¿ëÀÚ ÁöÁ¤	
+	navigation: {   // ë²„íŠ¼ ì‚¬ìš©ì ì§€ì •	
 	nextEl: '.swiper-button-next',	
 	prevEl: '.swiper-button-prev',}, 
 -->
@@ -286,37 +286,37 @@ var swipe1 = new Swiper('#swipe1', {
 			
 			<section class="padd mt30 ">
 				<div class="mb10">
-					<h3 class="menu_title">Ãß°¡ ¼³Á¤</h3>
-			        <span>*Ä¿½ºÅÒ ÇÒ ¼ö ÀÖ´Â ¿É¼Ç ¿ä¼Òµé ÀÔ´Ï´Ù.</span>
+					<h3 class="menu_title">ì¶”ê°€ ì„¤ì •</h3>
+			        <span>*ì»¤ìŠ¤í…€ í•  ìˆ˜ ìˆëŠ” ì˜µì…˜ ìš”ì†Œë“¤ ì…ë‹ˆë‹¤.</span>
 				</div>			
 				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
 				<textarea style="width:100%;height:40rem;font-size:1.2rem;display:none">
 <!-- 
-	freeMode : false, // ½½¶óÀÌµå ³Ñ±æ ¶§ À§Ä¡ °íÁ¤ ¿©ºÎ
-	autoHeight : true, // true·Î ¼³Á¤ÇÏ¸é ½½¶óÀÌ´õ ·¡ÆÛ°¡ ÇöÀç È°¼º ½½¶óÀÌµåÀÇ ³ôÀÌ¿¡ ¸Â°Ô ³ôÀÌ¸¦ Á¶Á¤ÇÕ´Ï´Ù.
-	a11y : false, // Á¢±Ù¼º ¸Å°³º¯¼ö(Á¢±Ù¼º °ü·Ã ´ëÃ¼ ÅØ½ºÆ® ¼³Á¤ÀÌ °¡´É) 
-	resistance : false, // ½½¶óÀÌµå ÅÍÄ¡¿¡ ´ëÇÑ ÀúÇ× ¿©ºÎ ¼³Á¤
-	slideToClickedSlide : true, // ÇØ´ç ½½¶óÀÌµå Å¬¸¯½Ã ½½¶óÀÌµå À§Ä¡·Î ÀÌµ¿
-	centeredSlides : true // true½Ã¿¡ ½½¶óÀÌµå°¡ °¡¿îµ¥·Î ¹èÄ¡
-	allowTouchMove : true, // false½Ã¿¡ ½º¿ÍÀÌÇÎÀÌ µÇÁö ¾ÊÀ¸¸ç ¹öÆ°À¸·Î¸¸ ½½¶óÀÌµå Á¶ÀÛÀÌ °¡´É
-	watchOverflow : true // ½½¶óÀÌµå°¡ 1°³ ÀÏ ¶§ pager, button ¼û±è ¿©ºÎ ¼³Á¤
-	slidesOffsetBefore : number, // ½½¶óÀÌµå ½ÃÀÛ ºÎºĞ ¿©¹é
-	slidesOffsetAfter : number, // ½½¶óÀÌµå ½ÃÀÛ ºÎºĞ ¿©¹é
+	freeMode : false, // ìŠ¬ë¼ì´ë“œ ë„˜ê¸¸ ë•Œ ìœ„ì¹˜ ê³ ì • ì—¬ë¶€
+	autoHeight : true, // trueë¡œ ì„¤ì •í•˜ë©´ ìŠ¬ë¼ì´ë” ë˜í¼ê°€ í˜„ì¬ í™œì„± ìŠ¬ë¼ì´ë“œì˜ ë†’ì´ì— ë§ê²Œ ë†’ì´ë¥¼ ì¡°ì •í•©ë‹ˆë‹¤.
+	a11y : false, // ì ‘ê·¼ì„± ë§¤ê°œë³€ìˆ˜(ì ‘ê·¼ì„± ê´€ë ¨ ëŒ€ì²´ í…ìŠ¤íŠ¸ ì„¤ì •ì´ ê°€ëŠ¥) 
+	resistance : false, // ìŠ¬ë¼ì´ë“œ í„°ì¹˜ì— ëŒ€í•œ ì €í•­ ì—¬ë¶€ ì„¤ì •
+	slideToClickedSlide : true, // í•´ë‹¹ ìŠ¬ë¼ì´ë“œ í´ë¦­ì‹œ ìŠ¬ë¼ì´ë“œ ìœ„ì¹˜ë¡œ ì´ë™
+	centeredSlides : true // trueì‹œì— ìŠ¬ë¼ì´ë“œê°€ ê°€ìš´ë°ë¡œ ë°°ì¹˜
+	allowTouchMove : true, // falseì‹œì— ìŠ¤ì™€ì´í•‘ì´ ë˜ì§€ ì•Šìœ¼ë©° ë²„íŠ¼ìœ¼ë¡œë§Œ ìŠ¬ë¼ì´ë“œ ì¡°ì‘ì´ ê°€ëŠ¥
+	watchOverflow : true // ìŠ¬ë¼ì´ë“œê°€ 1ê°œ ì¼ ë•Œ pager, button ìˆ¨ê¹€ ì—¬ë¶€ ì„¤ì •
+	slidesOffsetBefore : number, // ìŠ¬ë¼ì´ë“œ ì‹œì‘ ë¶€ë¶„ ì—¬ë°±
+	slidesOffsetAfter : number, // ìŠ¬ë¼ì´ë“œ ì‹œì‘ ë¶€ë¶„ ì—¬ë°±
 	
-	pagination : {   // ÆäÀÌÀú ¹öÆ° »ç¿ëÀÚ ¼³Á¤  
-		el : '.pagination',  // ÆäÀÌÀú ¹öÆ°À» ´ãÀ» ÅÂ±× ¼³Á¤ 
-		clickable : true,  // ¹öÆ° Å¬¸¯ ¿©ºÎ  
-		type : 'bullets', // ¹öÆ° ¸ğ¾ç °áÁ¤ "bullets", "fraction"   
-		renderBullet : function (index, className) {  // classNameÀÌ ±âº»°ªÀÌ µé¾î°¡°Ô ÇÊ¼ö ¼³Á¤    
+	pagination : {   // í˜ì´ì € ë²„íŠ¼ ì‚¬ìš©ì ì„¤ì •  
+		el : '.pagination',  // í˜ì´ì € ë²„íŠ¼ì„ ë‹´ì„ íƒœê·¸ ì„¤ì • 
+		clickable : true,  // ë²„íŠ¼ í´ë¦­ ì—¬ë¶€  
+		type : 'bullets', // ë²„íŠ¼ ëª¨ì–‘ ê²°ì • "bullets", "fraction"   
+		renderBullet : function (index, className) {  // classNameì´ ê¸°ë³¸ê°’ì´ ë“¤ì–´ê°€ê²Œ í•„ìˆ˜ ì„¤ì •    
 			return '<a href="#" class="' + className + '">' + (index + 1) + '</a>'  
 		},  
-		renderFraction: function (currentClass, totalClass) { 	// typeÀÌ fractionÀÏ ¶§ »ç¿ë    
+		renderFraction: function (currentClass, totalClass) { 	// typeì´ fractionì¼ ë•Œ ì‚¬ìš©    
 		return '<span class="' + currentClass + '"></span>' +           
 				'<span class="' + totalClass + '"></span>';  
 		}
 	}, 
-	resistanceRatio: 0,//µå·¡±×¹Ğ¸²Á¤µµ
-	scrollbar: {//½ºÅ©·Ñ¹Ù
+	resistanceRatio: 0,//ë“œë˜ê·¸ë°€ë¦¼ì •ë„
+	scrollbar: {//ìŠ¤í¬ë¡¤ë°”
 		el: '.table-hor-scrolling .swiper-scrollbar',
 	}
 -->
@@ -325,34 +325,34 @@ var swipe1 = new Swiper('#swipe1', {
 			
 			<section class="padd mt30 ">
 				<div class="mb10">
-				 	<h3 class="menu_title">ÃÊ±âÈ­ ¼³Á¤</h3>
-			        <span>* ÃÊ±âÈ­ ¼³Á¤ ¹æ¹ıÀº 2°¡Áö°¡ ÀÖ½À´Ï´Ù. <br/>
-					swiper°¡ ÃÊ±âÈ­ µÉ ¶§, ÃÊ±âÈ­ µÈ ÈÄ ¼³Á¤À» ÇÒ ¼ö°¡ ÀÖ½À´Ï´Ù. <br/>
-					onÀ» ¸Å°³ º¯¼ö·Î Àü´Ş ÇÒ ½Ã¿¡ swiper°¡ »ı¼ºµÉ ¶§ Áï ÃÊ±âÈ­ µÉ ¶§ ¼³Á¤À» ÇØÁÙ ¼ö°¡ ÀÖ°í <br/>
-					´Ù¸¥ ¹æ¹ıÀ¸·Î ¾Æ·¡ ÄÚµåÃ³·³ µû·Î »ç¿ë ½Ã¿¡´Â swiper°¡ ÀÌ¹Ì ¸¸µé¾îÁö°í ³ª¼­ µ¿ÀÛÇÏ±â ¶§¹®¿¡ ÃÊ±âÈ­ µÈ ÈÄ µ¿ÀÛÇÕ´Ï´Ù. <br/></span>
+				 	<h3 class="menu_title">ì´ˆê¸°í™” ì„¤ì •</h3>
+			        <span>* ì´ˆê¸°í™” ì„¤ì • ë°©ë²•ì€ 2ê°€ì§€ê°€ ìˆìŠµë‹ˆë‹¤. <br/>
+					swiperê°€ ì´ˆê¸°í™” ë  ë•Œ, ì´ˆê¸°í™” ëœ í›„ ì„¤ì •ì„ í•  ìˆ˜ê°€ ìˆìŠµë‹ˆë‹¤. <br/>
+					onì„ ë§¤ê°œ ë³€ìˆ˜ë¡œ ì „ë‹¬ í•  ì‹œì— swiperê°€ ìƒì„±ë  ë•Œ ì¦‰ ì´ˆê¸°í™” ë  ë•Œ ì„¤ì •ì„ í•´ì¤„ ìˆ˜ê°€ ìˆê³  <br/>
+					ë‹¤ë¥¸ ë°©ë²•ìœ¼ë¡œ ì•„ë˜ ì½”ë“œì²˜ëŸ¼ ë”°ë¡œ ì‚¬ìš© ì‹œì—ëŠ” swiperê°€ ì´ë¯¸ ë§Œë“¤ì–´ì§€ê³  ë‚˜ì„œ ë™ì‘í•˜ê¸° ë•Œë¬¸ì— ì´ˆê¸°í™” ëœ í›„ ë™ì‘í•©ë‹ˆë‹¤. <br/></span>
 					
 				</div>			
 				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
 				<textarea style="width:100%;height:37rem;font-size:1.2rem;display:none">
 <!-- 
-	// ¸Å°³ º¯¼ö·Î »ç¿ë½Ã swiper°¡ ÃÊ±âÈ­ µÉ ¶§ µ¿ÀÛÇÕ´Ï´Ù.
+	// ë§¤ê°œ ë³€ìˆ˜ë¡œ ì‚¬ìš©ì‹œ swiperê°€ ì´ˆê¸°í™” ë  ë•Œ ë™ì‘í•©ë‹ˆë‹¤.
 	var mySwiper = new Swiper('.swiper-container', {  
 		on : {    
 			init : function () {      
-				console.log('swiper ÃÊ±âÈ­ µÉ¶§ ½ÇÇà');    
+				console.log('swiper ì´ˆê¸°í™” ë ë•Œ ì‹¤í–‰');    
 			},    
-			imagesReady : function () { // ¸ğµç ³»ºÎ ÀÌ¹ÌÁö°¡ ·Îµå µÈ Á÷ÈÄ ÀÌº¥Æ®°¡ ½ÃÀÛµË´Ï´Ù.      
-			console.log('½½¶óÀÌµå ÀÌ¹ÌÁö ·Îµå ÈÄ ½ÇÇà');    
+			imagesReady : function () { // ëª¨ë“  ë‚´ë¶€ ì´ë¯¸ì§€ê°€ ë¡œë“œ ëœ ì§í›„ ì´ë²¤íŠ¸ê°€ ì‹œì‘ë©ë‹ˆë‹¤.      
+			console.log('ìŠ¬ë¼ì´ë“œ ì´ë¯¸ì§€ ë¡œë“œ í›„ ì‹¤í–‰');    
 			},  
 		},
 	};
 	
-	// swiper°¡ ÃÊ±âÈ­ µÈ ÈÄ µ¿ÀÛÇÕ´Ï´Ù.
+	// swiperê°€ ì´ˆê¸°í™” ëœ í›„ ë™ì‘í•©ë‹ˆë‹¤.
 	var mySwiper = new Swiper('.swiper-container', { 
 		// ...
 	};
 	mySwiper.on('init', function () {  
-		console.log('slide°¡ ÃÊ±âÈ­ ¼³Á¤À» ¸¶Ä£ ÈÄ ½ÇÇà');
+		console.log('slideê°€ ì´ˆê¸°í™” ì„¤ì •ì„ ë§ˆì¹œ í›„ ì‹¤í–‰');
 	}); 
 -->
 				</textarea>
@@ -360,20 +360,20 @@ var swipe1 = new Swiper('#swipe1', {
 			
 			<section class="padd mt30 ">
 				<div class="mb10">
-				 	<h3 class="menu_title">¹İÀÀÇü ¼³Á¤</h3>
-			        <span>*swiper´Â breakpoints¶ó´Â °´Ã¼·Î ¹İÀÀÇü ¼³Á¤ÀÌ °¡´ÉÇÕ´Ï´Ù. ¾Æ·¡ ¼³Á¤Àº ºê¶ó¿ìÀúÀÇ °¡·Î Å©±â°¡ 768px ÀÌÇÏ ÀÏ ¶§ µ¿ÀÛÇÏ´Â ¿¹½ÃÀÔ´Ï´Ù. </span>
+				 	<h3 class="menu_title">ë°˜ì‘í˜• ì„¤ì •</h3>
+			        <span>*swiperëŠ” breakpointsë¼ëŠ” ê°ì²´ë¡œ ë°˜ì‘í˜• ì„¤ì •ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤. ì•„ë˜ ì„¤ì •ì€ ë¸Œë¼ìš°ì €ì˜ ê°€ë¡œ í¬ê¸°ê°€ 768px ì´í•˜ ì¼ ë•Œ ë™ì‘í•˜ëŠ” ì˜ˆì‹œì…ë‹ˆë‹¤. </span>
 					
 				</div>			
 				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
 				<textarea style="width:100%;height:40rem;font-size:1.2rem;display:none">
 <!-- 
-	breakpoints : { // ¹İÀÀÇü ¼³Á¤ÀÌ °¡´É width°ªÀ¸·Î Á¶Á¤  
+	breakpoints : { // ë°˜ì‘í˜• ì„¤ì •ì´ ê°€ëŠ¥ widthê°’ìœ¼ë¡œ ì¡°ì •  
 		768 : {    
 		slidesPerView : 1,  
 		},
 	},
 	
-	//5.3.0ºÎÅÍ "ºñÀ²"(³Êºñ / ³ôÀÌ)·Î ¼³Á¤ÀÌ °¡´ÉÇØÁ³½À´Ï´Ù.
+	//5.3.0ë¶€í„° "ë¹„ìœ¨"(ë„ˆë¹„ / ë†’ì´)ë¡œ ì„¤ì •ì´ ê°€ëŠ¥í•´ì¡ŒìŠµë‹ˆë‹¤.
 	var swiper = new Swiper('.swiper-container', {  
 		slidesPerView: 1,  
 		spaceBetween: 10,  
@@ -398,20 +398,20 @@ var swipe1 = new Swiper('#swipe1', {
 			
 			<section class="padd mt30 ">
 				<div class="mb10">
-				 	<h3 class="menu_title">¸Ş¼Òµå</h3>
-			        <span>*swiperÀÌ¸§.¸Ş¼Òµå() Çü½ÄÀ¸·Î »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.</span>
+				 	<h3 class="menu_title">ë©”ì†Œë“œ</h3>
+			        <span>*swiperì´ë¦„.ë©”ì†Œë“œ() í˜•ì‹ìœ¼ë¡œ ì‚¬ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.</span>
 					
 				</div>			
 				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
 				<textarea style="width:100%;height:15rem;font-size:1.2rem;display:none">
 <!-- 
 	// ex)  mySlider.autoplay.start()
-	.slideTo(index, speed, runCallbacks) // ÇØ´ç ½½¶óÀÌµå·Î ÀÌµ¿
-	.slidePrev(index, speed, runCallbacks) // ÀÌÀü ½½¶óÀÌµå·Î ÀÌµ¿
-	.slideNext(index, speed, runCallbacks) // ´ÙÀ½ ½½¶óÀÌµå·Î ÀÌµ¿
-	.autoplay.start(); // ÀÚµ¿ Àç»ı ½ÃÀÛ
-	.autoplay.stop(); // ÀÚµ¿ Àç»ı Á¤Áö
-	.destroy() // ½½¶óÀÌµå Á¦°Å
+	.slideTo(index, speed, runCallbacks) // í•´ë‹¹ ìŠ¬ë¼ì´ë“œë¡œ ì´ë™
+	.slidePrev(index, speed, runCallbacks) // ì´ì „ ìŠ¬ë¼ì´ë“œë¡œ ì´ë™
+	.slideNext(index, speed, runCallbacks) // ë‹¤ìŒ ìŠ¬ë¼ì´ë“œë¡œ ì´ë™
+	.autoplay.start(); // ìë™ ì¬ìƒ ì‹œì‘
+	.autoplay.stop(); // ìë™ ì¬ìƒ ì •ì§€
+	.destroy() // ìŠ¬ë¼ì´ë“œ ì œê±°
 -->
 				</textarea>
 			</section>

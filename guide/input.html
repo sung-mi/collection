@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>input</title>
-	<meta charset="euc-kr">
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
 	<link rel="stylesheet" href="../css/contents_jsm.css">   
@@ -23,10 +23,10 @@
 		<nav class="padd">
             <ul class="flex_col mb30">
 				<li>
-					<h1 class="header-title">�ֽĸ����� ���̵�</h1>
+					<h1 class="header-title">주식모으기 가이드</h1>
 				</li>
 				<li class="ar">
-					<a href="list.html" class="home-btn">���</a>
+					<a href="list.html" class="home-btn">목록</a>
 				</li>
 			</ul>
 		</nav>
@@ -39,7 +39,7 @@
 			<section class="padd line_btm" style="padding-bottom:3rem">
 				<nav class="padd">
                     <ul class="flex_between">
-						<li class="item on"><a role="tab" aria-selected="false" href="input.html"  title="���� ��">input</a></li>
+						<li class="item on"><a role="tab" aria-selected="false" href="input.html"  title="현재 탭">input</a></li>
 						<li class="item"><a role="tab" aria-selected="false" href="icon.html">icon&button</a></li>
 						<li class="item"><a role="tab" aria-selected="false" href="tabs.html">tabs</a></li>
 						<li class="item"><a role="tab" aria-selected="true" href="popup.html">popup</a></li>
@@ -58,14 +58,14 @@
 					class="<span class="c_rd">inp_tx</span>"
 					</h3>
 					<span class="inp_tx mt10">
-						<input type="text" title="�ؽ�Ʈ�Է�" placeholder="�ؽ�Ʈ�� �Է����ּ���.">
+						<input type="text" title="텍스트입력" placeholder="텍스트를 입력해주세요.">
 					</span>
 				</div>	
 				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code" >CODE VIEW</a>				
 				<textarea style="width:100%;height:12rem;font-size:1.2rem;display:none">
 <!-- 
 <span class="inp_tx">
-	<input type="text" title="�ؽ�Ʈ�Է�" placeholder="�ؽ�Ʈ�� �Է����ּ���">
+	<input type="text" title="텍스트입력" placeholder="텍스트를 입력해주세요">
 </span>
 -->
 				</textarea>
@@ -74,14 +74,14 @@
 			<section class="padd mt30 ">
 				<div class="mb10">
 					<h3 class="menu_title">
-						�˻�: inputDelCtr();<br/>
-						<span class="f13 fontf">* �Է�â�� �ؽ�Ʈ �Է½� �ؽ�Ʈ ���� ��ư Ȱ��ȭ</span><br/>
+						검색: inputDelCtr();<br/>
+						<span class="f13 fontf">* 입력창에 텍스트 입력시 텍스트 삭제 버튼 활성화</span><br/>
 						class="<span class="c_rd">inp_srh</span>"<br/>
 					</h3>
 					<span class="inp_srh">
 						<a href="javascript:void(0)" class="ico_srh"></a>
-						<input type="text" placeholder="�˻�� �Է��ϼ���." title="�˻����Է�" id="srh">
-						<button type="button" class="btn_delete" style="display: none;"><i class="visualhide">����</i></button>
+						<input type="text" placeholder="검색어를 입력하세요." title="검색어입력" id="srh">
+						<button type="button" class="btn_delete" style="display: none;"><i class="visualhide">삭제</i></button>
 					</span>
 				</div>			
 				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
@@ -89,8 +89,8 @@
 <!-- 
 <span class="inp_srh">
 	<a href="javascript:void(0)" class="ico_srh"></a>
-	<input type="text" placeholder="�����, Ű����, ���� �˻�" title="�����, Ű����, ���� �˻�" id="srh">
-	<button type="button" class="btn_delete" style="display: none;"><i class="visualhide">����</i></button>
+	<input type="text" placeholder="종목명, 키워드, 뉴스 검색" title="종목명, 키워드, 뉴스 검색" id="srh">
+	<button type="button" class="btn_delete" style="display: none;"><i class="visualhide">삭제</i></button>
 </span>
 
 <script>inputDelCtr();</script>
@@ -108,8 +108,8 @@
 
 
 <script>
-inputDelCtr();//�ؽ�Ʈ�Է½� ������ưȰ��ȭ
-inpPw.on();//��й�ȣ�Է½� ���� ��ư Ȱ��ȭ
+inputDelCtr();//텍스트입력시 삭제버튼활성화
+inpPw.on();//비밀번호입력시 저장 버튼 활성화
 </script>
 </body>
 </html>
