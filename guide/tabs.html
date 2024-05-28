@@ -1,0 +1,231 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>탭</title>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<link rel="stylesheet" href="../css/contents_jsm.css">   
+    <link rel="stylesheet" href="../css/swiper.min.css"> 
+    <link rel="stylesheet" href="guide.css">
+    <script src="../js/jquery-1.12.0.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/datepicker.js"></script>
+    <script src="../js/common.js"></script>
+
+	<style>
+	.best_btns{padding-left:0 !important}
+	.tab-content{background-color:#fff;padding:2rem;border-radius:0.5rem;font-family:var(--fontFB)}
+	</style>
+</head>
+<body style="width:0;min-width:100%">
+
+<!-- #wrap -->
+<div class="wrap">
+	
+	<!-- header -->
+	<header class="header" role="presentation">
+		<nav class="padd">
+            <ul class="flex_col mb30">
+				<li>
+					<h1 class="header-title">주식모으기 가이드</h1>
+				</li>
+				<li class="ar">
+					<a href="list.html" class="home-btn">목록</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- // header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			<section class="padd line_btm" style="padding-bottom:3rem">
+				<nav class="padd">
+                    <ul class="flex_between">
+						<li class="item"><a role="tab" aria-selected="false" href="input.html">input</a></li>
+						<li class="item"><a role="tab" aria-selected="false" href="icon.html">icon&button</a></li>
+						<li class="item on"><a role="tab" aria-selected="true" href="tabs.html">tabs</a></li>
+						<li class="item"><a role="tab" aria-selected="false" href="popup.html">popup</a></li>
+						<li class="item"><a role="tab" aria-selected="false" href="popup_list.html">popup_list</a></li>
+						<li class="item"><a role="tab" aria-selected="false" href="calendar.html" aria-selected="true"  title="현재 탭">calendar</a></li>
+						<li class="item"><a role="tab" aria-selected="false" href="table.html">table</a></li>
+						<li class="item"><a role="tab" aria-selected="false" href="swiper.html">swiper</a></li>
+					</ul>
+				</nav>				
+			</section>
+			<section class="padd mt30 g_line">
+				<h3 class="menu_title">tabHandler('<span class="c_rd">.class</span>');<br/><br/>tabs [01]</h3>
+				<div class="mb10 mt20">
+					<nav class="menu tabs1">
+						<ul class="menu-set">
+							<li class="item on"><a role="tab" aria-selected="false" href="javascript:void(0)">menu1</a></li>
+							<li class="item"><a role="tab" aria-selected="true" href="javascript:void(0)">menu2</a></li>
+							<li class="item"><a title="현재 탭" role="tab" aria-selected="false" href="javascript:void(0)">menu3</a></li>
+						</ul>
+					</nav>
+					<script>
+					tabHandler('.tabs1')
+					</script>
+				</div>		
+				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
+				<textarea style="width:100%;height:22rem;font-size:1.2rem;display:none">
+<!-- 
+<nav class="menu tabs1">
+	<ul class="menu-set">
+		<li class="item on"><a role="tab" aria-selected="false" href="javascript:void(0)">내투자</a></li>
+		<li class="item"><a role="tab" aria-selected="true" href="javascript:void(0)">시장탐색</a></li>
+		<li class="item"><a title="현재 탭" role="tab" aria-selected="false" href="javascript:void(0)">잔고</a></li>
+	</ul>
+</nav>
+<script>
+tabHandler('.tabs1')
+</script>
+-->
+				</textarea>
+			</section>
+			
+			<section class="padd mt30 g_line">
+				<h3 class="menu_title">tabs [02]</h3>
+				<div class="mb10 mt20">
+					<nav class="menu menu_sub tabs2">
+						<ul class="menu-set">
+							<li class="item on"><a role="tab" aria-selected="true" href="#">menu_sub1</a></li>
+							<li class="item"><a role="tab" aria-selected="false" href="#">menu_sub2</a></li>
+						</ul>
+					</nav>
+					<script>
+					tabHandler('.tabs2')
+					</script>
+				</div>		
+				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
+				<textarea style="width:100%;height:22rem;font-size:1.2rem;display:none">
+<!-- 
+<nav class="menu menu_sub tabs2">
+	<ul class="menu-set">
+		<li class="item on"><a role="tab" aria-selected="true" href="#">지수</a></li>
+		<li class="item"><a role="tab" aria-selected="false" href="#">환율·원유·금리</a></li>
+	</ul>
+</nav>
+<script>
+tabHandler('.tabs2')
+</script>
+-->
+				</textarea>
+			</section>
+			
+			<section class="padd pt30 g_line bgc_f5">
+				<h3 class="menu_title">tabs [03]<br/>
+				tab li : data-tab="<span class="c_rd">id</span>"<br/>
+				 tabox div : class="tab-content" id="<span class="c_rd">id</span>"</h3>
+				<div class="mb10 mt20 ">
+					<div class="best_btns">
+						<ul>
+							<li class="on" data-tab="tabox1"><a href="javascript:void(0)" class="btn_best" role="tab" aria-selected="false">tab1</a></li>
+							<li data-tab="tabox2"><a href="javascript:void(0)" class="btn_best" role="tab" aria-selected="false">tab2</a></li>
+							<li data-tab="tabox3"><a href="javascript:void(0)" class="btn_best" role="tab" aria-selected="false">tab3</a></li>
+						</ul>
+					</div>
+					<div class="tab-content dp-block" id="tabox1" style="display:none">tabox1</div>
+					<div class="tab-content" id="tabox2" style="display:none">tabox2</div>
+					<div class="tab-content" id="tabox3" style="display:none">tabox3</div>
+					<script>
+					tabHandler('.best_btns')
+					</script>
+				</div>		
+				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code active" >CODE VIEW</a>				
+				<textarea style="width:100%;height:24rem;font-size:1.2rem;background-color:#fff">
+<!-- 
+<div class="best_btns">
+	<ul>
+		<li class=" on" data-tab="tabox1"><a href="javascript:void(0)" class="btn_best" role="tab" aria-selected="false">tab1</a></li>
+		<li data-tab="tabox2"><a href="javascript:void(0)" class="btn_best" role="tab" aria-selected="false">tab2</a></li>
+		<li data-tab="tabox3"><a href="javascript:void(0)" class="btn_best" role="tab" aria-selected="false">tab3</a></li>
+	</ul>
+</div>
+<div class="tab-content dp-block" id="tabox1" style="display:none">tab01</div>
+<div class="tab-content" id="tabox2" style="display:none">tab02</div>
+<div class="tab-content" id="tabox3" style="display:none">tab03</div>
+<script>
+tabHandler('.best_btns')
+</script>
+-->
+				</textarea>
+			</section>
+			
+			<section class="padd mt30 g_line">
+				<h3 class="menu_title">tabs [04]</h3>
+				<div class="mb10 mt20 ">
+					<div class="tabs_btns">
+						<ul>
+							<li class="on"><a href="javascript:void(0)" class="btn_tabs" role="tab" aria-selected="true">btn_tabs_1</a></li>
+							<li><a href="javascript:void(0)" class="btn_tabs" role="tab" aria-selected="false">btn_tabs_2</a></li>
+							<li><a href="javascript:void(0)" class="btn_tabs" role="tab" aria-selected="false">btn_tabs_3</a></li>
+						</ul>
+					</div>
+					<script>
+					tabHandler('.tabs_btns')
+					</script>
+				</div>		
+				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
+				<textarea style="width:100%;height:22rem;font-size:1.2rem;display:none">
+<!-- 
+<div class="tabs_btns">
+	<ul>
+		<li class="on"><a href="javascript:void(0)" class="btn_tabs" role="tab" aria-selected="true">btn_tabs_1</a></li>
+		<li><a href="javascript:void(0)" class="btn_tabs" role="tab" aria-selected="false">btn_tabs_2</a></li>
+		<li><a href="javascript:void(0)" class="btn_tabs" role="tab" aria-selected="false">btn_tabs_3</a></li>
+	</ul>
+</div>
+<script>
+tabHandler('.tabs_btns')
+</script>
+-->
+				</textarea>
+			</section>
+			
+			<section class="padd mt30 g_line">
+				<h3 class="menu_title">tabs [05]</h3>
+				<style>
+				.tabs_btns1 >ul>li{-webkit-flex-shrink: 0;}
+				</style>
+				<div class="mb10 mt20 ">
+					<div class="tabs_btns1">
+						<ul>
+							<li class="on"><a href="javascript:void(0)" class="btn_tabs1" role="tab" aria-selected="false">btn_tabs1_1</a></li>
+							<li><a href="javascript:void(0)" class="btn_tabs1" role="tab" aria-selected="false">btn_tabs1_2</a></li>
+						</ul>
+					</div>
+					<script>
+					tabHandler('.tabs_btns1')
+					</script>
+				</div>		
+				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code" >CODE VIEW</a>				
+				<textarea style="width:100%;height:22rem;font-size:1.2rem;display:none">
+<!-- 
+<div class="tabs_btns1">
+	<ul>
+		<li class="on"><a href="javascript:void(0)" class="btn_tabs1" role="tab" aria-selected="false">btn_tabs1_1</a></li>
+		<li><a href="javascript:void(0)" class="btn_tabs1" role="tab" aria-selected="false">btn_tabs1_2</a></li>
+	</ul>
+</div>
+<script>
+tabHandler('.tabs_btns1')
+</script>
+-->
+				</textarea>
+			</section>
+			
+			
+				
+			<div class="mt60"></div>
+		</div>
+	</div>
+	<!-- // container -->
+</div>
+<!-- //#wrap -->
+</body>
+</html>

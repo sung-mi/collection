@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>테이블</title>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<link rel="stylesheet" href="../css/contents_jsm.css">   
+    <link rel="stylesheet" href="../css/swiper.min.css"> 
+    <link rel="stylesheet" href="guide.css">
+    <script src="../js/jquery-1.12.0.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/datepicker.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body style="width:0;min-width:100%">
+
+<!-- #wrap -->
+<div class="wrap">
+	  
+	<!-- header -->
+	<header class="header" role="presentation">
+		<nav class="padd">
+            <ul class="flex_col mb30">
+				<li>
+					<h1 class="header-title">주식모으기 가이드</h1>
+				</li>
+				<li class="ar">
+					<a href="list.html" class="home-btn">목록</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- // header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content flex-start" data-role="content">
+			<section class="padd line_btm" style="padding-bottom:3rem">
+				<nav class="padd">
+                    <ul class="flex_between">
+						<li class="item"><a role="tab" aria-selected="false" href="input.html">input</a></li>
+						<li class="item"><a role="tab" aria-selected="false" href="icon.html">icon&button</a></li>
+						<li class="item"><a role="tab" aria-selected="false" href="tabs.html">tabs</a></li>
+						<li class="item"><a role="tab" aria-selected="false" href="popup.html">popup</a></li>
+						<li class="item"><a role="tab" aria-selected="false" href="popup_list.html">popup_list</a></li>
+						<li class="item"><a role="tab" aria-selected="false" href="calendar.html" aria-selected="true"  title="현재 탭">calendar</a></li>
+						<li class="item on"><a role="tab" aria-selected="true" href="table.html">table</a></li>
+						<li class="item"><a role="tab" aria-selected="false" href="swiper.html">swiper</a></li>
+					</ul>
+				</nav>				
+			</section>
+			<section class="padd mt30 g_line">
+				<h3 class="menu_title">table [일반]</h3>
+				<div class="mb10 mt20">
+					<div class="tb tb01">
+						<table>
+							<caption>테이블제목: 구분 등의 정보제공</caption>
+							<colgroup><col width="*"/><col width="*"/><col width="*"/></colgroup>
+							<thead>
+								<tr>
+									<th scope="col">text</th>
+									<th scope="col">text</th>
+									<th scope="col">text</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="ac">text</td>
+									<td class="ar">0</td>
+									<td class="ar">0</td>
+								</tr>
+								<tr>
+									<td class="ac">text</td>
+									<td class="ar">0</td>
+									<td class="ar">0</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+				</div>		
+				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
+				<textarea style="width:100%;height:46rem;font-size:1.2rem;display:none">
+<!-- 
+<div class="tb tb01">
+	<table>
+		<caption>테이블제목: 구분 등의 정보제공</caption>
+		<colgroup><col width="*"/><col width="*"/><col width="*"/></colgroup>
+		<thead>
+			<tr>
+				<th scope="col">text</th>
+				<th scope="col">text</th>
+				<th scope="col">text</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="ac">text</td>
+				<td class="ar">0</td>
+				<td class="ar">0</td>
+			</tr>
+			<tr>
+				<td class="ac">text</td>
+				<td class="ar">0</td>
+				<td class="ar">0</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+-->
+				</textarea>
+			</section>
+			
+			<div class="mt30"></div>
+		</div>
+	</div>
+	<!-- // container -->
+</div>
+<!-- //#wrap -->
+</body>
+</html>

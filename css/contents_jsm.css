@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url("font.css?v1");
 @import url("common.css");
+@import url("swiper.min.css");
 
 /* font-family weight
     100 Thin 
@@ -16,4 +17,15 @@
 /* main top */
 
 
-
+body::after{content:'ver1';font-size:1rem;border-bottom-right-radius: 1rem;position:fixed;top:0;left:0;padding:0 0.5rem;background:rgba(256,256,256,0.3);color:#000;display:block}
+.header, .header nav, .header ul{height:6.3rem}
+.top_bg1 .header, .top_bg1 .con_top{background-color:#DAF5FF}
+.top_bg2 .header, .top_bg2 .con_top{background-color:#F7EDDA}
+.top_bg3 .header, .top_bg3 .con_top{background-color:#F8E6E7}
+.top_bg4 .header, .top_bg4 .con_top{background-color:#E0EAF3}
+.top_bg5 .header, .top_bg5 .con_top{background-color:#F0F8E9}  
+.header_title{font-size:1.8rem;color:#aaa}
+.btn_home{font-size:2.1rem;color:#000;font-weight:500}
+.con_top{height:50.5rem}
+.con_top + section{margin-top:-3rem;background-color:#fff;border-top-right-radius: 3rem;border-top-left-radius: 3rem;padding: 3rem;}
+.con_tit{height:3.4rem}

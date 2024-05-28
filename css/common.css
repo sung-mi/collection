@@ -347,6 +347,9 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 .flex_col{flex-direction: column;flex-wrap:wrap}
 .flex_inline{display:inline-flex}
 
+.flex1{flex:1}
+.flex2{flex:2}
+.flex3{flex:3}
 /* popup */
 
 

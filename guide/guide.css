@@ -1,0 +1,33 @@
+@charset "euc-kr";
+body.guide{min-width:100%}
+h1{font-size:22px;text-align:center;padding:15px 0 0px}
+.actbtn{background:#84C13D;display:inline-block;border:1px solid #84C13D;padding:0 20px;line-height:25px;color:#fff !important;font-size:1.2rem}
+.code{font-family:'NotoSans';background:#555;display:inline-block;border:0.1rem solid #555;padding:0 2rem;line-height:2.5rem;color:#fff !important;font-size:1.2rem}
+.code.active{position:relative;z-index:2;background:#fff;color:#000 !important;border-bottom:0;}
+.code + textarea{dipslay:block;position:relative;z-index:1;margin-top:-1px;border:1px solid #555}
+.g_line{border-bottom:0.1rem dashed #333;padding-bottom:3rem}
+.g_list{padding:0px 0px 40px}
+.g_list table{width:100%;border-bottom:1px solid #999;}
+.g_list table th{background:#555;color:#fff;white-space:nowrap}
+.g_list table th, .g_list table td{font-size:13px;line-height:25px;padding:0 7px;border-left:1px solid #ddd;word-break:break-all}
+.g_list table td{border-top:1px solid #ddd;}
+.g_list table th:first-child, .g_list table td:first-child{border-left:0}
+.g_list table td:first-child{background:#eaeaea;text-align:center}
+.g_list table td:last-child{text-align:center;vertical-align: middle;}
+.g_list table tr.bar_line td{border-bottom:1px solid #999}
+.url>a{color:#1b45bd}
+.complete td{background:#fef6dc}
+.ing td{background:#e3f8df}
+.guideli td{background:#ffeded}
+i.guideli{display:inline-block;padding: 0 10px;line-height:20px;background:#ffeded;font-size:12px;border:1px solid #ebccf3}
+i.complete{display:inline-block;padding: 0 10px;line-height:20px;background:#fef6dc;font-size:12px;border:1px solid #e6dfc8}
+i.ing{display:inline-block;padding: 0 10px;line-height:20px;background:#e3f8df;font-size:12px;border:1px solid #d0e4cc}
+i.info{display:inline-block;padding: 0 5px;line-height:16px;background:#f77a0f;font-size:11px;color:#fff}
+
+.progress{padding-bottom:10px;text-align:right}
+a.memo{position:relative;display:inline-block;font-size:12px;padding:0 5px;background:#f54040;line-height:18px;color:#fff !important;border-radius:3px}
+a.memo>i{display:none;line-height:18px}
+a.memo:hover>i{text-align:left;display:block;position:absolute;right:0;top:0;margin-right:100%;background:#fff;color:#333;white-space:nowrap;font-size:12px; word-break:break-all;border:1px solid #ddd;padding:5px 8px}
+.memo_ing{background:green !important}
+.memo_latest{background:#666 !important}
+.delete td{text-decoration: line-through}

@@ -47,69 +47,6 @@ var userAgt = {
 	    return version;
 	}
 }
-
-/*skip*/
-var skip = {
-	on:function(id){
-		$(id).focus();
-	},
-	tdx:function(id){
-		$(id).attr('tabindex','0').focus();
-	}
-}
-
-// 다크모드 처리 스크립트
-$(function(){
-	modefun.on();
-});
-var modefun = {
-    themeSkip:false,
-    on:function(){
-        // console.debug('modefun.themeSkip:', this.themeSkip);
-        if (this.themeSkip) {
-            $('#blackcss').remove();
-            return;
-        }
-        // var mode = localStorage.getItem('mode');
-        var mode = this.getMode();
-        if(mode == 'black'){
-            $('head').append('<link id="blackcss" rel="stylesheet" href="/css/common/theme_black.css">');
-            $('body').addClass('bkmode');
-            $(top.document).find('body').addClass('bkmode');
-        }
-        
-        $('#mode').click(function(){
-            let theme = '';
-            let wrap = $('body');
-            if(wrap.hasClass('bkmode')){
-                // localStorage.clear();
-                // $('#blackcss').remove();
-                // wrap.removeClass('bkmode');
-                $(top.document).find('body').removeClass('bkmode');
-                theme = '';
-            }else{
-                // localStorage.setItem('mode','black');
-                // $('head').append('<link id="blackcss" rel="stylesheet" href="/css/common/theme_black.css">');
-                // wrap.addClass('bkmode');
-                $(top.document).find('body').addClass('bkmode');
-                theme = 'bkmode';
-            }
-
-            $.ajax({
-                url: '/mtrade/setThemeAjax.nh',
-                type: 'post',
-                data: {'theme': theme},
-                success: function(RESPONSE) {
-                    location.href = getUrl('/myinvest/myInvest.nh');
-                }
-            });
-        });
-    },
-    getMode:function(){
-        return $('body').hasClass('bkmode') ? 'black' : '';
-    }
-}
-	
 	
 var homeBtn = {/* 홈으로 이동하는 버튼 */
 	on:function(){
@@ -268,19 +205,6 @@ function inputDelCtr(i){
 		});
 		
 	});
-}
-
-var fzfun = {//notice_view font-size function
-	fz : 1.6,
-	on:function(i){
-		if(i==0){
-			fzfun.fz=fzfun.fz-0.1;
-		}
-		if(i==1){
-			fzfun.fz=fzfun.fz+0.1;
-		}
-		$('.notic_view_con').css('font-size',fzfun.fz+'rem');
-	}
 }
 
 var tooltip ={
