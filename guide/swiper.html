@@ -58,65 +58,141 @@
 <div id="wrap">
 	  
 	<!-- header -->
-	<header class="header" role="presentation">
-		<nav class="padd">
-            <ul class="flex_col mb30">
+	<div class="sticky_top guide_top">
+		<div>
+			<ul class=" guide_header">
 				<li>
-					<h1 class="header-title">주식모으기 가이드</h1>
+					<div class="guide_title">주식모으기 가이드</div>
 				</li>
-				<li class="ar">
-					<a href="list.html" class="home-btn">목록</a>
+				<li>
+					<a href="list.html" class="guide_back">목록보기</a>
 				</li>
 			</ul>
-		</nav>
-	</header>
+		</div>
+		<div class="padd">
+			<ul class="tab_ty1 flex_wrap">
+				<li class=""><a href="input.html">input</a></li>
+				<li class=""><a href="icon.html">icon&button</a></li>
+				<li class=""><a href="tabs.html">tabs</a></li>
+				<li class=""><a href="popup.html">popup</a></li>
+				<li class=" "><a href="popup_list.html">popup_list</a></li>
+				<li class=""><a href="calendar.html">calendar</a></li>
+				<li class=""><a href="table.html">table</a></li>
+				<li class="on"><a href="swiper.html">swiper</a></li>
+			</ul>
+		</div>
+	</div>
 	<!-- // header -->
 
 	<!-- container -->
 	<div class="container">
-		<div class="content flex-start" data-role="content">
-			<section class="padd line_btm" style="padding-bottom:3rem">
-				<nav class="padd">
-                    <ul class="flex_between">
-						<li class="item"><a role="tab" aria-selected="false" href="input.html"  title="현재 탭">input</a></li>
-						<li class="item"><a role="tab" aria-selected="false" href="icon.html">icon&button</a></li>
-						<li class="item"><a role="tab" aria-selected="false" href="tabs.html">tabs</a></li>
-						<li class="item"><a role="tab" aria-selected="false" href="popup.html">popup</a></li>
-						<li class="item"><a role="tab" aria-selected="false" href="popup_list.html">popup_list</a></li>
-						<li class="item"><a role="tab" aria-selected="false" href="calendar.html">calendar</a></li>
-						<li class="item"><a role="tab" aria-selected="false" href="table.html">table</a></li>
-						<li class="item on"><a role="tab" aria-selected=""true"" href="swiper.html">swiper</a></li>
-					</ul>
-				</nav>				
-			</section>
-			
-			<section class="padd mt30 g_line">
-				<div class="mb10">
-					<h3 class="menu_title">일반 swiper 설정 예시</h3>
-			        <div class="mt30">
-				        <div class="swiper-container swipe1" id="swipe1"> 
-							<ul class="swiper-wrapper"> 
-								<li class="swiper-slide"><a href="javascript:void(0)" style="background:pink">1</a></li> 
-								<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f4d1fa">2</a></li>
-								<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f9e481">3</a></li> 
-								<li class="swiper-slide"><a href="javascript:void(0)" style="background:#9ff0ae">4</a></li> 
-								<li class="swiper-slide"><a href="javascript:void(0)" style="background:pink">5</a></li> 
-								<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f4d1fa">6</a></li>
-							</ul>
-				        </div>
-				        
-				        <script>
-			        	var swipe1 = new Swiper('#swipe1', {  
-			    			slidesPerView : 'auto',  
-			    			spaceBetween : 6, 
-			    		})
-			        	</script>
-			        </div>
-				</div>	
-				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code" >CODE VIEW</a>				
-				<textarea style="width:100%;height:30rem;font-size:1.2rem;display:none">
+		<section class="padd mt30 g_line">
+			<div class="mb10">
+				<h3 class="menu_title">일반 swiper 설정 예시</h3>
+				<div class="mt30">
+					<div class="swiper-container swipe1" id="swipe1"> 
+						<ul class="swiper-wrapper"> 
+							<li class="swiper-slide"><a href="javascript:void(0)" style="background:pink">1</a></li> 
+							<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f4d1fa">2</a></li>
+							<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f9e481">3</a></li> 
+							<li class="swiper-slide"><a href="javascript:void(0)" style="background:#9ff0ae">4</a></li> 
+							<li class="swiper-slide"><a href="javascript:void(0)" style="background:pink">5</a></li> 
+							<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f4d1fa">6</a></li>
+						</ul>
+					</div>
+					
+					<script>
+					var swipe1 = new Swiper('#swipe1', {  
+						slidesPerView : 'auto',  
+						spaceBetween : 6, 
+					})
+					</script>
+				</div>
+			</div>	
+			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code" >CODE VIEW</a>				
+			<textarea style="width:100%;height:30rem;font-size:1.2rem;display:none">
 <!-- 
 <div class="swiper-container swipe1" id="swipe1"> 
+<ul class="swiper-wrapper"> 
+	<li class="swiper-slide"><a href="javascript:void(0)" style="background:pink">1</a></li> 
+	<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f4d1fa">2</a></li>
+	<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f9e481">3</a></li> 
+	<li class="swiper-slide"><a href="javascript:void(0)" style="background:#9ff0ae">4</a></li> 
+	<li class="swiper-slide"><a href="javascript:void(0)" style="background:pink">5</a></li> 
+	<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f4d1fa">6</a></li>
+</ul>
+</div>
+<script>
+var swipe1 = new Swiper('#swipe1', {  
+slidesPerView : 'auto',  
+spaceBetween : 6, 
+})
+</script> 
+-->
+			</textarea>
+		</section>
+		
+			<style>
+		.swipe2>ul>li>a{display:block;width:calc(100% - 0.2rem);margin:0.1rmex;line-height:5rem;font-size:3rem;text-align:center}
+		.paging>a{width:2rem;height:2rem;text-align:center;color:#fff;margin:0 0.1rem}
+		</style>
+		<section class="padd mt30 ">
+			<h3 class="menu_title">자동롤링 swiper 설정 예시</h3>
+			<div class="swiper-container swipe2 mt30" id="swipe2"> 
+				<ul class="swiper-wrapper"> 
+					<li class="swiper-slide"><a href="javascript:void(0)" style="background:pink">1</a></li> 
+					<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f4d1fa">2</a></li>
+					<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f9e481">3</a></li> 
+					<li class="swiper-slide"><a href="javascript:void(0)" style="background:#9ff0ae">4</a></li> 
+					<li class="swiper-slide"><a href="javascript:void(0)" style="background:pink">5</a></li> 
+					<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f4d1fa">6</a></li>
+				</ul>
+			</div>
+			
+			<div class="mt10 mb10 ac">
+				<div class="paging "></div>
+			</div>
+			<div class="mt10 mb10 ">
+				<a href="javascript:void(0)" class="prev btn_add">Prev</a>
+				<a href="javascript:void(0)" class="next btn_add">Next</a>
+				<a href="javascript:void(0)" class="stop btn_add" onclick="swipe2.autoplay.stop();">Stop</a>
+				<a href="javascript:void(0)" class="play btn_add" onclick="swipe2.autoplay.start()">Play</a>
+			</div>
+			
+			<script>
+			var swipe2 = new Swiper('#swipe2', {  
+				slidesPerView: '1', 
+				//effect: 'fade', 
+				spaceBetween: 0, 
+				loop : true,
+				loopAdditionalSlides : 1,
+				autoplay: { 
+					delay: 2500, 
+					disableOnInteraction: true, 
+				}, 
+				autoplayDisableOnInteraction: false, 
+				pagination: { 
+					el: '.paging', 
+					clickable: true, 
+					type : 'bullets', // 버튼 모양 결정 "bullets", "fraction"   
+					renderBullet : function (index, className) {  // className이 기본값이 들어가게 필수 설정    
+						return '<a href="#" class="' + className + '">' + (index + 1) + '</a>'  
+					},  
+					renderFraction: function (currentClass, totalClass) { 	// type이 fraction일 때 사용    
+					return '<span class="' + currentClass + '"></span>' +           
+							'<span class="' + totalClass + '"></span>';  
+					}
+				},
+				navigation: {   // 버튼 사용자 지정	
+					nextEl: '.next',	
+					prevEl: '.prev',
+				}
+			})
+			</script>
+			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
+			<textarea style="width:100%;height:30rem;font-size:1.2rem;display:none">
+<!-- 
+<div class="swiper-container swipe2" id="swipe2"> 
 	<ul class="swiper-wrapper"> 
 		<li class="swiper-slide"><a href="javascript:void(0)" style="background:pink">1</a></li> 
 		<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f4d1fa">2</a></li>
@@ -127,297 +203,237 @@
 	</ul>
 </div>
 <script>
-var swipe1 = new Swiper('#swipe1', {  
-	slidesPerView : 'auto',  
-	spaceBetween : 6, 
-})
-</script> 
--->
-				</textarea>
-			</section>
-			
-			 <style>
-			.swipe2>ul>li>a{display:block;width:calc(100% - 0.2rem);margin:0.1rmex;line-height:5rem;font-size:3rem;text-align:center}
-			.paging>a{width:2rem;height:2rem;text-align:center;color:#fff;margin:0 0.1rem}
-			</style>
-			<section class="padd mt30 ">
-				<h3 class="menu_title">자동롤링 swiper 설정 예시</h3>
-		        <div class="swiper-container swipe2 mt30" id="swipe2"> 
-					<ul class="swiper-wrapper"> 
-						<li class="swiper-slide"><a href="javascript:void(0)" style="background:pink">1</a></li> 
-						<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f4d1fa">2</a></li>
-						<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f9e481">3</a></li> 
-						<li class="swiper-slide"><a href="javascript:void(0)" style="background:#9ff0ae">4</a></li> 
-						<li class="swiper-slide"><a href="javascript:void(0)" style="background:pink">5</a></li> 
-						<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f4d1fa">6</a></li>
-					</ul>
-		        </div>
-		        
-		        <div class="mt10 mb10 ac">
-		        	<div class="paging "></div>
-		        </div>
-		        <div class="mt10 mb10 ">
-		        	<a href="javascript:void(0)" class="prev btn_add">Prev</a>
-		        	<a href="javascript:void(0)" class="next btn_add">Next</a>
-		        	<a href="javascript:void(0)" class="stop btn_add" onclick="swipe2.autoplay.stop();">Stop</a>
-		        	<a href="javascript:void(0)" class="play btn_add" onclick="swipe2.autoplay.start()">Play</a>
-		        </div>
-		     
-		        <script>
-	        	var swipe2 = new Swiper('#swipe2', {  
-	        		slidesPerView: '1', 
-        	        //effect: 'fade', 
-        	        spaceBetween: 0, 
-        	        loop : true,
-        	        loopAdditionalSlides : 1,
-        	        autoplay: { 
-        	            delay: 2500, 
-        	            disableOnInteraction: true, 
-        	        }, 
-        	        autoplayDisableOnInteraction: false, 
-        	        pagination: { 
-        	            el: '.paging', 
-        	            clickable: true, 
-        	            type : 'bullets', // 버튼 모양 결정 "bullets", "fraction"   
-        	            renderBullet : function (index, className) {  // className이 기본값이 들어가게 필수 설정    
-        	    			return '<a href="#" class="' + className + '">' + (index + 1) + '</a>'  
-        	    		},  
-        	            renderFraction: function (currentClass, totalClass) { 	// type이 fraction일 때 사용    
-       	        		return '<span class="' + currentClass + '"></span>' +           
-       	        				'<span class="' + totalClass + '"></span>';  
-       	        		}
-        	        },
-        	        navigation: {   // 버튼 사용자 지정	
-        	        	nextEl: '.next',	
-        	        	prevEl: '.prev',
-        	        }
-	    		})
-	        	</script>
-				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
-				<textarea style="width:100%;height:30rem;font-size:1.2rem;display:none">
-<!-- 
-<div class="swiper-container swipe2" id="swipe2"> 
-		<ul class="swiper-wrapper"> 
-			<li class="swiper-slide"><a href="javascript:void(0)" style="background:pink">1</a></li> 
-			<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f4d1fa">2</a></li>
-			<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f9e481">3</a></li> 
-			<li class="swiper-slide"><a href="javascript:void(0)" style="background:#9ff0ae">4</a></li> 
-			<li class="swiper-slide"><a href="javascript:void(0)" style="background:pink">5</a></li> 
-			<li class="swiper-slide"><a href="javascript:void(0)" style="background:#f4d1fa">6</a></li>
-		</ul>
-	</div>
-	<script>
-	var swipe2 = new Swiper('#swipe2', {  
-		slidesPerView: '1', 
-		spaceBetween: 0, 
-		loop : true,
-		loopAdditionalSlides : 1,
-		autoplay: { 
-		    delay: 2500, 
-		    disableOnInteraction: true, 
-		}, 
-		autoplayDisableOnInteraction: false, 
-		pagination: { 
-		    el: '.paging', 
-		    clickable: true, 
-		    type : 'bullets', // 버튼 모양 결정 "bullets", "fraction"   
-		    renderBullet : function (index, className) {  // className이 기본값이 들어가게 필수 설정    
-			return '<a href="#" class="' + className + '">' + (index + 1) + '</a>'  
-		},  
-		    renderFraction: function (currentClass, totalClass) { 	// type이 fraction일 때 사용    
-			return '<span class="' + currentClass + '"></span>' +           
-					'<span class="' + totalClass + '"></span>';  
-			}
-		},
-		navigation: {   // 버튼 사용자 지정	
-			nextEl: '.next',	
-			prevEl: '.prev',
-		}
-	})
-			
-	</script>
--->
-				</textarea>
-				
-			</section>
-			
-			<section class="padd mt30 ">
-				<div class="mb10">
-				 	<h3 class="menu_title">변수에 담아서 활용 예시</h3>
-			        <span>*swiper 옵션 설정을 변수에 담아서 사용 할 수도 있습니다. 변수에 담아서 사용 시에 설정을 재활용하기 편하다는 장점이 있습니다.</span>
-					
-				</div>			
-				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
-				<textarea style="width:100%;height:13rem;font-size:1.2rem;display:none">
-<!-- 
-	var slideSetting = {  
-		slidesPerView : 'auto',  
-		spaceBetween : 6,  loop : false,
-	}
-	var swipe2 = new Swiper('#swipe2', slideSetting)
--->
-				</textarea>
-			</section>
-			
-			<section class="padd mt30 ">
-				<div class="mb10">
-					<h3 class="menu_title">기본 설정</h3>
-			        <span>*기본적으로 슬라이드를 사용할 때 거의 필수로 설정하는 설정 요소들 입니다. 한 화면에 보여줄 슬라이드의 갯수 설정, 슬라이드 간의 사이 여백, 반복 여부 등 기본적인 설정</span>
-					
-				</div>			
-				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
-				<textarea style="width:100%;height:24rem;font-size:1.2rem;display:none">
-<!-- 
-	slidesPerView : 'auto', // 한 슬라이드에 보여줄 갯수
-	spaceBetween : 6, // 슬라이드 사이 여백
-	loop : false, // 슬라이드 반복 여부
-	loopAdditionalSlides : 1, // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
-	pagination : false, // pager 여부
-	autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false  
-	delay : 3000,   // 시간 설정  
-	disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
-	},
-	navigation: {   // 버튼 사용자 지정	
-	nextEl: '.swiper-button-next',	
-	prevEl: '.swiper-button-prev',}, 
--->
-				</textarea>
-			</section>
-			
-			<section class="padd mt30 ">
-				<div class="mb10">
-					<h3 class="menu_title">추가 설정</h3>
-			        <span>*커스텀 할 수 있는 옵션 요소들 입니다.</span>
-				</div>			
-				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
-				<textarea style="width:100%;height:40rem;font-size:1.2rem;display:none">
-<!-- 
-	freeMode : false, // 슬라이드 넘길 때 위치 고정 여부
-	autoHeight : true, // true로 설정하면 슬라이더 래퍼가 현재 활성 슬라이드의 높이에 맞게 높이를 조정합니다.
-	a11y : false, // 접근성 매개변수(접근성 관련 대체 텍스트 설정이 가능) 
-	resistance : false, // 슬라이드 터치에 대한 저항 여부 설정
-	slideToClickedSlide : true, // 해당 슬라이드 클릭시 슬라이드 위치로 이동
-	centeredSlides : true // true시에 슬라이드가 가운데로 배치
-	allowTouchMove : true, // false시에 스와이핑이 되지 않으며 버튼으로만 슬라이드 조작이 가능
-	watchOverflow : true // 슬라이드가 1개 일 때 pager, button 숨김 여부 설정
-	slidesOffsetBefore : number, // 슬라이드 시작 부분 여백
-	slidesOffsetAfter : number, // 슬라이드 시작 부분 여백
-	
-	pagination : {   // 페이저 버튼 사용자 설정  
-		el : '.pagination',  // 페이저 버튼을 담을 태그 설정 
-		clickable : true,  // 버튼 클릭 여부  
+var swipe2 = new Swiper('#swipe2', {  
+	slidesPerView: '1', 
+	spaceBetween: 0, 
+	loop : true,
+	loopAdditionalSlides : 1,
+	autoplay: { 
+		delay: 2500, 
+		disableOnInteraction: true, 
+	}, 
+	autoplayDisableOnInteraction: false, 
+	pagination: { 
+		el: '.paging', 
+		clickable: true, 
 		type : 'bullets', // 버튼 모양 결정 "bullets", "fraction"   
 		renderBullet : function (index, className) {  // className이 기본값이 들어가게 필수 설정    
-			return '<a href="#" class="' + className + '">' + (index + 1) + '</a>'  
-		},  
+		return '<a href="#" class="' + className + '">' + (index + 1) + '</a>'  
+	},  
 		renderFraction: function (currentClass, totalClass) { 	// type이 fraction일 때 사용    
 		return '<span class="' + currentClass + '"></span>' +           
 				'<span class="' + totalClass + '"></span>';  
 		}
-	}, 
-	resistanceRatio: 0,//드래그밀림정도
-	scrollbar: {//스크롤바
-		el: '.table-hor-scrolling .swiper-scrollbar',
-	}
--->
-				</textarea>
-			</section>
-			
-			<section class="padd mt30 ">
-				<div class="mb10">
-				 	<h3 class="menu_title">초기화 설정</h3>
-			        <span>* 초기화 설정 방법은 2가지가 있습니다. <br/>
-					swiper가 초기화 될 때, 초기화 된 후 설정을 할 수가 있습니다. <br/>
-					on을 매개 변수로 전달 할 시에 swiper가 생성될 때 즉 초기화 될 때 설정을 해줄 수가 있고 <br/>
-					다른 방법으로 아래 코드처럼 따로 사용 시에는 swiper가 이미 만들어지고 나서 동작하기 때문에 초기화 된 후 동작합니다. <br/></span>
-					
-				</div>			
-				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
-				<textarea style="width:100%;height:37rem;font-size:1.2rem;display:none">
-<!-- 
-	// 매개 변수로 사용시 swiper가 초기화 될 때 동작합니다.
-	var mySwiper = new Swiper('.swiper-container', {  
-		on : {    
-			init : function () {      
-				console.log('swiper 초기화 될때 실행');    
-			},    
-			imagesReady : function () { // 모든 내부 이미지가 로드 된 직후 이벤트가 시작됩니다.      
-			console.log('슬라이드 이미지 로드 후 실행');    
-			},  
-		},
-	};
-	
-	// swiper가 초기화 된 후 동작합니다.
-	var mySwiper = new Swiper('.swiper-container', { 
-		// ...
-	};
-	mySwiper.on('init', function () {  
-		console.log('slide가 초기화 설정을 마친 후 실행');
-	}); 
--->
-				</textarea>
-			</section>
-			
-			<section class="padd mt30 ">
-				<div class="mb10">
-				 	<h3 class="menu_title">반응형 설정</h3>
-			        <span>*swiper는 breakpoints라는 객체로 반응형 설정이 가능합니다. 아래 설정은 브라우저의 가로 크기가 768px 이하 일 때 동작하는 예시입니다. </span>
-					
-				</div>			
-				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
-				<textarea style="width:100%;height:40rem;font-size:1.2rem;display:none">
-<!-- 
-	breakpoints : { // 반응형 설정이 가능 width값으로 조정  
-		768 : {    
-		slidesPerView : 1,  
-		},
 	},
-	
-	//5.3.0부터 "비율"(너비 / 높이)로 설정이 가능해졌습니다.
-	var swiper = new Swiper('.swiper-container', {  
-		slidesPerView: 1,  
-		spaceBetween: 10,  
-		breakpoints: {    
-			'@0.75': {      
-			slidesPerView: 2,      
-			spaceBetween: 20,    
-			},    
-			'@1.00': {      
-				slidesPerView: 3,      
-				spaceBetween: 40,    
-			},    
-			'@1.50': {      
-				slidesPerView: 4,      
-				spaceBetween: 50,    
-			},  
-		}
-	});
+	navigation: {   // 버튼 사용자 지정	
+		nextEl: '.next',	
+		prevEl: '.prev',
+	}
+})
+		
+</script>
 -->
-				</textarea>
-			</section>
+			</textarea>
 			
-			<section class="padd mt30 ">
-				<div class="mb10">
-				 	<h3 class="menu_title">메소드</h3>
-			        <span>*swiper이름.메소드() 형식으로 사용할 수 있습니다.</span>
-					
-				</div>			
-				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
-				<textarea style="width:100%;height:15rem;font-size:1.2rem;display:none">
+		</section>
+		
+		<section class="padd mt30 ">
+			<div class="mb10">
+				<h3 class="menu_title">변수에 담아서 활용 예시</h3>
+				<span>*swiper 옵션 설정을 변수에 담아서 사용 할 수도 있습니다. 변수에 담아서 사용 시에 설정을 재활용하기 편하다는 장점이 있습니다.</span>
+				
+			</div>			
+			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
+			<textarea style="width:100%;height:13rem;font-size:1.2rem;display:none">
 <!-- 
-	// ex)  mySlider.autoplay.start()
-	.slideTo(index, speed, runCallbacks) // 해당 슬라이드로 이동
-	.slidePrev(index, speed, runCallbacks) // 이전 슬라이드로 이동
-	.slideNext(index, speed, runCallbacks) // 다음 슬라이드로 이동
-	.autoplay.start(); // 자동 재생 시작
-	.autoplay.stop(); // 자동 재생 정지
-	.destroy() // 슬라이드 제거
+var slideSetting = {  
+	slidesPerView : 'auto',  
+	spaceBetween : 6,  loop : false,
+}
+var swipe2 = new Swiper('#swipe2', slideSetting)
 -->
-				</textarea>
-			</section>
+			</textarea>
+		</section>
+		
+		<section class="padd mt30 ">
+			<div class="mb10">
+				<h3 class="menu_title">기본 설정</h3>
+				<span>*기본적으로 슬라이드를 사용할 때 거의 필수로 설정하는 설정 요소들 입니다. 한 화면에 보여줄 슬라이드의 갯수 설정, 슬라이드 간의 사이 여백, 반복 여부 등 기본적인 설정</span>
+				
+			</div>			
+			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
+			<textarea style="width:100%;height:24rem;font-size:1.2rem;display:none">
+<!-- 
+slidesPerView : 'auto', // 한 슬라이드에 보여줄 갯수
+spaceBetween : 6, // 슬라이드 사이 여백
+loop : false, // 슬라이드 반복 여부
+loopAdditionalSlides : 1, // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
+pagination : false, // pager 여부
+autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false  
+delay : 3000,   // 시간 설정  
+disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+},
+navigation: {   // 버튼 사용자 지정	
+nextEl: '.swiper-button-next',	
+prevEl: '.swiper-button-prev',}, 
+-->
+			</textarea>
+		</section>
+		
+		<section class="padd mt30 ">
+			<div class="mb10">
+				<h3 class="menu_title">추가 설정</h3>
+				<span>*커스텀 할 수 있는 옵션 요소들 입니다.</span>
+			</div>			
+			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
+			<textarea style="width:100%;height:40rem;font-size:1.2rem;display:none">
+<!-- 
+freeMode : false, // 슬라이드 넘길 때 위치 고정 여부
+autoHeight : true, // true로 설정하면 슬라이더 래퍼가 현재 활성 슬라이드의 높이에 맞게 높이를 조정합니다.
+a11y : false, // 접근성 매개변수(접근성 관련 대체 텍스트 설정이 가능) 
+resistance : false, // 슬라이드 터치에 대한 저항 여부 설정
+slideToClickedSlide : true, // 해당 슬라이드 클릭시 슬라이드 위치로 이동
+centeredSlides : true // true시에 슬라이드가 가운데로 배치
+allowTouchMove : true, // false시에 스와이핑이 되지 않으며 버튼으로만 슬라이드 조작이 가능
+watchOverflow : true // 슬라이드가 1개 일 때 pager, button 숨김 여부 설정
+slidesOffsetBefore : number, // 슬라이드 시작 부분 여백
+slidesOffsetAfter : number, // 슬라이드 시작 부분 여백
+
+pagination : {   // 페이저 버튼 사용자 설정  
+	el : '.pagination',  // 페이저 버튼을 담을 태그 설정 
+	clickable : true,  // 버튼 클릭 여부  
+	type : 'bullets', // 버튼 모양 결정 "bullets", "fraction"   
+	renderBullet : function (index, className) {  // className이 기본값이 들어가게 필수 설정    
+		return '<a href="#" class="' + className + '">' + (index + 1) + '</a>'  
+	},  
+	renderFraction: function (currentClass, totalClass) { 	// type이 fraction일 때 사용    
+	return '<span class="' + currentClass + '"></span>' +           
+			'<span class="' + totalClass + '"></span>';  
+	}
+}, 
+resistanceRatio: 0,//드래그밀림정도
+scrollbar: {//스크롤바
+	el: '.table-hor-scrolling .swiper-scrollbar',
+}
+-->
+			</textarea>
+		</section>
+		
+		<section class="padd mt30 ">
+			<div class="mb10">
+				<h3 class="menu_title">초기화 설정</h3>
+				<span>* 초기화 설정 방법은 2가지가 있습니다. <br/>
+				swiper가 초기화 될 때, 초기화 된 후 설정을 할 수가 있습니다. <br/>
+				on을 매개 변수로 전달 할 시에 swiper가 생성될 때 즉 초기화 될 때 설정을 해줄 수가 있고 <br/>
+				다른 방법으로 아래 코드처럼 따로 사용 시에는 swiper가 이미 만들어지고 나서 동작하기 때문에 초기화 된 후 동작합니다. <br/></span>
+				
+			</div>			
+			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
+			<textarea style="width:100%;height:37rem;font-size:1.2rem;display:none">
+<!-- 
+// 매개 변수로 사용시 swiper가 초기화 될 때 동작합니다.
+var mySwiper = new Swiper('.swiper-container', {  
+	on : {    
+		init : function () {      
+			console.log('swiper 초기화 될때 실행');    
+		},    
+		imagesReady : function () { // 모든 내부 이미지가 로드 된 직후 이벤트가 시작됩니다.      
+		console.log('슬라이드 이미지 로드 후 실행');    
+		},  
+	},
+};
+
+// swiper가 초기화 된 후 동작합니다.
+var mySwiper = new Swiper('.swiper-container', { 
+	// ...
+};
+mySwiper.on('init', function () {  
+	console.log('slide가 초기화 설정을 마친 후 실행');
+}); 
+-->
+			</textarea>
+		</section>
+		
+		<section class="padd mt30 ">
+			<div class="mb10">
+				<h3 class="menu_title">반응형 설정</h3>
+				<span>*swiper는 breakpoints라는 객체로 반응형 설정이 가능합니다. 아래 설정은 브라우저의 가로 크기가 768px 이하 일 때 동작하는 예시입니다. </span>
+				
+			</div>			
+			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
+			<textarea style="width:100%;height:40rem;font-size:1.2rem;display:none">
+<!-- 
+breakpoints : { // 반응형 설정이 가능 width값으로 조정  
+	768 : {    
+	slidesPerView : 1,  
+	},
+},
+
+//5.3.0부터 "비율"(너비 / 높이)로 설정이 가능해졌습니다.
+var swiper = new Swiper('.swiper-container', {  
+	slidesPerView: 1,  
+	spaceBetween: 10,  
+	breakpoints: {    
+		'@0.75': {      
+		slidesPerView: 2,      
+		spaceBetween: 20,    
+		},    
+		'@1.00': {      
+			slidesPerView: 3,      
+			spaceBetween: 40,    
+		},    
+		'@1.50': {      
+			slidesPerView: 4,      
+			spaceBetween: 50,    
+		},  
+	}
+});
+-->
+			</textarea>
+		</section>
+		
+		<section class="padd mt30 ">
+			<div class="mb10">
+				<h3 class="menu_title">메소드</h3>
+				<span>*swiper이름.메소드() 형식으로 사용할 수 있습니다.</span>
+				
+			</div>			
+			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
+			<textarea style="width:100%;height:15rem;font-size:1.2rem;display:none">
+<!-- 
+// ex)  mySlider.autoplay.start()
+.slideTo(index, speed, runCallbacks) // 해당 슬라이드로 이동
+.slidePrev(index, speed, runCallbacks) // 이전 슬라이드로 이동
+.slideNext(index, speed, runCallbacks) // 다음 슬라이드로 이동
+.autoplay.start(); // 자동 재생 시작
+.autoplay.stop(); // 자동 재생 정지
+.destroy() // 슬라이드 제거
+-->
+			</textarea>
+		</section>
+
+		<section class="padd mt30 ">
+			<div class="mb10">
+				<h3 class="menu_title">이벤트정리</h3>		       
+				</br>
+				init : </br>슬라이드 쇼가 초기화될 때 발생합니다.</br></br>
+				activeIndexChange : </br> 활성화된 인덱스가 바뀔 때마다 호출</br></br>
+				slideChange : </br>슬라이드가 변경될 때 발생합니다.</br></br>
+				slideChangeTransitionStart : </br>슬라이드 변경 트랜지션 시작시 발생합니다.</br></br>
+				slideChangeTransitionEnd : </br>슬라이드 변경 트랜지션 끝날 때 발생합니다.</br></br>
+				slideNextTransitionStart : </br>다음 슬라이드로 이동할 때 발생합니다.</br></br>
+				slideNextTransitionEnd : </br>다음 슬라이드로 이동한 후 트랜지션 끝날 때 발생합니다.</br></br>
+				slidePrevTransitionStart : </br>이전 슬라이드로 이동할 때 발생합니다.</br></br>
+				slidePrevTransitionEnd : </br>이전 슬라이드로 이동한 후 트랜지션 끝날 때 발생합니다.</br></br>			
+				slideReset : </br>슬라이드를 초기화할 때 발생합니다.</br></br>
+				resize : </br>슬라이드 쇼의 크기가 변경될 때 발생합니다.</br></br>
+				paginationRender : </br>페이징(슬라이드 넘버링 등)이 렌더링될 때 발생합니다.
+			</div>			
 			
-			<div class="mb60"></div>
-		</div>
+		</section>
+		
+		<div class="mb30"></div>
+		
 	</div>
 	<!-- // container -->
 </div>
