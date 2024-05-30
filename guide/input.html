@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
-	<link rel="stylesheet" href="../css/contents_jsm.css?v1">   
+	<link rel="stylesheet" href="../css/contents_jsm.css?v2">   
     <link rel="stylesheet" href="../css/swiper.min.css"> 
     <link rel="stylesheet" href="guide.css?v1">
     <script src="../js/jquery-1.12.0.min.js"></script>
@@ -44,56 +44,204 @@
 		</div>
 	</div>
 	<!-- // header -->
-
 	<!-- container -->
 	<div class="container">
 		<section class="padd mt30 g_line">
 			<div class="mb10">
 				<h3 class="menu_title">
-					input :<br/>
-				class="<span class="c_rd">inp_tx</span>"
+					input : text<br/>class="<span class="c_rd">inp_tx</span>"
 				</h3>
 				<span class="inp_tx mt10">
 					<input type="text" title="텍스트입력" placeholder="텍스트를 입력해주세요.">
 				</span>
+				<span class="inp_tx mt10"> 
+					<input type="tel" class="ar" title="텍스트입력" placeholder="텍스트를 입력해주세요.">
+					<i>원</i>
+				</span>
 			</div>	
 			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code" >CODE VIEW</a>				
-			<textarea style="width:100%;height:12rem;font-size:1.2rem;display:none">
+			<textarea style="width:100%;height:12rem;display:none">
 <!-- 
-<span class="inp_tx">
-<input type="text" title="텍스트입력" placeholder="텍스트를 입력해주세요">
+<span class="inp_tx mt10">
+	<input type="text" title="텍스트입력" placeholder="텍스트를 입력해주세요.">
+</span>
+<span class="inp_tx mt10"> 
+	<input type="text" class="ar" title="텍스트입력" placeholder="텍스트를 입력해주세요.">
+	<i>원</i>
 </span>
 -->
 			</textarea>
 		</section>
 		
-		<section class="padd mt30 ">
+		<section class="padd mt30 g_line">
 			<div class="mb10">
 				<h3 class="menu_title">
 					검색: inputDelCtr();<br/>
+					검색: inputDelCtr(<span class="c_rd">.inp_srh_s</span>);<br/>
 					<span class="f13 fontf">* 입력창에 텍스트 입력시 텍스트 삭제 버튼 활성화</span><br/>
 					class="<span class="c_rd">inp_srh</span>"<br/>
 				</h3>
-				<span class="inp_srh">
+				
+				<span class="inp_srh mt20">
 					<a href="javascript:void(0)" class="ico_srh"></a>
 					<input type="text" placeholder="검색어를 입력하세요." title="검색어입력" id="srh">
 					<button type="button" class="btn_delete" style="display: none;"><i class="visualhide">삭제</i></button>
 				</span>
+
+				<div class="mt20 ">
+					<h3 class="menu_title ">
+						class="<span class="c_rd">inp_srh_s</span>"<br/>
+					</h3>
+					<span class="inp_srh_s mt20 ">
+						<a href="javascript:void(0)" class="ico_srh_s"></a>
+						<input type="text" placeholder="검색어를 입력하세요." title="검색어입력" id="srh">
+						<button type="button" class="btn_delete" style="display: none;"><i class="visualhide">삭제</i></button>
+					</span>
+				</div>
 			</div>			
 			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
-			<textarea style="width:100%;height:15rem;font-size:1.2rem;display:none">
+			<textarea style="width:100%;height:15rem;display:none">
 <!-- 
 <span class="inp_srh">
-<a href="javascript:void(0)" class="ico_srh"></a>
-<input type="text" placeholder="종목명, 키워드, 뉴스 검색" title="종목명, 키워드, 뉴스 검색" id="srh">
-<button type="button" class="btn_delete" style="display: none;"><i class="visualhide">삭제</i></button>
+	<a href="javascript:void(0)" class="ico_srh"></a>
+	<input type="text" placeholder="검색어를 입력하세요." title="검색어입력" id="srh">
+	<button type="button" class="btn_delete" style="display: none;"><i class="visualhide">삭제</i></button>
 </span>
-
 <script>inputDelCtr();</script>
+
+<span class="inp_srh_s">
+	<a href="javascript:void(0)" class="ico_srh_s"></a>
+	<input type="text" placeholder="검색어를 입력하세요." title="검색어입력" id="srh">
+	<button type="button" class="btn_delete" style="display: none;"><i class="visualhide">삭제</i></button>
+</span>
+<script>inputDelCtr('.inp_srh_s');</script>
 -->
 			</textarea>
 			
 		</section>
+
+		<section class="padd mt30 g_line">
+			<div class="mb10">
+				<h3 class="menu_title">
+					input : checkbox <br/>class="<span class="c_rd">inp_ck1</span>"
+				</h3>
+				<span class="inp_ck1  mt10">
+					<input type="checkbox" id="inp_ck1">
+					<label for="inp_ck1"><span>이용동의</span></label>
+					<button type="button" class="btn_arrow_r"></button>
+				</span>
+
+				<h3 class="menu_title mt20">
+					class="<span class="c_rd">inp_ck2</span>"
+				</h3>
+				<span class="inp_ck2 mt10"> 
+					<input type="checkbox" id="inp_ck2">
+					<label for="inp_ck2"><span>레이블</span></label>
+				</span>
+
+				<h3 class="menu_title mt20">
+					class="<span class="c_rd">inp_ck_one</span>"
+				</h3>
+				<span class="inp_ck_one mt10"> 
+					<input type="checkbox" id="inp_ck3">
+					<label for="inp_ck3"></label>
+				</span>
+
+				<h3 class="menu_title mt20">
+					class="<span class="c_rd">inp_ck_w</span>"
+				</h3>
+				<span class="inp_ck_w mt10"> 
+					<input type="checkbox" id="inp_ck4">
+					<label for="inp_ck4"></label>
+				</span>
+			</div>	
+			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code" >CODE VIEW</a>				
+			<textarea style="width:100%;height:40rem;display:none">
+<!-- 
+<span class="inp_ck1">
+	<input type="checkbox" id="inp_ck1">
+	<label for="inp_ck1"><span>이용동의</span></label>
+	<button type="button" class="btn_arrow_r"></button>
+</span>
+
+<span class="inp_ck2"> 
+	<input type="checkbox" id="inp_ck2">
+	<label for="inp_ck2"><span>레이블</span></label>
+</span>
+
+<span class="inp_ck_one"> 
+	<input type="checkbox" id="inp_ck3">
+	<label for="inp_ck3"></label>
+</span>
+
+<span class="inp_ck_w"> 
+	<input type="checkbox" id="inp_ck4">
+	<label for="inp_ck4"></label>
+</span>
+-->
+			</textarea>
+		</section>
+
+		<section class="padd mt30 g_line" style="display:none">
+			<div class="mb10">
+				<h3 class="menu_title">
+					selectBox <br/>class="<span class="c_rd">sel1</span>"
+				</h3>
+
+				<style>
+					.selbox{position:relative;display:flex}
+					.sel_tx{position:relative;z-index:2;border-radius: 1rem;border: 0.1rem solid #000;background:#FFF;height:6rem;width:100%}
+					.sel_opt{position:absolute;overflow:hidden;height:0;z-index:1;width:calc(100% + 2rem);bottom:6rem;left:-1rem;}
+					.sel_opt_in{display:flex;flex-direction: column;background:#fff;border-radius: 1rem;border: 0.1rem solid #E0E0E0;box-shadow: 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.10);}
+					.sel_opt_in>button{height:6.4rem;width:100%}
+					.sel_opt_in>button:focus{background-color:#F9FDF4}
+
+					.selbox .sel_opt_in{height:0}
+					.selbox.active .sel_opt_in{height:auto}
+					/* .selbox .sel_opt_in{animation:1s forwards ease-in-out selopt_close;}
+					.selbox.active .sel_opt_in{animation:1s forwards ease-in-out selopt_open;} */
+					
+					
+					@keyframes selopt_open {
+						100% {height:100%}
+					}
+					@keyframes selopt_close {
+						0% {height:100%}
+						100% {height:0}
+					}
+
+				</style>
+				<span class="selbox mt10">
+					<button type="button" class="sel_tx" onclick="$(this).parent().toggleClass('active')">전체</button>
+					<span class="sel_opt">
+						<span class="sel_opt_in">
+							<button type="button">전체</button>
+							<button type="button">옵션1</button>
+							<button type="button">옵션2</button>
+							<button type="button">옵션3</button>
+							<button type="button">옵션4</button>
+						</span>
+					</span>
+				</span>
+				<span class="inp_tx mt10"> 
+					<input type="tel" class="ar" title="텍스트입력" placeholder="텍스트를 입력해주세요.">
+					<i>원</i>
+				</span>
+			</div>	
+			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code" >CODE VIEW</a>				
+			<textarea style="width:100%;height:12rem;display:none">
+<!-- 
+<span class="inp_tx mt10">
+	<input type="text" title="텍스트입력" placeholder="텍스트를 입력해주세요.">
+</span>
+<span class="inp_tx mt10"> 
+	<input type="text" class="ar" title="텍스트입력" placeholder="텍스트를 입력해주세요.">
+	<i>원</i>
+</span>
+-->
+			</textarea>
+		</section>
+
 		<div class="mt30"></div>
 	</div>
 	<!-- // container -->
@@ -103,7 +251,8 @@
 
 
 <script>
-inputDelCtr();//텍스트입력시 삭제버튼활성화
+inputDelCtr();
+inputDelCtr('.inp_srh_s');//텍스트입력시 삭제버튼활성화
 inpPw.on();//비밀번호입력시 저장 버튼 활성화
 </script>
 </body>
