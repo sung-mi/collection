@@ -493,3 +493,72 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 .zidx1{z-index:1}
 .zidx2{z-index:2}
 .zidx3{z-index:3}
+
+
+
+/* 공통 - 팝업 */
+/* popup layout */
+.popup_wrapper{display:none;opacity:0;position:fixed;top:0;bottom:0;right:0;left:0;width:100%;height:100vh;z-index:1000}
+.popup_wrapper.opened{display:block;animation:0.3s forwards ease-in-out pop_open}
+.popbg_close{position:fixed;left:0;right:0;top:0;bottom:0;background:transparent;text-indent:-999999px;z-index:1}
+@keyframes pop_open{100% {opacity:1}}
+.pop_footer{display:flex;justify-content:space-between;width:100%;font-size:0}
+.popup_wrapper.popbg:before{content:'';position:fixed;left:0;right:0;top:0;bottom:0;background:rgba(0, 0, 0, .45);text-indent:-999999px;z-index:-1}
+/* popup btns */
+.btn_pop1{line-height:6rem;height:6rem;padding:0;min-width:50%;margin:0;float:left;color:#111;background-color:#e5e5e5;font-size:1.6rem;text-align:center;font-family:var(--fontFM);flex:1 0 50%}
+.btn_pop2{line-height:6rem;height:6rem;padding:0;min-width:50%;margin:0;float:left;background-color:var(--theme);color:var(--themeC);font-size:1.6rem;text-align:center;font-family:var(--fontFM);flex:1 0 50%}
+.btn_pop3{line-height:4.8rem;height:4.8rem;padding:0;background-color:var(--theme);color:var(--themeC);font-size:1.6rem;text-align:center;font-family:var(--fontFM);border-radius:4.8rem;flex:1 calc(50% - 0.5rem)}
+.btn_pop4{color:#111;line-height:4.8rem;height:4.8rem;padding:0;background-color:#e5e5e5;font-size:1.6rem;text-align:center;font-family:var(--fontFM);border-radius:4.8rem;flex:1 1 calc(50% - 0.5rem)}
+.cols2>*:first-child{margin-right:0.5rem;flex:1 50%}
+.cols2>*:last-child{margin-left:0.5rem;flex:1 50%}
+.fullpop{position:fixed;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background:#fff;overflow:auto}
+
+/* popup alert */
+.pop_alert{position:relative;z-index:1;display:flex;justify-content:center;align-items:center;z-index:2;width:100%;height:100%}
+.pop_alert .pop_in{position:relative;z-index:2;overflow:hidden;border-radius:2rem;background-color:#fff;width:calc(100% - 4.8rem)}
+.pop_alert .pop_con{margin:3rem 2.4rem;max-height:calc(100vh - 21rem);overflow-y:auto}
+.alert_tx1{line-height:2.4rem;font-size:1.8rem;font-family:var(--fontFB)}
+.alert_tx1_1{line-height:2.4rem;font-size:1.8rem}
+.alert_tx2{line-height:2rem;padding-top:0.4rem;font-size:1.4rem;color:#666}
+
+/* popup function */
+.opened .pop_function{animation:0.3s forwards ease-in-out popfun}
+.pop_function{position:relative;z-index:2;padding:0 1.6rem var(--paddCommon3);border-top-left-radius:2rem;border-top-right-radius:2rem;-overflow-y:auto;position:fixed;bottom:-100vh;left:0;z-index:1010;width:100%;max-height:calc(100% - 5rem);height:auto;background-color:#fff;-webkit-overflow-scrolling:touch}
+@keyframes popfun{100% {bottom:0}}
+.pop_header{height:6rem}
+.pop_header>h3{font-size:2rem;font-family:var(--fontFM);line-height:6rem;height:6rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pop_function .pop_con{max-height:33rem;overflow-y:auto}
+.dimmed {position:fixed;left:0;right:0;top:0;bottom:0;background:rgba(0, 0, 0, .45);text-indent:-999999px;z-index:-1}
+
+/* popup alarm */
+.pop_alarm_out{position:fixed;width:100%;left:0;bottom:9.6rem;z-index:11000;max-height:calc(100vh - 11rem);overflow: auto}
+.pop_alarm_out.top{bottom:auto;top:1.2rem}
+.pop_alarm_out .pop_alarm:last-child{margin-bottom:0}
+.pop_alarm{font-size:1.4rem;margin-bottom:0.5rem;font-family:var(--fontFM);padding:1.2rem 2rem;line-height:2rem;background:rgba(0,0,0,0.8);border-radius:1rem;color:#fff;text-align:center}
+	
+	
+/* 공통 - 달력 */
+.controlDiv {position:relative;display:flex;height:5.4rem;width:100%;justify-content:center;align-items:center;border-bottom:0.1rem solid #EDEDED}
+.controlDiv p{line-height:2.4rem;height:2.4rem}
+.controlDiv p>a{display:inline-block;width:1.8rem;height:2.4rem}
+.controlDiv p.prev2>a{background:url(/images/icon/ico_cal_arw_pprev.png) 50% 50% no-repeat;background-size:auto 1.2rem}
+.controlDiv p.prev>a{background:url(/images/icon/ico_cal_arw_prev.png) 50% 50% no-repeat;background-size:auto 1.2rem}
+.controlDiv p.yearDate{line-height:2.6rem;font-family:var(--fontFB);width:11rem;text-align:center}
+.controlDiv p.next>a{background:url(/images/icon/ico_cal_arw_next.png) 50% 50% no-repeat;background-size:auto 1.2rem}
+.controlDiv p.next2>a{background:url(/images/icon/ico_cal_arw_nnext.png) 50% 50% no-repeat;background-size:auto 1.2rem}
+.controlDiv p.today{position:absolute;top:1.5rem;right:0.5rem}
+.controlDiv p.today>a{width:auto;border-bottom:0.1rem solid #111;white-space:nowrap;height:2rem;font-size:1.2rem}
+.weeks{display:table;width:100%;table-layout:fixed}
+.weeks>ul{display:table-row-group}
+.weeks>ul>li{display:table-cell;color:var(--grayCommon);text-align:center;font-size:1.4rem;line-height:4rem}
+.table-condensed>tbody>tr>td{padding:0.4rem;text-align:center}
+.table-condensed>tbody>tr>td>a{font-size:1.4rem;font-family:var(--fontFB);display:inline-block;width:3.6rem;height:3.6rem;line-height:3.6rem;text-align:center;border-radius:3.6rem}
+.table-condensed>tbody>tr>td:first-child{color:var(--grayCommon)}
+.table-condensed>tbody>tr>td:last-child{color:var(--grayCommon)}
+.table-condensed>tbody>tr>td.old>a,
+.table-condensed>tbody>tr>td.new>a {color:#d8d8d8;font-family:inherit}
+.table-condensed>tbody>tr>td.active>a,
+.table-condensed>tbody>tr>td.active>a:focus {color:#fff;background-color:#000;border:0;position:relative}
+.calendarClose{margin-top:2.4rem}
+.calendarClose, .btn_pop3{width:100%}
+
