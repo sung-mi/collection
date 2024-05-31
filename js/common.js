@@ -226,3 +226,28 @@ var tooltip ={
 		},2000)
 	}
 }
+
+
+const selBox = {
+	on:function(i){
+		const selBox = $(i).parents('.selbox');
+		const selTx = selBox.find('.sel_tx');
+		const selOptBox = selBox.find('.sel_opt');
+		const selOptItem = selOptBox.find('>*');
+
+		selOptBox.slideToggle('fast');
+		selOptItem.on('click',function(){
+			const _this = $(this);
+			const optVal =	_this.val();
+			
+			selOptBox.slideUp('fast');
+			selTx.attr('value',optVal);
+			selOptItem.removeAttr('selected');
+			_this.attr('selected','true');
+		});
+		
+		selTx.on('blur',function(){
+			selOptBox.slideUp();
+		})
+	}
+}
