@@ -50,9 +50,58 @@
 	<div class="container">
 		<section class="padd mt30 g_line">
 			<h3 class="menu_title">icon</h3>
+			<style>
+				.btn_q{display:inline-flex;width:2.8rem;height:2.8rem;background:url(../img/icon_q.png) 0 0 no-repeat;background-size:2.8rem auto}
+				.btn_cal{display:inline-flex;width:2.2rem;height:2.2rem;background:url(../img/icon_calendar.png) 0 0 no-repeat;background-size:2.2rem auto} 
+				.btn_set{display:inline-flex;width:2.2rem;height:2.2rem;background:url(../img/icon_setting.png) 0 0 no-repeat;background-size:2.2rem auto}
+				.icon_i{display:inline-flex;width:2.6rem;height:2.6rem;background:url(../img/icon_i.png) 0 0 no-repeat;background-size:2.6rem auto}
+				.icon_warning{display:inline-flex;width:6rem;height:6rem;background:url(../img/icon_warning.png) 0 0 no-repeat;background-size:6rem auto}
+				.icon_complate{display:inline-flex;width:6rem;height:6rem;background:url(../img/icon_complate.png) 0 0 no-repeat;background-size:6rem auto}
+			</style>
 
+			<h3 class="menu_title mt20">
+				class="<span class="c_rd">icon_i</span>"<br/>
+				class="<span class="c_rd">icon_warning</span>"<br/>
+				class="<span class="c_rd">icon_complate</span>"<br/>
+			</h3>
+			<div class="mb10 mt20 flex flex_vm" style="gap:1rem">
+				<i class="icon_i"><i class="visualhide">!</i></i>
+				<i class="icon_warning"><i class="visualhide">경고</i></i>
+				<i class="icon_complate"><i class="visualhide">완료</i></i>
+			</div>
+			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
+			<textarea style="width:100%;height:20rem;display:none">
+<!-- 
+<i class="icon_i"><i class="visualhide">!</i></i>
+<i class="icon_warning"><i class="visualhide">경고</i></i>
+<i class="icon_complate"><i class="visualhide">완료</i></i>
+-->
+			</textarea>
+		</section>
+		<section class="padd mt30 g_line">
+			<h3 class="menu_title mt20">button</h3>
 
-			<h3 class="menu_title">button</h3>
+			<h3 class="menu_title mt20">
+				class="<span class="c_rd">btn_q</span>"<br/>
+				class="<span class="c_rd">btn_cal</span>"<br/>
+				class="<span class="c_rd">btn_set</span>"<br/>
+			</h3>
+			<div class="mb10 mt20 flex flex_vm"  style="gap:1rem">
+				<button type="button" class="btn_q"><i class="visualhide">?</i></button>
+				<button type="button" class="btn_cal"><i class="visualhide">달력</i></button>
+				<button type="button" class="btn_set"><i class="visualhide">설정</i></button>
+			</div>
+
+			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
+			<textarea style="width:100%;height:20rem;display:none">
+<!-- 
+<button type="button" class="btn_q"><i class="visualhide">?</i></button>
+<button type="button" class="btn_cal"><i class="visualhide">달력</i></button>
+<button type="button" class="btn_set"><i class="visualhide">설정</i></button>
+-->
+			</textarea>
+		</section>
+		<section class="padd mt30 g_line">
 
 			<h3 class="menu_title mt20">
 				class="<span class="c_rd">btn_line_s</span>"<br/>

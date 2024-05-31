@@ -113,12 +113,21 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 .sel_opt>*:before{content:attr(value)}
 .sel_opt>*[selected]{background-color:#F9FDF4;font-weight:700;color:#000}
 
+.sel_acc_box{display:flex;align-items: center; position:relative;padding:2.4rem 3rem;border-radius: 1.6rem;border-radius: 16px;background: #F9F9F9}
+.sel_acc_tx{color: #999;font-size: 1.8rem;display:inline-flex;line-height:2.5rem;min-width:6.6rem;margin-right:2rem;}
+.btn_sel_acc{position:relative;height:2.5rem;display:inline-flex;align-items: center;width:calc(100% - 8.6rem)}
+.btn_sel_acc>button:before{content:attr(value)}
+.btn_sel_acc:after{content:'';position: absolute;top: 0;right: 0;display:inline-flex;margin-left:1rem;min-width:2.4rem;width:2.4rem;height:2.4rem;background:url(../img/icon_arrow_bottom.png) 0 0 no-repeat; background-size:2.4rem auto}
+.btn_sel_acc>button{color:#000;font-weight:500;padding:0;font-size:2.1rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+
 /*button*/
 .btn_sel{position:relative;height:3rem;display:inline-flex;align-items: center;justify-content: flex-end}
 .btn_sel>button:before{content:attr(value)}
 .btn_sel:after{content:'';display:inline-flex;margin-left:1rem;min-width:1.6rem;width:1.6rem;height:1.6rem;background:url(../img/icon_arrow_bottom_s.png) 0 0 no-repeat; background-size: 1.6rem auto}
 .btn_sel>button{color:#666;font-weight:500;padding:0;font-size:1.8rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
 
+
+				
 .btn_line_s{display:inline-flex;justify-content: center;align-items: center; height:4.6rem;padding: 0 2rem;border-radius: 1rem; border: 1px solid #E0E0E0;background:#fff;font-size: 1.8rem;font-weight: 400;color:#666}
 .btn_line_m{display:inline-flex;justify-content: center;align-items: center;height:6rem;padding: 0 2rem;border-radius:1rem;border:0.1rem solid #E0E0E0;background:#fff;font-size: 2.1rem;font-weight: 500;color:#666}
 .btn_line_m.s_padd{padding:0 1rem}

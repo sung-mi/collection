@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
-	<link rel="stylesheet" href="../css/contents_jsm.css?v4">   
+	<link rel="stylesheet" href="../css/contents_jsm.css?v5">   
     <link rel="stylesheet" href="../css/swiper.min.css"> 
     <link rel="stylesheet" href="guide.css?v1">
     <script src="../js/jquery-1.12.0.min.js"></script>
@@ -240,16 +240,10 @@
 						<button type="button" name="" value="옵션4"></button>
 					</span>
 				</span>
-
-				<h3 class="menu_title mt20">
-					class="<span class="c_rd">btn_sel</span>"
-				</h3>
-				<span class="btn_sel mt10">
-					<button type="button" name="" value="해외ETF소수점"></button>
-				</span>
-			</div>	
-			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code" >CODE VIEW</a>				
-			<textarea style="width:100%;height:32rem;display:none">
+			</div>
+			<div class="mt20">	
+				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code" >CODE VIEW</a>				
+				<textarea style="width:100%;height:32rem;display:none">
 <!-- 
 <span class="selbox mt10">
 	<button type="button" class="sel_tx" onclick="selBox.on(this)" name="" value="요일을 선택하세요"></button>
@@ -261,12 +255,59 @@
 		<button type="button" name="" value="금요일"></button>
 	</span>
 </span>
-
-<span class="btn_sel ">
-	<button type="button" name="" value="해외ETF소수점"></button>
+-->
+				</textarea>
+			</div>
+		</section>
+		<section class="padd mt30 g_line">
+			<div class="mb10">
+				<h3 class="menu_title mt20">
+					class="<span class="c_rd">btn_sel</span>"
+				</h3>
+				<span class="btn_sel mt10">
+					<button type="button" name="" value="해외ETF소수점"></button>
+				</span>
+			</div>
+			<div class="mt20">	
+				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code" >CODE VIEW</a>				
+				<textarea style="width:100%;height:12rem;display:none">
+<!-- 
+<span class="btn_sel mt10">
+<button type="button" name="" value="해외ETF소수점"></button>
 </span>
 -->
-			</textarea>
+				</textarea>
+			</div>
+		</section>
+		<section class="padd mt30 g_line">
+			<div class="mb10">
+				<h3 class="menu_title mt20">
+					class="<span class="c_rd">btn_sel_acc</span>"
+				</h3>
+				
+				<div class="sel_acc_box mt20">
+					<i class="sel_acc_tx">계좌번호</i>
+					<span class="btn_sel_acc ">
+						<button type="button" name="" value="201-02-123456"></button>
+					</span>
+				</div>
+				
+			</div>
+			<div class="mt20">	
+				<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code" >CODE VIEW</a>				
+				<textarea style="width:100%;height:22rem;display:none">
+<!-- 
+<div class="sel_acc_box mt20">
+	<i class="sel_acc_tx">계좌번호</i>
+	<span class="btn_sel_acc ">
+		<button type="button" name="" value="201-02-123456"></button>
+	</span>
+</div>
+-->
+				</textarea>
+			</div>
+			
+			
 		</section>
 
 		<div class="mt30"></div>
