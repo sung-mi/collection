@@ -11,28 +11,22 @@
     <script src="js/common.js"></script>
 </head>
 <body>
-<div class="wrap">
-    <header class="header sticky_top">
-        <nav class="padd">
-            <ul class="flex_between">
-                <li>
-                    <h1 class="header_title">NH투자증권 제공 서비스</h1>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
+    <div class="popup_wrapper"id="pop">
+        <div class="pop_alert">
+            <div class="pop_in text-center">
+                <div class="pop_con">
+                    <div class="alert_tx1 ac">해외 주식거래 신청이 필요해요.</div>
+                    <div class="alert_tx2 mt20 ac">해외 주식 모으기를 시작하기 위해<br/>해외 주식에 필요한 내용을 확인해주세요.</div>
+                </div>
+                <div class="pop_footer">
+                    <button type="button" class="btn_pop1 popclose">다음에</button> 
+                    <button type="button" class="btn_pop2">해외주식 시작하기</button> 
+                </div>
+            </div>
+        </div>
     </div>
-  
-</div>
+    <script>
+        pop.open('pop')
+    </script>
 </body>
 </html>

@@ -53,18 +53,126 @@
 
 	<!-- container -->
 	<div class="container">
-		<section class="padd mt30 g_line">
+		<section class="padd mt30 g_line" style="background: rgba(0, 0, 0, .45);">
 			<h3 class="menu_title">popup_list</h3>
 			<div class="mb10 mt20">
+				<div class="popup_wrapper"id="pop2">
+					<div class="pop_alert">
+						<div class="pop_in text-center">
+							<div class="pop_con">
+								<div class="alert_tx1 ac">아직 주식 모으기 종목이 아니에요.</div>
+								<div class="alert_tx2 mt20 ac">요청하시면 저희가 열심히 준비해서<br/> 모을 수 있도록 할게요!</div>
+							</div>
+							<div class="pop_footer">
+								<button type="button" class="btn_pop1 popclose">다음에</button> 
+								<button type="button" class="btn_pop2">요청하기</button> 
+							</div>
+						</div>
+					</div>
+				</div>
 				
-			</div>	
-			
-			<a href="javascript:void(0)" onclick="$(this).toggleClass('active').next('textarea').toggle()" class="code " >CODE VIEW</a>				
-			<textarea style="width:100%;height:25rem;font-size:1.2rem;display:none">
-<!-- 
-
--->
-			</textarea>
+				<div class="popup_wrapper" id="pop1">
+					<div class="pop_function">
+						<div class="pop_in text-center">
+							<button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+							<div class="pop_header">
+								<h3>조회설정</h3>
+							</div>
+							
+							<div class="pop_con ">
+								<h3 class="pop_tit ">유형</h3>
+								<div id="cd1" class="mt12">
+									<ul class="btns_cols3">
+										<li><a href="javascript:void(0)" class="btn_line_m">전체</a></li>
+										<li><a href="javascript:void(0)" class="btn_line_m">해외주식</a></li>
+										<li><a href="javascript:void(0)" class="btn_line_m s_padd">해외주식소수점</a></li>
+										<li><a href="javascript:void(0)" class="btn_line_m">해외ETF</a></li>
+										<li><a href="javascript:void(0)" class="btn_line_m s_padd">해외ETF소수점</a></li>
+									</ul>
+								</div>
+								<script>tabHandler('#cd1')</script>
+				
+								
+								<h3 class="pop_tit mt40">국가</h3>
+								<div id="cd2" class="mt12">
+									<ul class="btns_cols4">
+										<li><a href="javascript:void(0)" class="btn_line_m">전체</a></li>
+										<li><a href="javascript:void(0)" class="btn_line_m">미국</a></li>
+										<li><a href="javascript:void(0)" class="btn_line_m">홍콩</a></li>
+										<li><a href="javascript:void(0)" class="btn_line_m">중국</a></li>
+									</ul>
+								</div>
+								<script>tabHandler('#cd2')</script>
+				
+								<h3 class="pop_tit mt40">배수</h3>
+								<div id="cd3" class="mt12">
+									<ul class="btns_cols4">
+										<li><a href="javascript:void(0)" class="btn_line_m">전체</a></li>
+										<li><a href="javascript:void(0)" class="btn_line_m">1배수</a></li>
+										<li><a href="javascript:void(0)" class="btn_line_m">2배수</a></li>
+										<li><a href="javascript:void(0)" class="btn_line_m">3배수</a></li>
+										<li> </li>
+										<li><a href="javascript:void(0)" class="btn_line_m">-1배수</a></li>
+										<li><a href="javascript:void(0)" class="btn_line_m">-2배수</a></li>
+										<li><a href="javascript:void(0)" class="btn_line_m">-3배수</a></li>
+									</ul>
+								</div>
+								<script>tabHandler('#cd3')</script>
+				
+								<h3 class="pop_tit mt40">테마</h3>
+								<span class="selbox mt10">
+									<button type="button" class="sel_tx" onclick="selBox.on(this)" name="" value="요일을 선택하세요"></button>
+									<span class="sel_opt">
+										<button type="button" name="" value="전체" selected></button>
+										<button type="button" name="" value="국가대표지수"></button>
+										<button type="button" name="" value="금속"></button>
+										<button type="button" name="" value="금융"></button>
+										<button type="button" name="" value="미국대표지수"></button>
+										<button type="button" name="" value="배당"></button>
+										<button type="button" name="" value="변동성"></button>
+										<button type="button" name="" value="부동산"></button>
+										<button type="button" name="" value="상품"></button>
+										<button type="button" name="" value="소비재"></button>
+										<button type="button" name="" value="에너지"></button>
+										<button type="button" name="" value="정보통신(IT)"></button>
+										<button type="button" name="" value="채권"></button>
+										<button type="button" name="" value="통화"></button>
+										<button type="button" name="" value="기타"></button>
+									</span>
+								</span>
+				
+								<h3 class="pop_tit mt40">투자지역</h3>
+								<span class="selbox mt10 zidx2">
+									<button type="button" class="sel_tx" onclick="selBox.on(this)" name="" value="요일을 선택하세요"></button>
+									<span class="sel_opt">
+										<button type="button" name="" value="전체" selected></button>
+										<button type="button" name="" value="글로벌"></button>
+										<button type="button" name="" value="동남아시아"></button>
+										<button type="button" name="" value="동유럽"></button>
+										<button type="button" name="" value="라틴아메리카"></button>
+										<button type="button" name="" value="러시아"></button>
+										<button type="button" name="" value="미국"></button>
+										<button type="button" name="" value="브라질"></button>
+										<button type="button" name="" value="아시아"></button>
+										<button type="button" name="" value="유럽"></button>
+										<button type="button" name="" value="이머징"></button>
+										<button type="button" name="" value="인도"></button>
+										<button type="button" name="" value="일본"></button>
+										<button type="button" name="" value="중국"></button>
+										<button type="button" name="" value="기타"></button>
+									</span>
+								</span>
+				
+							</div>
+							<div class="pop_footer">
+								<button type="button" class="btn_pop1 popclose">취소</button> 
+								<button type="button" class="btn_pop2">조회</button> 
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>			
 		</section>
 	</div>
 	<!-- // container -->
@@ -74,7 +182,7 @@
 
 
 <script>
-	
+	//pop.open('pop1')
 </script>
 </body>
 </html>
