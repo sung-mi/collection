@@ -145,21 +145,21 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 .btns_cols2>li:nth-child(2n)>*{margin-left:0.5rem}
 
 .btns_cols3{display: flex;flex-wrap: wrap}
-.btns_cols3>li{flex:0 33%}
+.btns_cols3>li{flex:0 33%;max-width:33%}
 .btns_cols3>li:nth-child(3n-2){}
-.btns_cols3>li:nth-child(3n-1){flex:0 34%}
+.btns_cols3>li:nth-child(3n-1){flex:0 34%;max-width:34%}
 .btns_cols3>li:nth-child(3n){}
 .btns_cols3>li:nth-child(3n-2)>*{width:calc(100% - 0.5rem)}
 .btns_cols3>li:nth-child(3n-1)>*{width:calc(100% - 1rem);margin-left:0.5rem}
 .btns_cols3>li:nth-child(3n)>*{width:calc(100% - 0.5rem);margin-left:0.5rem}
-.btns_cols3>li>*{margin-top:1rem}
+.btns_cols3>li>*{margin-top:1rem;white-space: nowrap;}
 .btns_cols3>li:nth-child(1)>*{margin-top:0}
 .btns_cols3>li:nth-child(2)>*{margin-top:0}
 .btns_cols3>li:nth-child(3)>*{margin-top:0}
 
 .btns_cols4{display:flex;flex-wrap: wrap;width:calc(100% + 1rem);margin-left:-1rem}
-.btns_cols4>li{flex:0 25%}
-.btns_cols4>li>*{width:calc(100% - 1rem);margin-left:1rem;margin-top:1rem}
+.btns_cols4>li{flex:0 25%;;max-width:25%}
+.btns_cols4>li>*{width:calc(100% - 1rem);margin-left:1rem;margin-top:1rem;white-space: nowrap;}
 .btns_cols4>li:nth-child(1)>*{margin-top:0}
 .btns_cols4>li:nth-child(2)>*{margin-top:0}
 .btns_cols4>li:nth-child(3)>*{margin-top:0}
