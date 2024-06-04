@@ -5,34 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <title>주식 모으기</title>    
     <link rel="stylesheet" href="css/contents_jsm.css">   
+    <link rel="stylesheet" href="css/contents_ywg.css">   
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
-<div class="wrap">
-    <header class="header sticky_top">
-        <nav class="padd">
-            <ul class="flex_between">
-                <li>
-                    <h1 class="header_title">NH투자증권 제공 서비스</h1>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
+    <div class="popup_wrapper" id="pop1">
+        <div class="pop_function">
+            <div class="pop_in text-center">
+                <button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+                <div class="pop_header">
+                    <h3>주식 모으기 유의사항</h3>
+                </div>
+                
+                <div class="pop_con ">
+                    <h3 class="pop_tit ">NH투자증권 준법감시인 심사필 제2023-0952호<br>(2023-03-24 ~ 2024-03-23)</h3>
+                    <div class="mt12">
+                        <ul class="pop_list_type1">
+                            <li>당사는 본 서비스에 관하여 충분히 설명할 의무가 있으며, 투자자는 반드시 충분한 설명을 듣고, 서비스 가입 결정을 내리시기 바랍니다.</li>
+                            <li>본 자료는 투자자들의 증권투자를 돕기 위한 자료로서 그 정확성이나 안정성을 보장할 수 없으므로 고객의 주식투자의 결과에 대한 법적 책임 소재에 대한 증빙자료로 사용될 수 없습니다.</li>
+                            <li>본 서비스는 자동주문 실행 서비스로 시장상황에 따라 매매 체결이 되지 않을 수 있습니다. 매수된 주식/ETF는 고객의 책임하에 매도하여야 하며 회사는 매도 관련된 서비스는 별도로 제공하지 않습니다.</li>
+                            <li>신청 가능 종목은 추후에 변경 될 수 있습니다. 신청 전 홈페이지나 영업점을 통해서 확인하시기 바랍니다.</li>
+                            <li>주문실행 당시 신청계좌에 출금, 다른 주문의 존재 등으로 증거금이 부족한 경우 자동 주문은 실행되지 않을 수 있습니다.</li>
+                            <li>서비스의 등록.변경은 신청일의 익영업일부터 적용됩니다.</li>
+                            <li>주식(ETF포함)은 초고위험 상품이므로, 투자자의 투자성향에 따라 가입이 제한 될 수 있습니다.</li>
+                            <li>레버리지형 ETF는 파생ETF 거래신청/사전교육이수등록/기본 예탁금(계좌별)이 충족되어야 매수가 가능합니다. 해당 서비스 신청시 유의하시기 바랍니다.</li>
+                        </ul>
+                    </div>    
+                </div>
+
+                <div class="pop_footer">
+                    <button type="button" class="btn_pop2">확인</button> 
+                </div>
+            </div>
+        </div>
     </div>
-  
-</div>
+
+<script>
+    pop.open('pop1')	
+</script>
 </body>
 </html>

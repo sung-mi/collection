@@ -5,34 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <title>주식 모으기</title>    
     <link rel="stylesheet" href="css/contents_jsm.css">   
+    <link rel="stylesheet" href="css/contents_ywg.css">   
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
-<div class="wrap">
-    <header class="header sticky_top">
-        <nav class="padd">
-            <ul class="flex_between">
-                <li>
-                    <h1 class="header_title">NH투자증권 제공 서비스</h1>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
+    <div class="popup_wrapper" id="pop1">
+        <div class="pop_function">
+            <div class="pop_in text-center">
+                <button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+                <div class="pop_header">
+                    <h3>신청금액 유의사항</h3>
+                </div>
+                
+                <div class="pop_con ">
+                    <div>
+                        <h3 class="pop_tit_dot">신청금액(최소투자금액)</h3>
+                        <ul class="pop_list_type2">
+                            <li>- 국내주식 온주 : 5만원 이상 (1만원 단위)</li>
+                            <li>- 국내주식 소수점 : 1백원 이상 (1백원 단위)</li>
+                            <li>- 해외주식 온주 : 1만원 이상 (1만원 단위), 은행계설계좌는 30만원 이상</li>
+                            <li>- 해외주식 소수점 : 1천원 이상 (1천원 단위)</li>
+                            <li>- 가격 = 전일종가*최소매매단위</li>
+                            <li>- 가격이 최소투자금액보다 큰 경우 가격 이상으로 신청하셔야 합니다.</li>
+                        </ul>
+                    </div>    
+                    <div class="mt12">
+                        <h3 class="pop_tit_dot">신청금액(최소투자금액)</h3>
+                        <ul class="pop_list_type2">
+                            <li>- 신청 금액 직접 이체</li>
+                            <li>- 정기자동이체, 납부자자동이체서비스를 활용하여 신청 계좌로 신청금액 만큼 자동이체</li>
+                            <li>- 납부자 자동이체나 예약이체는 고객님이 이체하고자 하는 해당 금융기관에서 직접 신청하셔야 합니다.</li>
+                            <li>- NH농협은행, 농∙축협에서 개설된 ‘Asset글로벌증권통장'과 우리은행, 대구은행에서 개설된 ‘글로벌증권계좌'는 신청일에 자동으로 신청금액이 증권계좌로 이체됩니다.</li>
+                        </ul>
+                    </div>    
+                </div>
+
+                <div class="pop_footer">
+                    <button type="button" class="btn_pop2">확인</button> 
+                </div>
+            </div>
+        </div>
     </div>
-  
-</div>
+
+<script>
+    pop.open('pop1')	
+</script>
 </body>
 </html>

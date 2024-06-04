@@ -5,34 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <title>주식 모으기</title>    
     <link rel="stylesheet" href="css/contents_jsm.css">   
+    <link rel="stylesheet" href="css/contents_ywg.css">   
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
-<div class="wrap">
-    <header class="header sticky_top">
-        <nav class="padd">
-            <ul class="flex_between">
-                <li>
-                    <h1 class="header_title">NH투자증권 제공 서비스</h1>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
+    <div class="popup_wrapper" id="pop1">
+        <div class="pop_function">
+            <div class="pop_in text-center">
+                <button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+                <div class="pop_header">
+                    <h3>자동환전 유의사항</h3>
+                </div>
+                
+                <div class="pop_con ">
+                    <div>
+                        <h3 class="pop_tit_dot">해외주식의 경우 자동환전을 신청할 수 있으며, 자동환전에 따른 환차손이 발생할 수 있습니다. </h3>
+                        <ul class="pop_list_type2">
+                            <li>- 예시 : 신청일(자동매수일) 오전 OO시 적용환율 1,200원, 투자금액이 600,000원일 경우, 신청일(자동매수일)에 외화예수금이 500달러 이하이면 부족한 금액만큼 자동 환전 처리</li>
+                        </ul>
+                    </div>       
+                </div>
+
+                <div class="pop_footer">
+                    <button type="button" class="btn_pop2">확인</button> 
+                </div>
+            </div>
+        </div>
     </div>
-  
-</div>
+
+<script>
+    pop.open('pop1')	
+</script>
 </body>
 </html>
