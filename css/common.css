@@ -534,7 +534,7 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 
 /* popup function */
 .opened .pop_function{animation:0.3s forwards ease-in-out popfun}
-.pop_function{position:relative;z-index:2;border-top-left-radius:3rem;border-top-right-radius:3rem; overflow-y:auto;position:fixed;bottom:-100vh;left:0;z-index:1010;width:100%;max-height:calc(100% - 6.3rem) ;height:auto;background-color:#fff;-webkit-overflow-scrolling:touch}
+.pop_function{position:relative;z-index:2;border-top-left-radius:3rem;border-top-right-radius:3rem; overflow-y:hidden;position:fixed;bottom:-100vh;left:0;z-index:1010;width:100%;max-height:calc(100% - 6.3rem) ;height:auto;background-color:#fff;-webkit-overflow-scrolling:touch}
 @keyframes popfun{100% {bottom:0}}
 .pop_header{padding:4rem 0 3rem;border-bottom:0.1rem solid #E0E0E0;margin:0 3rem;}
 .pop_header>h3{font-size:2.6rem;font-weight: 500;line-height:3.8rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align: center;}
