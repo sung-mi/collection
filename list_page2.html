@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-    <title>주식 모으기</title>    
-    <link rel="stylesheet" href="css/contents_jsm.css">   
+    <title>주식 모으기 > 목록 > 약정내역있음</title>    
+    <link rel="stylesheet" href="css/contents_jsm.css?v2">   
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap top_bg3_1">
     <header class="header sticky_top">
-        <nav class="padd">
+        <nav class="padd2">
             <ul class="flex_between">
                 <li>
                     <h1 class="header_title">NH투자증권 제공 서비스</h1>
@@ -24,15 +24,172 @@
             </ul>
         </nav>
     </header>
-    <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
+    <div class="container has_footer">
+        <section class="padd2 con_top" style="height: 41.2rem">
+            <div class="con_top_in">
+                <div class="flex_between flex_vt pt10">
+                    <span class="btn_top_sel mt5">
+                        <button type="button" name="" value="201-02-123456" onclick="pop.open('pop1')"></button>
+                    </span>
+                    <button type="button" class="btn_help">도움말</button>
+                </div>
+                <div class="con_top_tx0 mt40">
+                    <i class="con_top_tx_icon mr10"><img src="img/logo_ci_kk.png"></i>
+                    <span id="change_item1">카카오뱅크</span>
+                </div>
+                <div class="con_top_tx1 mt12" id="change_item2">D+253</div>
+                <div class="con_top_tx2 mt12 mb60" id="change_item3">첫만남부터 지금까지<br/>이만큼이나 함께 했어요!</div>
+                <button type="button" class="btn_click" onclick="bgChange.on()"><i class="visualhide">눌러보세요</i></button>
+            </div>
         </section>
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
+       
+        <section class="padd2">
+            <div class="flex_between">
+            <h3 class="con_tit_s"> 내 모으기 내역</h3>
+                <span class="btn_sel ">
+                    <button type="button" name="" value="평가금액순" onclick="pop.open('pop2')"></button>
+                </span>
+            </div>
+        </section>
+       
+        <section class="padd mt10">
+            <div class="box_list mt10 mb60">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)" class="box_item">
+                            <i class="bxl_icon"><img src="img/logo_ci_kk.png"></i>
+                            <span class="box_list_c">
+                                <span class="bxl_info">
+                                    <span class="bxl_info1">
+                                        <i class="bxl_info1_tx1">카카오뱅크</i>
+                                        <i class="bxl_info1_tx2 up">101.13%</i>
+                                    </span>
+                                    <span class="bxl_info2">
+                                        <span class="bxl_info2_tx1">
+                                            <i>500,000원씩</i>
+                                            <i>매주 수요일</i>
+                                        </span>
+                                        <i class="bxl_info2_tx2">192,129원</i>
+                                    </span>
+                                </span>
+                            </span>
+                            <i class="box_list_more"><i class="visualhide"></i></i>   
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="box_item">
+                            <i class="bxl_icon"><img src="img/ci_etc.png"></i>
+                            <span class="box_list_c">
+                                <span class="bxl_info">
+                                    <span class="bxl_info1">
+                                        <i class="bxl_info1_tx1">LG에너지솔루션</i>
+                                        <i class="bxl_info1_tx2 dw">-93.30%</i>
+                                    </span>
+                                    <span class="bxl_info2">
+                                        <span class="bxl_info2_tx1">
+                                            <i>40,000원씩</i>
+                                            <i>매월 24일</i>
+                                        </span>
+                                        <i class="bxl_info2_tx2 ">-12,679,000원</i>
+                                    </span>
+                                </span>
+                            </span>
+                            <i class="box_list_more"><i class="visualhide"></i></i>   
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="box_item">
+                            <i class="bxl_icon"><img src="img/ci_etc.png"></i>
+                            <span class="box_list_c">
+                                <span class="bxl_info">
+                                    <span class="bxl_info1">
+                                        <i class="bxl_info1_tx1">Schwab US Dividend Equity ETF</i>
+                                        <i class="bxl_info1_tx2 up">3.62%</i>
+                                    </span>
+                                    <span class="bxl_info2">
+                                        <span class="bxl_info2_tx1">
+                                            <i>80,000원씩</i>
+                                            <i>매일</i>
+                                        </span>
+                                        <i class="bxl_info2_tx2 up">402,393원</i>
+                                    </span>
+                                </span>
+                            </span>
+                            <i class="box_list_more"><i class="visualhide"></i></i>   
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="footer flex">
+            <button type="button" class="btn2">새로운 주식 모으기</button> 
         </section>
     </div>
   
 </div>
+
+<div class="popup_wrapper" id="pop1">
+	<div class="pop_function">
+		<div class="pop_in text-center">
+			<button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+			<div class="pop_header">
+				<h3>계좌조회</h3>
+			</div>
+			<div class="pop_con">taset</div>
+		</div>
+	</div>
+</div>
+<div class="popup_wrapper" id="pop2">
+	<div class="pop_function">
+		<div class="pop_in text-center">
+			<button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+			<div class="pop_header">
+				<h3>내 모으기 내역</h3>
+			</div>
+			
+			<div class="pop_con">
+                <ul>
+                    <li>평가금액순</li>
+                    <li>종목명순</li>
+                    <li>최근 약정순</li>
+                    <li>약정 금액 많은 순</li>
+                </ul>
+            </div>
+			
+		</div>
+	</div>
+</div>
+
+
+<script>
+    const bgChange = {
+        num :0,
+        on:function(){
+            const bgClass = ['top_bg3_1','top_bg3_2','top_bg3_3','top_bg3_4'];
+            const item1 = ['카카오뱅크','LG에너지솔루션','카카오뱅크','Schwab US Dividend Equity ETF'];
+            const item2 = ['D+253','270,432원','매월 24일','D+253'];
+            const item3 = ['첫만남부터 지금까지<br/>이만큼이나 함께 했어요!','지금까지 주식 모으기로<br/>이만큼 모았어요!','이때마다 모으고 있어요!<br/>잊지말고 꼭꼭 챙겨주세요!','첫만남부터 지금까지<br/>이만큼이나 함께 했어요!'];
+            $('.wrap').removeClass('top_bg3_1');
+            $('.wrap').removeClass('top_bg3_2');
+            $('.wrap').removeClass('top_bg3_3');
+            $('.wrap').removeClass('top_bg3_4');
+            if(bgChange.num >= 0){
+                bgChange.num = bgChange.num+1;
+                $('.wrap').addClass(bgClass[bgChange.num]);
+                $('#change_item1').text(item1[bgChange.num]);
+                $('#change_item2').text(item2[bgChange.num]);
+                $('#change_item3').html(item3[bgChange.num]);
+            }
+            if(bgChange.num == 4){
+                bgChange.num = 0;
+                $('.wrap').addClass(bgClass[bgChange.num]);
+                $('#change_item1').text(item1[bgChange.num]);
+                $('#change_item2').text(item2[bgChange.num]);
+                $('#change_item3').html(item3[bgChange.num]);
+            }
+            console.log(bgChange.num)
+        }
+    }
+</script>
 </body>
 </html>

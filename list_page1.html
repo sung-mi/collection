@@ -3,31 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-    <title>주식 모으기</title>    
-    <link rel="stylesheet" href="css/contents_jsm.css">   
+    <title>주식 모으기 > 목록 > 약정내역없음</title>    
+    <link rel="stylesheet" href="css/contents_jsm.css?">   
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
 </head>
-<style>
-    body::after{content:'ver1';font-size:1rem;border-bottom-right-radius: 1rem;position:fixed;top:0;left:0;padding:0 0.5rem;background:rgba(256,256,256,0.3);color:#000;display:block}
-    .header, .header nav, .header ul{height:6.3rem}
-    .top_bg1 .header, .top_bg1 .con_top{background-color:#DAF5FF}
-    .top_bg2 .header, .top_bg2 .con_top{background-color:#F7EDDA}
-    .top_bg3 .header, .top_bg3 .con_top{background-color:#F8E6E7}
-    .top_bg4 .header, .top_bg4 .con_top{background-color:#E0EAF3}
-    .top_bg5 .header, .top_bg5 .con_top{background-color:#F0F8E9}  
-    .header_title{font-size:1.8rem;color:#aaa}
-    .btn_home{font-size:2.1rem;color:#000;font-weight:500}
-    .con_top{height:50.5rem}
-    .con_top + section{margin-top:-3rem;background-color:#fff;border-top-right-radius: 3rem;border-top-left-radius: 3rem;padding: 3rem;}
-    .con_tit{height:3.4rem}
-</style>
 <body>
-<div class="wrap top_bg1">
+<div class="wrap top_bg1_2">
     <header class="header sticky_top">
-        <nav class="padd">
+        <nav class="padd2">
             <ul class="flex_between">
                 <li>
                     <h1 class="header_title">NH투자증권 제공 서비스</h1>
@@ -39,67 +25,102 @@
         </nav>
     </header>
     <div class="container">
-        <section class="con_top padd">
-            201-02-123456<br/><br/>
-            모으고 있는  종목이 없어요<br/><br/>
-            애정을 담은 주식을 차곡차곡 모아보세요!<br/><br/>
-            더 알아보기
+        <section class="padd2 con_top">
+            <div class="con_top_in">
+                <span class="btn_top_sel mt15">
+                    <button type="button" name="" value="201-02-123456"></button>
+                </span>
+                <div class="con_top_tx1 mt40">모으고 있는<br/>종목이 없어요</div>
+                <div class="con_top_tx2 mt12">애정을 담은 주식을<br/>차곡차곡 모아보세요!</div>
+                <button type="button" class="btn_top_more mt16">더 알아보기</button>
+            </div>
         </section>
 
         <section class="padd">
-            <input type="text" placeholder="모으고 싶은 종목을 찾아보세요!"></input>
+            <span class="inp_srh">
+                <a href="javascript:void(0)" class="ico_srh"></a>
+                <input type="text" placeholder="모으고 싶은 종목을 찾아보세요!" title="종목검색" id="srh">
+                <button type="button" class="btn_delete" style="display: none;"><i class="visualhide">삭제</i></button>
+            </span>
+            <script>inputDelCtr();</script>
         </section>
 
-        <section class="padd">
-            <h3 class="con_tit mt30">다른 투자자들이 많이 모은 종목</h3>
-            <div class="con_tab1">
-                <ul>    
-                    <li><a href="javascript:void(0)">해외주식</a></li>
-                    <li><a href="javascript:void(0)">국내주식</a></li>
+        <section class="padd mt30">
+            <h3 class="con_tit">다른 투자자들이 많이 모은 종목 <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+            
+            <div id="main_tabs1" class="mt20">
+                <ul class="tab_ty2">
+                    <li class="on"><a href="javascript:void(0)" role="tab" aria-selected="true" >해외주식</a></li>
+                    <li class=""><a href="javascript:void(0)" role="tab" aria-selected="false" >국내주식</a></li>
                 </ul>
             </div>
-            <div class="con_list1">
+            <script>
+            tabHandler('#main_tabs1')
+            </script>
+  
+            <div class="con_list mt10">
                 <ul>
                     <li>
-                        <span>
-                            <i>애플</i>
-                            <i>미국</i>
-                            <i>AAPL</i>
+                        <span class="con_list_l">
+                            <i class="cl_num">1</i>
+                            <i class="cl_icon"><img src="img/logo_ci.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">애플</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국</i>
+                                    <i>AAPL</i>
+                                </span>
+                            </span>
                         </span>
-                        <span>
-                            <i>175.84</i>
-                            <i>USD</i>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">175.84</i>
+                            <i class="cl_p_tx2">USD</i>
+                        </span>    
+                    </li>
+                    
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_num">2</i>
+                            <i class="cl_icon"><img src="img/ci_etc.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">SCHWAB US DIVIDEND EQUITY ETF</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국</i>
+                                    <i>BARK.A</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">175.84</i>
+                            <i class="cl_p_tx2">USD</i>
                         </span>    
                     </li>
                     <li>
-                        <span>
-                            <i>SCHWAB US DIVIDEND EQUITY ETF</i>
-                            <i>미국</i>
-                            <i>BARK.A</i>
+                        <span class="con_list_l">
+                            <i class="cl_num">3</i>
+                            <i class="cl_icon"><img src="img/ci_etc.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">아마존 닷컴</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국</i>
+                                    <i>AMZN</i>
+                                </span>
+                            </span>
                         </span>
-                        <span>
-                            <i>877,968.62</i>
-                            <i>USD</i>
-                        </span>    
-                    </li>
-                    <li>
-                        <span>
-                            <i>아마존 닷컴</i>
-                            <i>미국</i>
-                            <i>AMZN</i>
-                        </span>
-                        <span>
-                            <i>36.68</i>
-                            <i>USD</i>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">36.68</i>
+                            <i class="cl_p_tx2">USD</i>
                         </span>    
                     </li>
                 </ul>
             </div>
         </section>
 
+
+        
         <section class="padd">
-            <h3 class="con_tit mt40">최고의 브랜드를 보유한 기업 🏆</h3>
-            <div>
+            <h3 class="con_tit mt40">최고의 브랜드를 보유한 기업 🏆 <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+            <div class="mt20">
                 <ul>
                     <li>애플 아이폰, 아이패드, 맥 하나하나가 TOP</li>
                     <li>비자 국제 신용결제의 선두주자</li>
@@ -109,8 +130,8 @@
         </section>
 
         <section class="padd">
-            <h3 class="con_tit mt40">압도적인 경쟁력을 가진 기업 🔥</h3>
-            <div>
+            <h3 class="con_tit mt40">압도적인 경쟁력을 가진 기업 🔥 <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+            <div class="mt20">
                 <ul>
                     <li>TSMC 세계 최대의 반도체 파운드리 업체</li>
                     <li>3M 6만 가지의 리테일 포트폴리오 보유</li>
@@ -120,8 +141,8 @@
         </section>
 
         <section class="padd">
-            <h3 class="con_tit mt40">큰손들이 PICK한 종목은?</h3>
-            <div>
+            <h3 class="con_tit mt40">큰손들이 PICK한 종목은? <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+            <div class="mt20">
                 <ul>
                     <li>워렌 버핏 “10년 이상을 볼 것이 아니면 10분도 그 주식을 갖고 있지 마라” #오마하의 현인 #버크셔 헤서웨이</li>
                     <li> 빌 애크먼 “기업이 돈을 버는 방식을 이해하고, 이론상 영원히 존재할 기업에 투자하라” #베이비 버핏 #행동주의 투자</li>
@@ -130,14 +151,64 @@
         </section>
 
         <section class="padd">
-            <h3 class="con_tit mt40">종목 하나로 아쉽다면 ETF</h3>
-            <div>
+            <h3 class="con_tit mt40">종목 하나로 아쉽다면 ETF <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+            <div class="con_list mt20 mb60">
                 <ul>
-                    <li>VOO 미국 S&P500 기업에 투자</li>
-                    <li>QQQ 미국 나스닥100 기업에 투자</li>
-                    <li>SCHD 미국 다우존스 배당+성장 기업에 투자</li>
-                    <li>MOAT 강력한 경쟁력을 가진 미국기업에 투자</li>
-                    <li>VNQ 미국 리츠 부동산 기업에 투자</li>
+                    <li>
+                        <span class="con_list_c">
+                            <i class="cl_icon"><img src="img/ci_etf.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">VOO</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국 S&P500 기업에 투자</i>
+                                </span>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="con_list_c">
+                            <i class="cl_icon"><img src="img/ci_etf.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">QQQ</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국 나스닥100 기업에 투자</i>
+                                </span>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="con_list_c">
+                            <i class="cl_icon"><img src="img/ci_etf.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">SCHD</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국 다우존스 배당+성장 기업에 투자</i>
+                                </span>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="con_list_c">
+                            <i class="cl_icon"><img src="img/ci_etf.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">MOAT</i>
+                                <span class="cl_info_tx2">
+                                    <i>강력한 경쟁력을 가진 미국기업에 투자</i>
+                                </span>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="con_list_c">
+                            <i class="cl_icon"><img src="img/ci_etf.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">VNQ</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국 리츠 부동산 기업에 투자</i>
+                                </span>
+                            </span>
+                        </span>
+                    </li>
                 </ul>
             </div>
         </section>
