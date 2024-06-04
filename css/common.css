@@ -518,8 +518,8 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 .popup_wrapper.popbg:before{content:'';position:fixed;left:0;right:0;top:0;bottom:0;background:rgba(0, 0, 0, .45);text-indent:-999999px;z-index:-1}
 
 /* popup btns */
-.btn_pop1,.btn1{line-height:7.5rem;height:7.5rem;padding:0;min-width:50%;margin:0;float:left;color:#333;background-color:#e5e5e5;font-size:2.6rem;text-align:center;font-weight:500;flex:1 0 50%}
-.btn_pop2,.btn2{line-height:7.5rem;height:7.5rem;padding:0;min-width:50%;margin:0;float:left;background-color:#84C13D;color:#fff;font-size:2.6rem;text-align:center;font-weight:500;flex:1 0 50%}
+.btn_pop1,.btn1{line-height:7.5rem;height:7.5rem;padding:0;margin:0;float:left;color:#333;background-color:#e5e5e5;font-size:2.6rem;text-align:center;font-weight:500;flex:1 0 50%}
+.btn_pop2,.btn2{line-height:7.5rem;height:7.5rem;padding:0;margin:0;float:left;background-color:#84C13D;color:#fff;font-size:2.6rem;text-align:center;font-weight:500;flex:1 0 50%}
 .cols2>*:first-child{margin-right:0.5rem;flex:1 50%}
 .cols2>*:last-child{margin-left:0.5rem;flex:1 50%}
 .fullpop{position:fixed;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background:#fff;overflow:auto}
