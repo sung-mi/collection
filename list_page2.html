@@ -19,7 +19,7 @@
                     <h1 class="header_title">NH투자증권 제공 서비스</h1>
                 </li>
                 <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
+                    <a href="javascript:void(0)" class="btn_home_x">종료</a>
                 </li>
             </ul>
         </nav>
@@ -29,7 +29,7 @@
             <div class="con_top_in">
                 <div class="flex_between flex_vt pt10">
                     <span class="btn_top_sel mt5">
-                        <button type="button" name="" value="201-02-123456" onclick="pop.open('pop1')"></button>
+                        <button type="button" name="" value="201-02-123456" onclick="pop.open('pop1')" id="selTx"></button>
                     </span>
                     <button type="button" class="btn_help">도움말</button>
                 </div>
@@ -47,7 +47,7 @@
             <div class="flex_between">
             <h3 class="con_tit_s"> 내 모으기 내역</h3>
                 <span class="btn_sel ">
-                    <button type="button" name="" value="평가금액순" onclick="pop.open('pop2')"></button>
+                    <button type="button" name="" value="평가금액순" onclick="pop.open('pop2')" id="selTx2"></button>
                 </span>
             </div>
         </section>
@@ -135,10 +135,20 @@
 			<div class="pop_header">
 				<h3>계좌조회</h3>
 			</div>
-			<div class="pop_con">taset</div>
+			<div class="pb40">
+                <div class="pop_sel_opt">
+                    <button type="button" name="" value="201-02-123456" selected onclick="popSelOpt.select(this,'selTx','pop1')"></button>
+                    <button type="button" name="" value="301-03-234561" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                    <button type="button" name="" value="401-04-345612" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                    <button type="button" name="" value="501-05-456123" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                    <button type="button" name="" value="601-06-561234" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                </div>
+            </div>
 		</div>
 	</div>
 </div>
+
+
 <div class="popup_wrapper" id="pop2">
 	<div class="pop_function">
 		<div class="pop_in text-center">
@@ -146,16 +156,14 @@
 			<div class="pop_header">
 				<h3>내 모으기 내역</h3>
 			</div>
-			
-			<div class="pop_con">
-                <ul>
-                    <li>평가금액순</li>
-                    <li>종목명순</li>
-                    <li>최근 약정순</li>
-                    <li>약정 금액 많은 순</li>
-                </ul>
+			<div class="pb40">
+                <div class="pop_sel_opt">
+                    <button type="button" name="" value="평가금액순" selected onclick="popSelOpt.select(this,'selTx2','pop2')"></button>
+                    <button type="button" name="" value="종목명순" onclick="popSelOpt.select(this,'selTx2', 'pop2')"></button>
+                    <button type="button" name="" value="최근 약정순" onclick="popSelOpt.select(this,'selTx2', 'pop2')"></button>
+                    <button type="button" name="" value="약정 금액 많은 순" onclick="popSelOpt.select(this,'selTx2', 'pop2')"></button>
+                </div>
             </div>
-			
 		</div>
 	</div>
 </div>
