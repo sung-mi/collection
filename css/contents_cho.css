@@ -38,7 +38,12 @@
 .bank_info_bx .bank_info_dsc dt{color:#999;line-height:2.4rem;font-size:1.8rem;text-align:left;word-break:keep-all;}
 .bank_info_bx .bank_info_dsc dd{padding:0.6rem 0 0;color:#333;line-height:3.2rem;font-size:2.1rem;text-align:left;word-break:keep-all;font-weight:500;}
 
+.btn_notice{display:block;position:relative;padding:1.4rem 5.8rem 1.4rem 5.4rem;text-align:left;width:100%;font-size:1.9rem;line-height:2.6rem;color:#666;background:#f9f9f9;}
+.btn_notice::before{position:absolute;left:2.4rem;top:50%;transform:translateY(-50%);width:2.2rem;height:2.2rem;background:url("../img/icon_i_s.png") center bottom no-repeat;background-size:2.2rem;content:""}
+.btn_notice::after{position:absolute;right:2.4rem;top:50%;transform:translateY(-50%);width:2.4rem;height:2.4rem;background:url("../img/icon_arrow_right.png") center bottom no-repeat;background-size:2.4rem;content:""}
+
 /** 서비스안내  **/
+.con_top + section.service_info{padding-bottom:11.2rem;}
 .service_info .step_bx{width:100%;text-align:center;}
 .service_info .cont_dsc{padding:2rem 0 0;}
 .service_info .img_lst{margin:3.5rem 0 0;}
