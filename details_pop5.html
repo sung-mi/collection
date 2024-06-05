@@ -4,35 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <title>주식 모으기</title>    
+    <link rel="stylesheet" href="css/icon.css">   
     <link rel="stylesheet" href="css/contents_jsm.css">   
+    <link rel="stylesheet" href="css/contents_ywg.css">   
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
-<div class="wrap">
-    <header class="header sticky_top">
-        <nav class="padd">
-            <ul class="flex_between">
-                <li>
-                    <h1 class="header_title">NH투자증권 제공 서비스</h1>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">투자금액 설정</h3>
-        </section>
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
+    <div class="popup_wrapper" id="pop1">
+        <div class="pop_function">
+            <div class="pop_in text-center">
+                <button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+                <div class="pop_header ac">
+                    <h3>투자금액 설정</h3>
+                </div>
+                
+                <div class="pop_con">
+                    <div class="border_box">
+                        <h3 class="pop_tit">뭐라고 부를까요?</h3>
+                        <span class="inp_tx mt20"> 
+                            <input type="tel" class="ar" title="텍스트입력" placeholder="금액을 입력해주세요">
+                            <i>원</i>
+                        </span>
+                        <div id="btn_tab3" class="mt20 mb20">
+                            <ul class="btns_cols4">
+                                <li><a href="javascript:void(0)" class="btn_line_m" role="tab" aria-selected="false">+ 1천</a></li>
+                                <li><a href="javascript:void(0)" class="btn_line_m" role="tab" aria-selected="false">+ 1만</a></li>
+                                <li><a href="javascript:void(0)" class="btn_line_m" role="tab" aria-selected="false">+ 5만</a></li>
+                                <li><a href="javascript:void(0)" class="btn_line_m" role="tab" aria-selected="false">+ 10만</a></li>
+                            </ul>
+                        </div>
+                        <p class="info_txt">최소투자금액은 5만원이고, 1만원 단위로 입력해주세요.</p>
+                    </div>
+                </div>
+
+                <div class="pop_footer">
+                    <button type="button" class="btn_pop1 popclose">다음에</button> 
+                    <button type="button" class="btn_pop2">확인</button> 
+                </div>
+            </div>
+        </div>
     </div>
-  
-</div>
+
+<script>
+    pop.open('pop1')
+    tabHandler('#btn_tab3')
+</script>
 </body>
 </html>

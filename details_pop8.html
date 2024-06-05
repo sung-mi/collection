@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <title>주식 모으기</title>    
+    <link rel="stylesheet" href="css/icon.css">   
+    <link rel="stylesheet" href="css/contents_jsm.css">   
+    <link rel="stylesheet" href="css/contents_ywg.css">   
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <div class="popup_wrapper" id="pop1">
+        <div class="pop_function">
+            <div class="pop_in text-center">
+                <button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+                <div class="pop_header ac">
+                    <h3>자동환전</h3>
+                </div>
+                
+                <div class="pop_con">
+                    <div class="box_list mt10 mb30">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)" class="box_item">
+                                    <i class="bxl_icon"><img src="img/logo_ci_kk.png"></i>
+                                    <span class="box_list_c flex1">
+                                        <span class="bxl_info">
+                                            <span class="bxl_info1">
+                                                <i class="bxl_info1_tx1">카카오뱅크</i>
+                                                <i class="bxl_info1_tx2 up">101.13%</i>
+                                            </span>
+                                            <span class="bxl_info2">
+                                                <span class="bxl_info2_tx1">
+                                                    <i>500,000원씩</i>
+                                                    <i>매주 수요일</i>
+                                                </span>
+                                                <i class="bxl_info2_tx2">192,129원</i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>                    
+
+                    <dl class="dl_table">
+                        <dt class="mr30">계좌번호</dt>
+                        <dd>201-02-123456</dd>  
+                        <dt class="mr30">투자금액</dt>
+                        <dd>100원</dd>  
+                        <dt class="mr30">주기</dt>
+                        <dd>매일</dd>                        
+                        <dt class="mr30">투자기간</dt>
+                        <dd class="">2023.05.03 ~ 해지 전까지</dd>
+                    </dl>
+                </div>
+
+                <div class="pop_footer">
+                    <button type="button" class="btn_pop1 popclose">취소</button>
+                    <button type="button" class="btn_pop2">해지하기</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    pop.open('pop1')
+    tabHandler('#btn_tab3')
+</script>
+</body>
+</html>
