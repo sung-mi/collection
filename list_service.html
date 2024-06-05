@@ -29,51 +29,47 @@
 
  
     <div class="container has_footer">
-        <section>
-            <div id="tab1">
-                <ul class="tab_ty1">
-                    <li class="flex1 on"><a href="javascript:void(0)" role="tab" aria-selected="true" >서비스 안내</a></li>
-                    <li class="flex1"><a href="javascript:void(0)" role="tab" aria-selected="true" >자주하는 질문</a></li>
-                </ul>
-            </div>
-            <script>
-            tabHandler('#tab1')
-            </script>
-        </section>
-        <section class="padd2 con_top" style="height: 36rem">
-            <div class="con_top_in">
-                <div class="con_top_tx1" style="padding-top:11.2rem">애정을 담은<br/>주식 있나요?</div>
-                <div class="con_top_tx2 mt12 mb60">
-                    작은 식물을 키우듯<br/>
-                    좋아하는 주식을 모아<br/>
-                    관심을 두고 지켜봐 주세요.
+        <div id="tab1">
+            <ul class="tab_ty1">
+                <li class="flex1 on" data-tab="tabox1"><a href="javascript:void(0)" role="tab" aria-selected="true" >서비스 안내</a></li>
+                <li class="flex1" data-tab="tabox2"><a href="javascript:void(0)" role="tab" aria-selected="true" >자주하는 질문</a></li>
+            </ul>
+        </div>
+       
+        <div  class="tab-content dp-block" id="tabox1" style="display:none">
+            <section class="padd2 con_top" style="height: 36rem">
+                <div class="con_top_in">
+                    <div class="con_top_tx1" style="padding-top:11.2rem">애정을 담은<br/>주식 있나요?</div>
+                    <div class="con_top_tx2 mt12 mb60">
+                        작은 식물을 키우듯<br/>
+                        좋아하는 주식을 모아<br/>
+                        관심을 두고 지켜봐 주세요.
+                    </div>
                 </div>
-            </div>
-        </section>
-       
-        <section class="padd">
-            STEP 1
-        </section>
-        <section class="padd">
-            STEP 2
-        </section>
-        <section class="padd">
-            STEP 3
-        </section>
-       
-        
-        <section class="footer flex">
-            유의사항
-        </section>
+            </section>
+           
+            <section class="padd">
+                STEP 1
+            </section>
+            <section class="padd">
+                STEP 2
+            </section>
+            <section class="padd">
+                STEP 3
+            </section>
+           
+            
+            <section class="footer flex">
+                유의사항
+            </section>
+        </div>
+        <div class="tab-content" id="tabox2" style="display:none">
+            자주하는질문
+        </div>
     </div>
-  
 </div>
-
-
-
-
 <script>
-   
+    tabHandler('#tab1')
 </script>
 </body>
 </html>
