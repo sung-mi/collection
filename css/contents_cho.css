@@ -20,9 +20,9 @@
 .day_lst > li{flex:1;padding:0 0.6rem;}
 .day_lst .img_banner{padding:3rem 0 2.5rem;border:0.1rem solid #f0f0f0;border-radius:2rem;}
 .day_lst .img_banner .tit{padding:0 0 1.7rem 0;position:relative;display:block;text-align:center;width:100%;font-size:2.1rem;font-weight:500;line-height:2.6rem;}
-.day_lst .img_banner .tit:nth-child(1){background:url("../img/water_drop01.png") center bottom no-repeat;background-size:4.9rem 0.7rem;}
-.day_lst .img_banner .tit:nth-child(2){background:url("../img/water_drop02.png") center bottom no-repeat;background-size:4.9rem 0.7rem;}
-.day_lst .img_banner .tit:nth-child(3){background:url("../img/water_drop03.png") center bottom no-repeat;background-size:4.9rem 0.7rem;}
+.day_lst > li:nth-child(1) .img_banner .tit{background:url("../img/water_drop01.png") center bottom no-repeat;background-size:4.9rem 0.7rem;}
+.day_lst > li:nth-child(2) .img_banner .tit{background:url("../img/water_drop02.png") center bottom no-repeat;background-size:4.9rem 0.7rem;}
+.day_lst > li:nth-child(3) .img_banner .tit{background:url("../img/water_drop03.png") center bottom no-repeat;background-size:4.9rem 0.7rem;}
 .day_lst .img_banner .img{margin:2rem 0 0;display:block;width:100%;text-align:center;}
 .day_lst .img_banner .img img{display:inline-block;width:9rem;}
 .day_lst .img_banner .txt{padding:2.1rem 0 0;width:100%;text-align:center;line-height:2.6rem;font-size:2.1rem;}
