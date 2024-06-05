@@ -522,7 +522,7 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 .btn_pop2,.btn2{line-height:7.5rem;height:7.5rem;padding:0;margin:0;float:left;background-color:#84C13D;color:#fff;font-size:2.6rem;text-align:center;font-weight:500;flex:1 0 50%}
 .cols2>*:first-child{margin-right:0.5rem;flex:1 50%}
 .cols2>*:last-child{margin-left:0.5rem;flex:1 50%}
-.fullpop{position:fixed;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background:#fff;overflow:auto}
+.fullpop{position:fixed;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background:#fff;overflow:auto;z-index:10}
 
 /* popup alert */
 .pop_alert{position:relative;z-index:1;display:flex;justify-content:center;align-items:center;z-index:2;width:100%;height:100%}

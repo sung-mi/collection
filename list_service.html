@@ -3,36 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-    <title>주식 모으기</title>    
-    <link rel="stylesheet" href="css/contents_jsm.css">   
+    <title>주식 모으기 > 목록 > 약정내역있음</title>    
+    <link rel="stylesheet" href="css/contents_jsm.css?v2">   
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
 </head>
-<body>
-<div class="wrap">
-    <header class="header sticky_top">
-        <nav class="padd">
+<body>  
+<div class="fullpop top_bg2" id="sub">
+    <header class="header_sub sticky_top">
+        <div class="padd2">
             <ul class="flex_between">
                 <li>
-                    <h1 class="header_title">NH투자증권 제공 서비스</h1>
+                    <!-- <a href="javascript:void(0)" class="btn_back"><i class="visualhide">뒤로</i></a> -->
+                    <h1 class="header_title_sub">주식 모으기란?</h1>
                 </li>
                 <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
+                    <!-- <a href="javascript:void(0)" class="btn_home">홈</a> -->
+                    <a href="javascript:void(0)" class="btn_x"><i class="visualhide">닫기</i></a>
                 </li>
             </ul>
-        </nav>
+        </div>
     </header>
-    <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
+
+ 
+    <div class="container has_footer">
+        <div id="tab1">
+            <ul class="tab_ty1">
+                <li class="flex1 on" data-tab="tabox1"><a href="javascript:void(0)" role="tab" aria-selected="true" >서비스 안내</a></li>
+                <li class="flex1" data-tab="tabox2"><a href="javascript:void(0)" role="tab" aria-selected="true" >자주하는 질문</a></li>
+            </ul>
+        </div>
+       
+        <div  class="tab-content dp-block" id="tabox1" style="display:none">
+            <section class="padd2 con_top" style="height: 36rem">
+                <div class="con_top_in">
+                    <div class="con_top_tx1" style="padding-top:11.2rem">애정을 담은<br/>주식 있나요?</div>
+                    <div class="con_top_tx2 mt12 mb60">
+                        작은 식물을 키우듯<br/>
+                        좋아하는 주식을 모아<br/>
+                        관심을 두고 지켜봐 주세요.
+                    </div>
+                </div>
+            </section>
+           
+            <section class="padd">
+                STEP 1
+            </section>
+            <section class="padd">
+                STEP 2
+            </section>
+            <section class="padd">
+                STEP 3
+            </section>
+           
+            
+            <section class="footer flex">
+                유의사항
+            </section>
+        </div>
+        <div class="tab-content" id="tabox2" style="display:none">
+            자주하는질문
+        </div>
     </div>
-  
 </div>
+<script>
+    tabHandler('#tab1')
+</script>
 </body>
 </html>
