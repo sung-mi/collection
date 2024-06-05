@@ -4,35 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <title>주식 모으기</title>    
+    <link rel="stylesheet" href="css/icon.css">   
     <link rel="stylesheet" href="css/contents_jsm.css">   
+    <link rel="stylesheet" href="css/contents_ywg.css">   
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
-<div class="wrap">
-    <header class="header sticky_top">
-        <nav class="padd">
-            <ul class="flex_between">
-                <li>
-                    <h1 class="header_title">NH투자증권 제공 서비스</h1>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
+    <div class="popup_wrapper" id="pop1">
+        <div class="pop_function">
+            <div class="pop_in text-center">
+                <button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+                <div class="pop_header ac">
+                    <h3>주식 모으기가 시작되었습니다</h3>
+                    
+                    <!-- 실패했을때 -->
+                    <!-- <i class="icon_warning mb30"></i>
+                    <h3>주식 모으기 신청을<br>
+                        실패하였습니다</h3> -->
+                </div>
+ 
+                <div class="pop_con">
+                    <div class="collect_info">
+                        <div class="visual_img_box">
+                            <img src="img/stock_logo_samsung_bd.png" alt="">    
+                        </div>
+                        <div class="collect_info_box">
+                            <p>삼성전자</p>
+                            <span>10,000,000원씩 매주 수요일</span>
+                        </div>
+                    </div>
+
+                    <dl class="dl_table mb30">
+                        <dt class="mr30">구분</dt>
+                        <dd>국내주식 소수점</dd>  
+                        <dt class="mr30">계좌번호</dt>
+                        <dd>201-02-123456</dd>  
+                        <dt class="mr30">기간</dt>
+                        <dd>23.05.03 ~ 해지 전까지</dd>                        
+                        <dt class="mr30">자동환전</dt>
+                        <dd class="">신청</dd>
+                    </dl>
+
+                    <!-- 실패했을때 -->
+                    <!-- <dl class="dl_table mb30">
+                        <dt class="mr30">구분</dt>
+                        <dd>국내주식 소수점</dd>                        
+                        <dt class="mr30">종목</dt>
+                        <dd>삼성전자</dd>                        
+                        <dt class="mr30">계좌번호</dt>
+                        <dd>201-02-123456</dd>                        
+                        <dt class="mr30">투자금액</dt>
+                        <dd>100,000,000원</dd>                        
+                        <dt class="mr30">기간</dt>
+                        <dd>23.05.03 ~ 해지 전까지</dd>                        
+                        <dt class="mr30">주기</dt>
+                        <dd>매주 수요일</dd>                        
+                        <dt class="mr30">자동환전</dt>
+                        <dd>신청</dd>                        
+                        <dt class="mr30">실패사유</dt>
+                        <dd class="c_rd">사고 처리된 계좌입니다. 사고 처리된 계좌입니다. 사고 처리된 계좌입니다.</dd>
+                    </dl> -->
+                </div>
+ 
+                <div class="pop_footer">
+                    <button type="button" class="btn_pop1 popclose">더 둘러보기</button>
+                    <button type="button" class="btn_pop2">모으기 일지 보기</button> 
+                </div>
+            </div>
+        </div>
     </div>
-  
-</div>
+
+<script>
+    pop.open('pop1')	
+</script>
 </body>
 </html>
