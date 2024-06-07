@@ -42,6 +42,19 @@
 .btn_notice::before{position:absolute;left:2.4rem;top:50%;transform:translateY(-50%);width:2.2rem;height:2.2rem;background:url("../img/icon_i_s.png") center bottom no-repeat;background-size:2.2rem;content:""}
 .btn_notice::after{position:absolute;right:2.4rem;top:50%;transform:translateY(-50%);width:2.4rem;height:2.4rem;background:url("../img/icon_arrow_right.png") center bottom no-repeat;background-size:2.4rem;content:""}
 
+.accord{padding:3.3rem 2.4rem;box-sizing:border-box;background:#ebedf1}
+.acc_menu{width:100%;}
+.acc_menu > li{margin:1.2rem 0 0;}
+.acc_menu > li:first-child{margin:0;}
+.acc_menu .acc_cont{overflow:hidden;width:100%;background:#fff;border-radius:1.6rem;}
+.acc_menu .acc_cont .btn_acc{position:relative;display:block;padding:2.4rem 5.8rem;width:100%;text-align:left;word-break:keep-all;font-size:2.1rem;font-weight:500;line-height:3.2rem;color:#000;}
+.acc_menu .acc_cont .btn_acc:before{position:absolute;left:2.4rem;top:50%;transform:translateY(-50%);content:"Q.";color:#999;font-size:2.1rem;line-height:3rem;width:2.4rem;height:3.0rem;text-align:left;}
+.acc_menu .acc_cont .btn_acc:after{position:absolute;right:2.4rem;top:50%;transform:translateY(-50%);content:"";width:2.4rem;height:2.4rem;background:url("../img/icon_arrow_bottom.png") center bottom no-repeat;background-size:2.4rem;}
+.acc_menu .acc_cont.active .acc_txt{display:block;}
+.acc_menu .acc_cont.active .btn_acc:after{background:url("../img/icon_arrow_top.png") center bottom no-repeat;background-size:2.4rem;}
+.acc_menu .acc_txt{display:none;position:relative;padding:2.4rem;position:relative;font-size:2.1rem;line-height:3rem;color:#666;}
+.acc_menu .acc_txt::before{position:absolute;left:2.4rem;top:0;content:"";width:calc(100% - 4.8rem);height:0.1rem;background:#f0f0f0;}
+
 /** 서비스안내  **/
 .con_top + section.service_info{padding-bottom:11.2rem;}
 .service_info .step_bx{width:100%;text-align:center;}

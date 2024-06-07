@@ -157,6 +157,10 @@ var tabHandler = function(tabNavs){
 				tabConts.removeClass(activeConClass);
 				$("#"+tabId).addClass(activeConClass);
 			}
+
+			if($('.acc_menu').length){
+				$('.acc_menu').find('.acc_cont').removeClass('active');
+			} // 자주하는 질문 아코디언 메뉴가 있을때 초기화
 		});
 	});
 };
