@@ -38,7 +38,7 @@ img{max-width:100%;height:auto}
 table {border-collapse:collapse;border-spacing:0;table-layout:fixed;width:100%}
 caption{border:0 !important;clip:rect(0 0 0 0) !important;height:0px !important;overflow:hidden !important;padding:0 !important;width:0px !important;font-size:0px !important}
 textarea{-webkit-backface-visibility:hidden;backface-visibility:hidden;background-color:transparent;word-break:keep-all;word-wrap:break-word} 
-i {font-family:inherit;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:inherit}
+i {font-family:inherit;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:inherit;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:inherit}
 i:before{display:inline-block}
 span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-family:inherit;font-weight:normal}
 :focus,:active {outline:none;-webkit-tap-highlight-color:transparent}
@@ -71,7 +71,7 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 .inp_ck1 label:before{content:'';display:inline-flex;margin-right:1rem;min-width:2.6rem;width:2.6rem;height:2.6rem;background:url(../img/icon_ck.png) 0 0 no-repeat; background-size:2.6rem auto}
 .inp_ck1>input:checked + label>span{color:#333}
 .inp_ck1>input:checked + label:before{background-image: url(../img/icon_ck_on.png)}
-.inp_ck1>button{position:absolute;top:0.3rem;right:0;z-index:2}
+.inp_ck1>button{position:absolute;top:0;right:0;z-index:2}
 .btn_arrow_r{height:3rem;width:3rem;background:url(../img/icon_arrow_right.png) 50% 50% no-repeat;background-size:2.4rem auto}
 
 .inp_ck2{display:flex;flex:1 auto;position:relative}
@@ -108,7 +108,7 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 .sel_tx:focus{border: 0.1rem solid #000;color:#666}
 .sel_tx:focus:after{background-image:url(../img/icon_arrow_top.png)}
 .sel_tx:before{content:attr(value)}
-.sel_opt{display:none;overflow:hidden;max-height:32rem;overflow:auto;position:absolute;z-index:1;width:100%;bottom:6rem;left:0rem;border-radius: 1rem;border: 0.1rem solid #E0E0E0;box-shadow: 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.10)}
+.sel_opt{display:none;max-height:32rem;overflow:auto;position:absolute;z-index:1;width:100%;bottom:6rem;left:0rem;border-radius: 1rem;border: 0.1rem solid #E0E0E0;box-shadow: 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.10)}
 .sel_opt>*{background:#fff;height:6.4rem;width:100%;padding:0 2rem;text-align:left;font-size:2.1rem;font-weight:500;color:#666;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
 .sel_opt>*:before{content:attr(value)}
 .sel_opt>*[selected]{background-color:#F9FDF4;font-weight:700;color:#000}
@@ -119,6 +119,12 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 .btn_sel_acc>button:before{content:attr(value)}
 .btn_sel_acc:after{content:'';position: absolute;top: 0;right: 0;display:inline-flex;margin-left:1rem;min-width:2.4rem;width:2.4rem;height:2.4rem;background:url(../img/icon_arrow_bottom.png) 0 0 no-repeat; background-size:2.4rem auto}
 .btn_sel_acc>button{color:#000;font-weight:500;padding:0;font-size:2.1rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+
+/*select popup*/
+.pop_sel_opt>*{position:relative;background:#fff;height:8rem;width:100%;padding:0 3rem;text-align:left;font-size:2.1rem;font-weight:500;color:#666;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+.pop_sel_opt>*:before{content:attr(value)}
+.pop_sel_opt>*:after{content:'';position:absolute;bottom:0;left:0;width:calc(100% - 6rem);height:0.1rem;background-color:#F0F0F0;margin:0 3rem}
+.pop_sel_opt>*[selected]{background-color:#F9FDF4;font-weight:700;color:#000}
 
 /*button + select*/
 .btn_sel{position:relative;height:3rem;display:inline-flex;align-items: center;justify-content: flex-end}
@@ -300,6 +306,7 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 .mt26{margin-top: 2.6rem}
 .mt30{margin-top: 3rem}
 .mt35{margin-top: 3.5rem}
+.mt38{margin-top: 3.8rem}
 .mt40{margin-top: 4rem}
 
 /* margin-right */
@@ -509,6 +516,11 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 
 
 /* 공통 - 팝업 */
+.modalOn {
+    overflow-y: hidden !important;
+    height: 100vh;
+    touch-action: none;
+}
 /* popup layout */
 .popup_wrapper{display:none;opacity:0;position:fixed;top:0;bottom:0;right:0;left:0;width:100%;height:100vh;z-index:1000}
 .popup_wrapper.opened{display:block;animation:0.3s forwards ease-in-out pop_open}

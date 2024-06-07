@@ -330,3 +330,11 @@ const selBox = {
 		})
 	}
 }
+
+const popSelOpt = {
+	select:function(i,target,popid){
+		$(i).attr('selected','true').siblings().removeAttr('selected');
+		$('#'+target).attr('value', $(i).val());
+		pop.close(popid);
+	}
+}
