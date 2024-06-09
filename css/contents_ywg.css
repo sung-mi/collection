@@ -19,10 +19,22 @@
 .collect_info .collect_info_box p{line-height: 3.4rem;font-size:2.4rem;font-weight:700;}
 .collect_info .collect_info_box span{line-height: 3rem;color: #666;}
 
+.swiper_tab{position: relative;width: 100%;}
+.swiper_tab::before{content: '';position: absolute;right: 0;bottom: 0.2rem;width: 7rem;height:100%;background: linear-gradient(270deg, #FFF 46.59%, rgba(255, 255, 255, 0.00) 100%);z-index: 2;}
+.swiper_tab::after{content: '';position:absolute;bottom: 0; width:100%;height:0.2rem;display: block;border-bottom: 0.2rem solid #e0e0e0;}
+.swiper_tab li {width: auto;color: #999;font-size: 2.4rem;font-weight:700;line-height: 3.4rem;}
+.swiper_tab li.on{color: black;}
+.swiper_tab li a{display: inline-block;padding: 2rem 1.6rem;}
+.swiper_tab li.on a{border-bottom: 0.2rem solid black;}
+.box_pick{display: flex;justify-content: space-between;padding: 4rem 2.4rem 3rem;border-bottom: 1.2rem solid #F5F5F5;}
+.box_pick .pick_txt h3{font-size: 2.6rem;font-weight: 700; line-height: 3.8rem;}
+.box_pick .pick_txt p{color: #666;font-size: 2.1rem;line-height: 3.2rem;}
+.box_pick .pick_txt span{color: #C5C5C5;font-size:1.5rem;}
+.box_pick .pick_pic{display: flex;align-items: center;}
+.box_pick .pick_pic img{width: 13.4rem;}
+
 /* 공통 */
 button[disabled]{opacity: 0.6;}
-
-.btn_arrow_b{height:2.5rem;width:2.5rem;background:url(../img/icon_arrow_bottom.png) 50% 50% no-repeat;background-size:2.4rem auto}
 
 .icon_i{display:inline-flex;width:2.6rem;height:2.6rem;background:url(../img/icon_i.png) 0 0 no-repeat;background-size:2.6rem auto}
 .icon_warning{display:inline-flex;width:6rem;height:6rem;background:url(../img/icon_warning.png) 0 0 no-repeat;background-size:6rem auto}
@@ -38,3 +50,10 @@ button[disabled]{opacity: 0.6;}
 .btn_q{display:inline-flex;width:2.8rem;height:2.8rem;background:url(../img/icon_q.png) 0 0 no-repeat;background-size:2.8rem auto}
 
 .flex0{flex: 0 !important;}
+
+.cal_pop.type2{position: fixed;width: 100vw;height: 100vh;}
+.inp_cal{position:relative;display:inline-flex;height:4rem;border-bottom:0.1rem solid #989898;}
+.inp_cal>input{color:var(--grayCommon);font-size:1.8rem;display:block;height:3rem;width: 11rem;padding-left: 1rem;}
+.inp_cal>a{font-size: 1.6rem;line-height: 4rem}
+
+.bd_none{border: none !important;}
