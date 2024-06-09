@@ -163,8 +163,27 @@
           </section>
           
           <section class="footer flex" style="z-index:11;">
-            <button type="button" class="btn_notice">유의사항</button>
+            <button type="button" class="btn_notice" onclick="pop.open('stockNoticePopup',this)">유의사항</button>
           </section>
+
+          <!-- 유의사항 모달팝업 -->
+          <div class="popup_wrapper" id="stockNoticePopup">
+            <div class="pop_function">
+              <div class="pop_in text-center">
+                <div class="pop_header">
+                  <h3>주식 모으기 유의사항</h3>
+                </div>
+                
+                <div class="pop_con">
+                  유의사항 팝업
+                </div>
+                <div class="pop_footer">
+                  <button type="button" class="btn_pop2 popclose">확인</button> 
+                </div>
+              </div>
+            </div>
+          </div>
+           <!-- // 유의사항 모달팝업 -->
         </div>
         <!-- //서비스 인내 -->
         
@@ -266,8 +285,16 @@
       tabHandler("#tab1");
 
       $(function(){
-        var $PopHeader =  $(".header_sub"); // 팝업 헤더
         var $PopTab =  $(".tab_ty1"); // 팝업 탭
+        
+        var $PopTabBtn = $PopTab.find('> li > a'); // 팝업 버튼
+        $PopTabBtn.click(function(){
+          if($('.acc_menu').length){
+            $(this).parents('.container').find('.acc_cont').removeClass('active');
+          } // 자주하는 아코디언 메뉴가 있을때 초기화
+        }); // 탭 버튼 클릭시
+        
+        var $PopHeader =  $(".header_sub"); // 팝업 헤더
         var headerHeight = $PopHeader.outerHeight(); // 팝업 헤더 높이
         var tabHeight =  $PopTab.outerHeight(); // 팝업 탭 높이
         var accHeight = $(window).height() - headerHeight - tabHeight; // 해상도 대비 아코디언 메뉴 높이값을 구함
@@ -290,7 +317,7 @@
             // 클릭한 버튼과 텍스트를 감싼 영역에 active class가 없을때
           }
         });
-       //자주하는 질문 아코디언 메뉴
+       // 자주하는 질문 아코디언 메뉴
       });
     
     </script>
