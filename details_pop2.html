@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-    <title>주식 모으기</title>    
+    <title>유의사항</title>    
+    <link rel="stylesheet" href="css/icon.css">   
     <link rel="stylesheet" href="css/contents_jsm.css">   
+    <link rel="stylesheet" href="css/contents_ywg.css">   
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
-<div class="wrap">
-    <header class="header sticky_top">
-        <nav class="padd">
-            <ul class="flex_between">
-                <li>
-                    <h1 class="header_title">NH투자증권 제공 서비스</h1>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">유의사항</h3>
-        </section>
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
+    <div class="popup_wrapper" id="pop1">
+        <div class="pop_function">
+            <div class="pop_in text-center">
+                <button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+                <div class="pop_header">
+                    <h3>모으기 일지 유의사항</h3>
+                </div>
+                <div class="pop_con ">
+                    유의사항
+                   
+                </div>
+                <div class="pop_footer">
+                    <button type="button" class="btn_pop2">확인</button> 
+                </div>
+            </div>
+        </div>
     </div>
-  
-</div>
+    
+    
+<script>
+    pop.open('pop1')
+</script>
 </body>
 </html>

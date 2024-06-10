@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <title>주식 모으기 > 목록 > 약정내역있음</title>    
     <link rel="stylesheet" href="css/contents_jsm.css?v2" />
-    <link rel="stylesheet" href="css/contents_ywg.css?v2" /> 
+    <!-- <link rel="stylesheet" href="css/contents_ywg.css?v2" />  -->
     <link rel="stylesheet" href="css/contents_cho.css?v2" /> 
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
@@ -30,7 +30,7 @@
         <section class="padd2 con_top_sub">
             <div class="pt25 pb10 flex_between">
                 <span class="btn_sel">
-                    <button type="button" name="" value="시작일부터" onclick="pop.open('pop2')" id="selTx2"></button>
+                    <button type="button" name="" value="시작일부터" onclick="pop.open('pop1')" id="selTx2"></button>
                 </span>
                 <span class="btn_set_out">
                     관리
@@ -39,21 +39,211 @@
             </div>
         </section>
        
-        <section class="padd2">
-           
-        </section>
-        <section class="padd2">
+        <section class="padd2 line_btm">
+            <div class="my_item_info">
+                <i class="my_item_info_icon"><i><img src="img/logo_ci.png"></i></i>
+                <span class="my_item_info_tx1">삼성전자</span>
+                <span class="my_item_info_tx2">9층가자고 · 125회차</span>
+            </div>
+
             
-        </section>
-       
-        <section class="padd mt10">
-            <div class="con_list mt10">
+            <div class="box_line mt20">
+                <div class="my_money">
+                    
+                    <span class="my_money_tx1">모으기 평가금액</span>
+                    <span class="my_money_tx2 mt12">
+                        <i>3,456,789</i> 
+                        <i class="fwr">원</i>
+                    </span>
+                    <span class="my_money_tx3 mt6 up">
+                        <i>192,126</i> 
+                        <i>(1.13%)</i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="mb40 mt30 my_money_info">
                 <ul>
                     <li>
-                        <span class="con_list_l flex_vt">
+                        <span>
+                            <i class="myi_tx1">모은수량</i>
+                            <i class="myi_tx2">4.345211주</i>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <i class="myi_tx1">투자원금</i>
+                            <i class="myi_tx2">1,233,168,845</i>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <i class="myi_tx1">평균단가</i>
+                            <i class="myi_tx2">837,129,300</i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="padd2 line_btm">
+            <h3 class="con_tit ac mt40"> 잘 모으고 있나요 👀 <button type="button" class="btn_q" onclick="pop.open('pop2')"><i class="visualhide">?</i></button></h3>
+            <div class="mb30 mt10">
+                차트영역
+            </div>
+        </section>
+
+        <section class="padd mt10">
+            <div class="con_list type2 mt10">
+                <ul>
+                    <li>
+                        <span class="con_list_l">
                             <i class="cl_date mr20">02.11</i>
                             <span class="cl_info">
                                 <i class="cl_info_tx1">125회차</i>
+                                <span class="cl_info_tx2">
+                                    <i>체결단가</i>
+                                    <i>50,302원</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">134,234원</i>
+                            <i class="cl_p_tx2">10.839243주</i>
+                        </span>    
+                    </li>
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_date mr20">01.11</i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">124회차</i>
+                                <span class="cl_info_tx2">
+                                    <i>체결단가</i>
+                                    <i>50,302원</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">134,234원</i>
+                            <i class="cl_p_tx2">10.839243주</i>
+                        </span>    
+                    </li>
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_date mr20">12.11</i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">123회차</i>
+                                <span class="cl_info_tx2">
+                                    <i>체결단가</i>
+                                    <i>50,302원</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">134,234원</i>
+                            <i class="cl_p_tx2">10.839243주</i>
+                        </span>    
+                    </li>
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_date mr20">11.11</i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">122회차</i>
+                                <span class="cl_info_tx2">
+                                    <i>체결단가</i>
+                                    <i>50,302원</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">134,234원</i>
+                            <i class="cl_p_tx2">10.839243주</i>
+                        </span>    
+                    </li>
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_date mr20">10.11</i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">121회차</i>
+                                <span class="cl_info_tx2">
+                                    <i>체결단가</i>
+                                    <i>50,302원</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">134,234원</i>
+                            <i class="cl_p_tx2">10.839243주</i>
+                        </span>    
+                    </li>
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_date mr20">09.11</i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">120회차</i>
+                                <span class="cl_info_tx2">
+                                    <i>체결단가</i>
+                                    <i>50,302원</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">134,234원</i>
+                            <i class="cl_p_tx2">10.839243주</i>
+                        </span>    
+                    </li>
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_date mr20">08.11</i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">119회차</i>
+                                <span class="cl_info_tx2">
+                                    <i>체결단가</i>
+                                    <i>50,302원</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">134,234원</i>
+                            <i class="cl_p_tx2">10.839243주</i>
+                        </span>    
+                    </li>
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_date mr20">07.11</i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">118회차</i>
+                                <span class="cl_info_tx2">
+                                    <i>체결단가</i>
+                                    <i>50,302원</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">134,234원</i>
+                            <i class="cl_p_tx2">10.839243주</i>
+                        </span>    
+                    </li>
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_date mr20">06.11</i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">117회차</i>
+                                <span class="cl_info_tx2">
+                                    <i>체결단가</i>
+                                    <i>50,302원</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">134,234원</i>
+                            <i class="cl_p_tx2">10.839243주</i>
+                        </span>    
+                    </li>
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_date mr20">05.11</i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">116회차</i>
                                 <span class="cl_info_tx2">
                                     <i>체결단가</i>
                                     <i>50,302원</i>
@@ -80,7 +270,7 @@
 
 
 
-<div class="popup_wrapper" id="pop2">
+<div class="popup_wrapper" id="pop1">
 	<div class="pop_function">
 		<div class="pop_in text-center">
 			<button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
@@ -122,6 +312,23 @@
 </div>
 <div class="popup_wrapper cal_pop"></div>
 
+<div class="popup_wrapper" id="pop2">
+	<div class="pop_function">
+		<div class="pop_in text-center">
+			<button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+			<div class="pop_header">
+				<h3>잘 모으고 있나요 👀</h3>
+			</div>
+			<div class="pop_con ">
+               test
+               
+            </div>
+            <div class="pop_footer">
+                <button type="button" class="btn_pop2 popclose">확인</button> 
+            </div>
+		</div>
+	</div> 
+</div>
 
 <script>
 </script>
