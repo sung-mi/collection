@@ -57,6 +57,14 @@
 
 .btn_write{display:inline-flex;width:2.2rem;height:2.2rem;background:url("../img/icon_write.png") 0 0 no-repeat;background-size:2.2rem auto}
 
+.bullet_lst > li{padding:0 0 0 1.4rem;margin:2rem 0 0;position:relative;color:#333;font-size:2.1rem;line-height:3rem;word-break:keep-all;}
+.bullet_lst > li:first-child{margin:0;}
+.bullet_lst > li:before{position:absolute;left:0;top:-0.1rem;content:"·";}
+.bullet_lst .bullet_lst01{margin:0.6rem 0 0;}
+
+.bullet_lst01 > li{padding:0 0 0 1.2rem;position:relative;color:#666;font-size:1.8rem;line-height:2.8rem;word-break:keep-all;}
+.bullet_lst01 > li:before{position:absolute;left:0;top:-0.1rem;content:"-";}
+
 /** 서비스안내  **/
 .con_top + section.service_info{padding-bottom:11.2rem;}
 .service_info .step_bx{width:100%;text-align:center;}
