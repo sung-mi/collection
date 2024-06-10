@@ -18,13 +18,20 @@
 .header, .header nav, .header ul,
 .header_sub, .header_sub nav, .header_sub ul{height:6.3rem}
 .top_bg1_1 .header, .top_bg1_1 .con_top,
-.top_bg1_2 .header, .top_bg1_2 .con_top{background-color:#DAF5FF}
+.top_bg1_1 .header, .top_bg1_1 .con_top_sub,
+.top_bg1_2 .header, .top_bg1_2 .con_top,
+.top_bg1_2 .header_sub, .top_bg1_2 .con_top_sub{background-color:#DAF5FF}
 .top_bg2 .header_sub{background-color:#fff}
-.top_bg2 .con_top{background-color:#F7EDDA}
-.top_bg3_1 .header, .top_bg3_1 .con_top{background-color:#F7EDDA}
-.top_bg3_2 .header, .top_bg3_2 .con_top{background-color:#F8E6E7}
-.top_bg3_3 .header, .top_bg3_3 .con_top{background-color:#E0EAF3}
-.top_bg3_4 .header, .top_bg3_4 .con_top{background-color:#F0F8E9}  
+.top_bg2 .con_top,
+.top_bg2 .con_top_sub{background-color:#F7EDDA}
+.top_bg3_1 .header, .top_bg3_1 .con_top, 
+.top_bg3_1 .header_sub, .top_bg3_1 .con_top_sub{background-color:#F7EDDA}
+.top_bg3_2 .header, .top_bg3_2 .con_top, 
+.top_bg3_2 .header_sub, .top_bg3_2 .con_top_sub{background-color:#F8E6E7}
+.top_bg3_3 .header, .top_bg3_3 .con_top, 
+.top_bg3_3 .header_sub, .top_bg3_3 .con_top_sub{background-color:#E0EAF3}
+.top_bg3_4 .header, .top_bg3_4 .con_top, 
+.top_bg3_4 .header_sub, .top_bg3_4 .con_top_sub{background-color:#F0F8E9}  
 .top_bg1_2 .con_top_in .btn_top_sel{margin-bottom:6.8rem}
 .top_bg3_1 .con_top_in .btn_top_sel,
 .top_bg3_2 .con_top_in .btn_top_sel,
@@ -50,6 +57,8 @@
 
 .con_top{position:relative;padding-bottom:7rem;z-index:1}
 .con_top + section{position:relative;z-index:2;margin-top:-3rem;background-color:#fff;border-top-right-radius: 3rem;border-top-left-radius: 3rem;padding-top: 3rem}
+.con_top_sub{padding-bottom:3rem}
+.con_top_sub + section{position:relative;z-index:2;margin-top:-3rem;background-color:#fff;border-top-right-radius: 3rem;border-top-left-radius: 3rem;padding-top: 3rem}
 .con_top:before{content:'';z-index:1;position:absolute;top:0;left:0;width:100%;height:100%}
 .top_bg1_1 .con_top:before{background:url(../img/img_main_visual1.png) 0 100% no-repeat;background-size:100% auto}
 .top_bg1_2 .con_top:before{background:url(../img/img_main_visual2.png) 0 100% no-repeat;background-size:100% auto}
@@ -79,6 +88,7 @@
 .con_list_c{width:100%;display:flex;align-items: center}
 .con_list_r{width:13rem;min-width:1.3rem;display:flex;flex-direction: column}
 .cl_num{color:#333;font-size: 2.1rem;font-weight: 500;line-height: 3rem;min-width:3.2rem}
+.cl_date{color: #999;text-align: center;font-size: 1.8rem;line-height: 3rem;letter-spacing: -0.05rem;}
 .cl_icon{width:4rem;height:4rem;min-width: 4rem;display:inline-flex;border-radius:4rem;overflow:hidden;margin-right:1.2rem}
 .cl_icon>img{width:100%}
 .cl_info{display:flex;flex-direction: column;min-width:26rem}
