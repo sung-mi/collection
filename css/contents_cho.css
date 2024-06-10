@@ -67,5 +67,9 @@
 .service_info .bank_info_img .info_img{position:absolute;left:50%;top:0;transform:translateX(-50%);width:42.5rem;z-index:1;}
 
 /** 모으기 관리 **/
+.cont_collet{width:100%;padding:0 0 14.4rem;}
 .cont_dsc_table{padding:2.3rem 1.9rem;width:100%;}
+.btm_collect_fixed{padding:4.2rem 2.4rem;display:flex;justify-content:space-between;border-top:1.2rem solid #f5f5f5;width:100%;background:#fff;}
+.btm_collect_fixed .txt{font-size:1.8rem;line-height:2.4rem;color:#666;}
+.btm_collect_fixed .btn_line_s{height:5rem;}
 .dl_table dd .btn_write{margin: 0 0 0 auto;}
