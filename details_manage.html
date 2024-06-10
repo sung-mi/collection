@@ -1,38 +1,69 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-    <title>주식 모으기</title>    
-    <link rel="stylesheet" href="css/contents_jsm.css">   
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"/>
+    <title>주식 모으기</title>
+    <link rel="stylesheet" href="css/contents_jsm.css?v2" />
+    <link rel="stylesheet" href="css/contents_cho.css?v2" />
+    <link rel="stylesheet" href="css/contents_ywg.css">
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
-</head>
-<body>
-<div class="wrap">
-    <header class="header sticky_top">
-        <nav class="padd">
-            <ul class="flex_between">
-                <li>
-                    <h1 class="header_title">NH투자증권 제공 서비스</h1>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
+  </head>
+  <body>
+    <div class="fullpop top_bg2" id="sub">
+      <header class="header_sub sticky_top">
+        <div class="padd2">
+          <ul class="flex_between">
+            <li>
+              <!-- <a href="javascript:void(0)" class="btn_back"><i class="visualhide">뒤로</i></a> -->
+              <h1 class="header_title_sub">모으기 관리</h1>
+            </li>
+            <li>
+              <!-- <a href="javascript:void(0)" class="btn_home">홈</a> -->
+              <a href="javascript:void(0)" class="btn_x"><i class="visualhide">닫기</i></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="cont_dsc_table">
+            <dl class="dl_table">
+                <dt class="mr30">계좌번호</dt>
+                <dd>201-02-123456</dd>  
+                <dt class="mr30">구분</dt>
+                <dd>국내주식 소수점</dd>  
+                <dt class="mr30">종목</dt>
+                <dd>NH투자증권</dd>                        
+                <dt class="mr30">주기</dt>
+                <dd>매일</dd>
+                <dt class="mr30">투자기간</dt>
+                <dd class="pr25 relative">
+                    2023.05.03 ~ 해지 전까지
+                    <button type="button" class="btn_write position_r"><i class="visualhide">투자기간 설정 팝업열기</i></button>
+                </dd>
+                <dt class="mr30">투자금액</dt>
+                <dd class="pr25 relative">
+                    100원
+                    <button type="button" class="btn_write position_r"><i class="visualhide">투자금액 설정 팝업열기</i></button>
+                </dd>
+                <dt class="mr30">애칭</dt>
+                <dd class="pr25 relative">
+                    볼볼타오름
+                    <button type="button" class="btn_write position_r"><i class="visualhide">애칭 설정 팝업열기</i></button>
+                </dd>
+                <dt class="mr30">자동환전</dt>
+                <dd class="pr25 relative">
+                    신청
+                    <button type="button" class="btn_write position_r"><i class="visualhide">자동환전 팝업열기</i></button>
+                </dd>
+            </dl>
+        </div>
+      </div>
     </div>
-  
-</div>
-</body>
+    <script></script>
+  </body>
 </html>

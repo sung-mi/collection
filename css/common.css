@@ -533,6 +533,9 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 .zidx2{z-index:2}
 .zidx3{z-index:3}
 
+.relative{position:relative;}
+.position_r{position:absolute;right:0;top:50%;transform:translateY(-50%);}
+
 
 
 /* 공통 - 팝업 */

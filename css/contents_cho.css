@@ -55,6 +55,8 @@
 .acc_menu .acc_txt{display:none;position:relative;padding:2.4rem;position:relative;font-size:2.1rem;line-height:3rem;color:#666;}
 .acc_menu .acc_txt::before{position:absolute;left:2.4rem;top:0;content:"";width:calc(100% - 4.8rem);height:0.1rem;background:#f0f0f0;}
 
+.btn_write{display:inline-flex;width:2.2rem;height:2.2rem;background:url("../img/icon_write.png") 0 0 no-repeat;background-size:2.2rem auto}
+
 /** 서비스안내  **/
 .con_top + section.service_info{padding-bottom:11.2rem;}
 .service_info .step_bx{width:100%;text-align:center;}
@@ -63,3 +65,7 @@
 .service_info .day_lst{margin:3rem 0 0;}
 .service_info .bank_info_img{margin:3rem 0 0;padding:23.9rem 0 0;position:relative;}
 .service_info .bank_info_img .info_img{position:absolute;left:50%;top:0;transform:translateX(-50%);width:42.5rem;z-index:1;}
+
+/** 모으기 관리 **/
+.cont_dsc_table{padding:2.3rem 1.9rem;width:100%;}
+.dl_table dd .btn_write{margin: 0 0 0 auto;}
