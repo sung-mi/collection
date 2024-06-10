@@ -572,6 +572,7 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 @keyframes popfun{100% {bottom:0}}
 .pop_header{padding:4rem 0 3rem;border-bottom:0.1rem solid #E0E0E0;margin:0 3rem;}
 .pop_header>h3{font-size:2.6rem;font-weight: 500;line-height:3.8rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align: center;}
+.pop_function .pop_con .pop_lst_tit{display:block;padding:0 0 1rem;color:#333;font-weight:700;font-size:1.9rem;line-height:2.6rem;}
 .pop_function .pop_con{max-height:53.6rem;overflow-y:auto;padding:4rem 3rem 0;}
 .pop_function .pop_con::after{content:'';display:block;height:6rem}
 .btn_pop_close{display:inline-flex;width:3rem;height:3rem;position:absolute;top:4.4rem;right:3rem;background:url(../img/icon_close.png) 0 0 no-repeat;background-size:3rem auto}
