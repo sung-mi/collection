@@ -33,6 +33,14 @@
 .box_pick .pick_pic{display: flex;align-items: center;}
 .box_pick .pick_pic img{width: 13.4rem;}
 
+.cl_bg_box{display: flex;justify-content: space-between;align-items: center;padding: 2rem 2.4rem;background-color: #F9F9F9;}
+.bg_box_l{display:flex;align-items: center;}
+.bg_box_l .cl_logo{width: 2.4rem;margin-right: 1.2rem;}
+.bg_box_l .cl_logo img{display: block;}
+.bg_box_l .cl_txt{font-size: 2.1rem;}
+.bg_box_r{display:flex;flex-direction: column;justify-content: center;}
+.bg_box_r .cl_sub_num{color: #999;font-size: 1.8rem;}
+
 /* 공통 */
 button[disabled]{opacity: 0.6;}
 
@@ -45,15 +53,17 @@ button[disabled]{opacity: 0.6;}
 .dl_table dd{margin: 0;display: flex;align-items: center;color:#333;line-height: 3rem;font-size: 2.1rem;}
 
 .border_box{padding: 3rem;border: 1px solid #e0e0e0;border-radius: 2rem;}
+.border_box.shdw{border: 1px solid #f0f0f0;box-shadow: 2px 4px 16px 0px rgba(0, 0, 0, 0.06);}
 .border_box .info_txt{line-height: 2.4rem; color: #999;}
+.border_box .info_num{line-height: 2.4rem;}
+.border_box .box_txt{font-size: 2.1rem;font-weight: 700;color:#333;line-height: 3rem;}
+
 
 .btn_q{display:inline-flex;width:2.8rem;height:2.8rem;background:url(../img/icon_q.png) 0 0 no-repeat;background-size:2.8rem auto}
 
+.zidx0{z-index: 0;}
 .flex0{flex: 0 !important;}
 
 .cal_pop.type2{position: fixed;width: 100vw;height: 100vh;}
-.inp_cal{position:relative;display:inline-flex;height:4rem;border-bottom:0.1rem solid #989898;}
-.inp_cal>input{color:var(--grayCommon);font-size:1.8rem;display:block;height:3rem;width: 11rem;padding-left: 1rem;}
-.inp_cal>a{font-size: 1.6rem;line-height: 4rem}
 
 .bd_none{border: none !important;}

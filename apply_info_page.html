@@ -1,38 +1,165 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-    <title>주식 모으기</title>    
-    <link rel="stylesheet" href="css/contents_jsm.css">   
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"/>
+    <title>주식 모으기 > 목록 > 약정내역있음</title>
+    <link rel="stylesheet" href="css/contents_jsm.css?v2" />
+    <link rel="stylesheet" href="css/contents_ywg.css" />
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
-</head>
-<body>
-<div class="wrap">
-    <header class="header sticky_top">
-        <nav class="padd">
-            <ul class="flex_between">
-                <li>
-                    <h1 class="header_title">NH투자증권 제공 서비스</h1>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
+  </head>
+  <body>
+    <div class="fullpop top_bg2 pb100">
+      <header class="header_sub sticky_top">
+        <div class="padd2">
+          <ul class="flex_between">
+            <li>
+              <!-- <a href="javascript:void(0)" class="btn_back"><i class="visualhide">뒤로</i></a> -->
+              <h1 class="header_title_sub">
+                <button type="button" class="btn_back"></button></h1>
+            </li>
+            <li>
+              <!-- <a href="javascript:void(0)" class="btn_home">홈</a> -->
+              <a href="javascript:void(0)" class="btn_home_x">홈</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="cl_bg_box">
+          <div class="bg_box_l">
+            <div class="cl_logo"><img src="img/logo_ci_bh.png"></div>
+            <div class="cl_txt">삼성전자</div>
+          </div>
+          <div class="bg_box_r">
+            <div class="cl_num">175.84</div>
+            <div class="cl_sub_num">60,600원</div>
+          </div>
+        </div>
+
+        <section class="padd mt40">
+            <h3 class="con_tit">모으기 규칙을 정해 주세요</h3>
         </section>
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
+        
+        <section class="padd mt40">
+          <div class="border_box shdw">
+            <h3 class="box_txt">얼마씩 모을까요?<button type="button" class="btn_q ml10 mb2"><i class="visualhide">?</i></button></h3>
+            <span class="inp_tx mt20"> 
+              <input type="tel" class="ar" title="텍스트입력" placeholder="텍스트를 입력해주세요.">
+              <i>원</i>
+            </span>
+            <div id="btn_tab" class=" mt20">
+              <ul class="btns_cols4">
+                <li><a href="javascript:void(0)" class="btn_line_s" role="tab" aria-selected="false">+ 1천</a></li>
+                <li><a href="javascript:void(0)" class="btn_line_s" role="tab" aria-selected="false">+ 1만</a></li>
+                <li><a href="javascript:void(0)" class="btn_line_s" role="tab" aria-selected="false">+ 5만</a></li>
+                <li><a href="javascript:void(0)" class="btn_line_s" role="tab" aria-selected="false">+ 10만</a></li>
+              </ul>
+            </div>
+            <div class="flex_between mt20">
+              <p class="info_txt">최소투자금액 100원</p>
+              <!-- <p class="info_num">10.834236주 예상</p> -->
+              <div>
+                <span class="inp_ck2"> 
+                  <input type="checkbox" id="inp_ck2">
+                  <label for="inp_ck2"><span>소수점 버리기</span></label>
+                </span>
+              </div>
+            </div>
         </section>
+
+        <section class="padd mt20">
+          <div class="border_box shdw">
+            <div>
+                <h3 class="con_tit">언제 모을까요?<button type="button" class="btn_q ml10 mb2"><i class="visualhide">?</i></button></h3>
+                <p class="info_txt mt4">원화로 편하게 모을수 있어요</p>
+            </div>
+            <div id="btn_tab2" class="mt10">
+              <ul class="btns_cols3">
+                <li data-tab="tabox1"><a href="javascript:void(0)" class="btn_line_m" role="tab" aria-selected="false">매일</a></li>
+                <li data-tab="tabox2"><a href="javascript:void(0)" class="btn_line_m" role="tab" aria-selected="false">매주</a></li>
+                <li data-tab="tabox3"><a href="javascript:void(0)" class="btn_line_m s_padd" role="tab" aria-selected="false">매월</a></li>
+              </ul>
+            </div>
+            <div class="tab-content dp-block" id="tabox1" style="display: none"></div>
+            <div class="tab-content" id="tabox2" style="display: none">
+              <span class="selbox mt20">
+                <button type="button" class="sel_tx zidx0" onclick="selBox.on(this)" name="" value="요일을 선택하세요"></button>
+                <span class="sel_opt" style="display: none;">
+                  <button type="button" name="" value="월요일" selected=""></button>
+                  <button type="button" name="" value="화요일"></button>
+                  <button type="button" name="" value="수요일"></button>
+                  <button type="button" name="" value="목요일"></button>
+                  <button type="button" name="" value="금요일"></button>
+                </span>
+              </span>
+            </div>
+            <div class="tab-content" id="tabox3" style="display: none">
+              <span class="selbox mt20">
+                <button type="button" class="sel_tx zidx0" onclick="selBox.on(this)" name="" value="일자를 선택하세요"></button>
+                <span class="sel_opt" style="display: none;">
+                  <button type="button" name="" value="1일" selected=""></button>
+                  <button type="button" name="" value="2일"></button>
+                  <button type="button" name="" value="3일"></button>
+                  <button type="button" name="" value="4일"></button>
+                  <button type="button" name="" value="5일"></button>
+                  <button type="button" name="" value="6일"></button>
+                  <button type="button" name="" value="7일"></button>
+                  <button type="button" name="" value="8일"></button>
+                  <button type="button" name="" value="9일"></button>
+                  <button type="button" name="" value="10일"></button>
+                  <button type="button" name="" value="11일"></button>
+                  <button type="button" name="" value="12일"></button>
+                  <button type="button" name="" value="13일"></button>
+                  <button type="button" name="" value="14일"></button>
+                  <button type="button" name="" value="15일"></button>
+                  <button type="button" name="" value="16일"></button>
+                  <button type="button" name="" value="17일"></button>
+                  <button type="button" name="" value="18일"></button>
+                  <button type="button" name="" value="19일"></button>
+                  <button type="button" name="" value="20일"></button>
+                  <button type="button" name="" value="21일"></button>
+                  <button type="button" name="" value="22일"></button>
+                  <button type="button" name="" value="23일"></button>
+                  <button type="button" name="" value="24일"></button>
+                  <button type="button" name="" value="25일"></button>
+                  <button type="button" name="" value="26일"></button>
+                  <button type="button" name="" value="27일"></button>
+                  <button type="button" name="" value="28일"></button>
+                  <button type="button" name="" value="29일"></button>
+                  <button type="button" name="" value="30일"></button>
+                  <button type="button" name="" value="31일"></button>
+                </span>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section class="padd mt20 mb60">
+          <div class="border_box shdw flex_between">
+            <div>
+                <h3 class="con_tit">자동환전 신청<button type="button" class="btn_q ml10 mb2"><i class="visualhide">?</i></button></h3>
+                <p class="info_txt mt4">원화로 편하게 모을수 있어요</p>
+            </div>
+            <span class="inp_ck_one flex0"> 
+                <input type="checkbox" id="inp_ck3">
+                <label for="inp_ck3"></label>
+            </span>
+          </div>
+        </section>
+      </div>
+
+      <div class="footer flex">
+        <button type="button" class="btn2">다음</button> 
+      </div>
     </div>
-  
-</div>
-</body>
+    <script>
+      // tabHandler('#btn_tab')    
+      tabHandler('#btn_tab2')    
+    </script>
+  </body>
 </html>
