@@ -41,13 +41,25 @@
 .bg_box_r{display:flex;flex-direction: column;justify-content: center;}
 .bg_box_r .cl_sub_num{color: #999;font-size: 1.8rem;}
 
+.box_inp_search{padding:3rem 2.4rem;}
+.box_list2>ul{display: flex;flex-direction: column;}
+.box_list2>ul>li>.box_item{position:relative;display:flex;align-items:center;background:#fff;padding: 2rem 2.4rem;border: none !important;}
+.bxl2_info1{display:flex}
+.bxl2_info1_tx1{display:block;width:calc(100% - 12.4rem); color: #333;font-size: 2.1rem;font-weight: 500;line-height: 2.6rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+.bxl2_info1_tx2{display:flex;width:12.4rem;justify-content: flex-end;font-size: 2.1rem;font-weight: 500;line-height: 2.6rem;letter-spacing: -0.05rem}
+.bxl2_info2{display:flex}
+.bxl2_info2_tx1{display:flex;width:calc(100% - 15.8rem); color:#999;line-height:2.6rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+.bxl2_info2_tx1>*{display:inline-flex;line-height:1.8rem;font-size:1.5rem;margin-left:1.2rem;letter-spacing: -0.05rem}
+.bxl2_info2_tx1>*:first-child{margin-left:0}
+.bxl2_info2_tx2{display:flex;width:15.8rem; color: #999;justify-content: flex-end;line-height:1.8rem;font-size:1.5rem;letter-spacing: -0.05rem;}
+.bx_search_noti{margin-top: 10rem;color: #666;line-height: 3rem;text-align: center;}
+.matched{color: #3C9800;}
+
 /* 공통 */
 button[disabled]{opacity: 0.6;}
 
 .zidx0{z-index: 0;}
 .flex0{flex: 0 !important;}
-
-.bd_none{border: none !important;}
 
 .dl_table{display: grid;grid-template-columns: auto 1fr;gap: 1rem 1rem;padding: 1rem;}
 .dl_table dt{display: flex;align-items: flex-start;color: #999; line-height: 3rem;}
