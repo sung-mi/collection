@@ -185,7 +185,7 @@
 .myi_tx2{font-size:2rem;color: #000;line-height: 2.4rem;letter-spacing: -0.05rem;margin-top:0.6rem;width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: center;}
                 
 /* highcharts */
-
+/* cht1 */
 .cht1_legend{display:flex;justify-content: center;}
 .cht1_legend>span{display: flex;justify-content: space-between;align-items: center;}
 .cht_legend_tx{font-size:1.8rem;color:#333;line-height:2.2rem}
@@ -209,4 +209,7 @@
 .icon_cht1{display:inline-flex;width:2.2rem;height:2.2rem;background:url(../img/icon_cht1.png) 0 0 no-repeat;background-size:2.2rem auto}
 .icon_cht2{display:inline-flex;width:2.2rem;height:2.2rem;background:url(../img/icon_cht2.png) 0 0 no-repeat;background-size:2.2rem auto}
 
+/* cht2 */
 .box_smile{font-size:4rem;display:inline-flex;justify-content:center;align-items: center;width:10rem;height: 10rem;padding-bottom: 0.5rem;background:url(../img/img_cht_label_bg.png) 0 0 no-repeat;background-size:10rem auto;}
+#cht2 .highcharts-series-label-0{left:100% !important;margin-left:-10rem;margin-top:1rem}
+#cht2 .highcharts-series-label-1{left:100% !important;margin-left:-8.9rem}

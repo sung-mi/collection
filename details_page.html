@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <title>주식 모으기 > 목록 > 약정내역있음</title>    
-    <link rel="stylesheet" href="css/contents_jsm.css?v6" />
+    <link rel="stylesheet" href="css/contents_jsm.css?v7" />
     <!-- <link rel="stylesheet" href="css/contents_ywg.css?v2" />  -->
     <link rel="stylesheet" href="css/contents_cho.css?v2" /> 
     <script src="js/jquery-1.12.0.min.js"></script>
@@ -12,6 +12,7 @@
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
     <script src="js/highcharts.js"></script>
+    <script src="js/series-label.js"></script>
 </head>
 <body>
 <div class="wrap top_bg3_1">
@@ -173,6 +174,12 @@
                     
                 },
                 series: [{
+                    label:{
+                        useHTML: true,
+                        style:{
+                            fontSize: 0
+                        }
+                    },
                     name: '내 평단가',
                     lineWidth: 2,
                     lineColor: '#FF5252',
@@ -193,6 +200,12 @@
                     data: [24000,21000,17000,21000,19000,19500,21000],
                     showInLegend: false
                 }, {
+                    label:{
+                        useHTML: true,
+                        style:{
+                            fontSize: 0
+                        }
+                    },
                     name: '주가',
                     lineWidth: 1,
                     lineColor: '#999',
@@ -513,16 +526,23 @@
                 fontSize: '1.5rem',
                 marker: {
                     enabled: false,
-                   
+                },
+                label:{
+                    useHTML: true,
+                    style:{
+                        fontSize: '1.8rem',
+                        color: '#000',
+                        lineHeight: '2.4rem',
+                        fontWeight: '700',
+                        left: '100px !important'
+                    }
                 },
                 states: {
                     hover: {
                         lineWidth: 2,
                         marker: {
                             enabled: true
-                           
                         },
-                        
                     }
                 },
                 tooltip: {
@@ -533,15 +553,27 @@
                 data: [15000,16000,14000,15000,13000,15000,16000,14000,15000,13000,14000],
                 showInLegend: false
             }, {
-                events:{
-                    click:false
+                label:{
+                    useHTML: true,
+                    style:{
+                        fontSize: '1.8rem',
+                        color: '#999',
+                        lineHeight: '2.4rem'
+                    }
                 },
-                name: '주가',
+                name: '😵 주가',
                 lineWidth: 1,
                 lineColor: '#999',
                 fontSize: '1.5rem',
                 marker: {
-                    enabled: false
+                    enabled: false,
+                    symbol: 'url()',
+                    lineColor: 'red',
+                    states: {
+                        hover: {
+                            enabled:false
+                        }
+                    }
                 },
                 states: {
                     hover: {
@@ -553,7 +585,7 @@
                     pointFormat: '',
                     footerFormat: '</span>'
                 },
-                data: [20000,25000,20000,26000,20000,25000,20000,24000,20000,25000,20000],
+                data: [21000,24000,20000,23000,21000,26000,22000,24000,20000,25000,21000],
                 showInLegend: false
             }],
             
