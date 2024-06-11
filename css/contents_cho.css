@@ -57,6 +57,7 @@
 
 .btn_write{display:inline-flex;width:2.2rem;height:2.2rem;background:url("../img/icon_write.png") 0 0 no-repeat;background-size:2.2rem auto}
 
+.pop_function .pop_con .pop_lst_tit{display:block;padding:0 0 1rem;color:#333;font-weight:700;font-size:1.9rem;line-height:2.6rem;word-break:keep-all;}
 .bullet_lst > li{padding:0 0 0 1.4rem;margin:2rem 0 0;position:relative;color:#333;font-size:2.1rem;line-height:3rem;word-break:keep-all;}
 .bullet_lst > li:first-child{margin:0;}
 .bullet_lst > li:before{position:absolute;left:0;top:-0.1rem;content:"·";}
