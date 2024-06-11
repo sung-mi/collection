@@ -11,6 +11,7 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/highcharts.js"></script>
 </head>
 <body>
 <div class="wrap top_bg3_1">
@@ -91,12 +92,131 @@
             </div>
         </section>
         <section class="padd2 line_btm">
-            <h3 class="con_tit ac mt40"> 잘 모으고 있나요 👀 <button type="button" class="btn_q" onclick="pop.open('pop2')"><i class="visualhide">?</i></button></h3>
+            <h3 class="con_tit ac mt40"> 잘 모으고 있나요 👀 <button type="button" class="btn_q ml10" onclick="pop.open('pop2')"><i class="visualhide">?</i></button></h3>
             <div class="mb30 mt10">
-                차트영역
+                <div id="cht1" style="height:38rem"></div>
+                <div class="cht1_legend">
+                    <span class="mr20">
+                        <i class="icon_cht1 mr5"></i>
+                        <i class="cht_legend_tx">내 평단가</i>
+                    </span>
+                    <span> 
+                        <i class="icon_cht2 mr5"></i>
+                        <i class="cht_legend_tx">주가</i>
+                    </span>
+                </div>
             </div>
         </section>
 
+        <script>
+        $('#cht1').highcharts({		
+                chart: {
+                    type: 'spline'
+                },
+                credits: {
+                    enabled: false
+                },
+                title: {
+                    text: ''
+                },
+                subtitle: {
+                    text: ''
+                },
+                xAxis: [{
+                    categories: ['2022.10.11','2022.11.11','2022.12.11','2023.01.11','2023.02.11','2023.03.11','2023.04.11'],
+                    //crosshair: true,
+                    lineColor:'#ADADAD',
+                    labels: {
+                        format: '{text}',
+                        style: {
+                            fontSize: '1.5rem',
+                            color: '#999',
+                            fontFamily: 'Pretendard',
+                        }
+                    }
+                }],
+                yAxis: [{
+                    title: {
+                        text: ''
+                    },
+                    labels: {
+                        format: '{value:,.0f}',
+                        style: {
+                            fontSize: '1.5rem',
+                            letterSpacing: '-0.05rem',
+                            color: "#2C363B",
+                            fontFamily:'Pretendard'
+                        }
+                    },
+                    plotLines: [{
+                        animation: {
+                            duration: 1000,
+                            defer: 4000
+                        }
+                    }]
+                }, {
+                    title: {
+                        text: ''
+                    }
+                }],
+                tooltip: {
+                    headerFormat: '<span class="tooltipH"><i>{point.x}</i><span>112회차</span></span><span class="tooltipC_out">',
+                    pointFormat: '{point.y}',
+                    footerFormat: '</span>',
+                    backgroundColor: null,
+                    borderWidth: 0,
+                    shadow: false,
+                    useHTML: true,
+                    shared: true
+                },
+                plotOptions: {
+                    
+                },
+                series: [{
+                    name: '내 평단가',
+                    lineWidth: 2,
+                    lineColor: '#FF5252',
+                    fontSize: '1.5rem',
+                    marker: {
+                        enabled: false,
+                        symbol:'diamond'
+                    },
+                    states: {
+                        hover: {
+                            lineWidth: 2
+                        }
+                    },
+                    tooltip: {
+                        valuePrefix: '<span class="tooltipC_in"><span><i class="icon_cht1 mr5"></i><span class="">{series.name}</span></span><span class="fwb">',
+                        valueSuffix: '원</span></span>'
+                    },
+                    data: [24000,21000,17000,21000,19000,19500,21000],
+                    showInLegend: false
+                }, {
+                    name: '주가',
+                    lineWidth: 1,
+                    lineColor: '#999',
+                    fontSize: '1.5rem',
+                    marker: {
+                        enabled: false
+                    },
+                    states: {
+                        hover: {
+                            lineWidth: 1
+                        }
+                    },
+                    tooltip: {
+                        valuePrefix: '<span class="tooltipC_in"><span><i class="icon_cht2 mr5"></i><span class="">{series.name}</span></span><span class="fwb">',
+                        valueSuffix: '원</span></span>'
+                    },
+                    data: [22000,18000,22000,20000,21000,20000,22000],
+                    showInLegend: false
+                }],
+                
+                colors: ["#FF5252", "#999"]
+        });
+        </script>
+        
         <section class="padd mt10">
             <div class="con_list type2 mt10">
                 <ul>
@@ -260,8 +380,6 @@
                             <i class="cl_p_tx2">10.839243주</i>
                         </span>    
                     </li>
-                    
-                    
                 </ul>
             </div>
         </section>
@@ -269,11 +387,7 @@
             <button type="button" class="btn_notice">유의사항</button>
         </section>
     </div>
-  
 </div>
-
-
-
 
 <div class="popup_wrapper" id="pop1">
 	<div class="pop_function">
@@ -293,7 +407,6 @@
                     </ul>
                 </div>
                 <script>tabHandler('#cd1')</script>
-
                 
                 <div class="mt12 flex_between">
                     <span class="inp_cal inp_start_end">
@@ -325,8 +438,17 @@
 				<h3>잘 모으고 있나요 👀</h3>
 			</div>
 			<div class="pop_con ">
-               test
-               
+                <div id="cht2" style="height:28rem"></div>
+                <h3 class="con_tit mt30">내가 모으는 주식은 평온해요</h3>
+                <div class="con_tit_s mt20">
+                    주가가 오르면 덜 사고, 내리면 더 사는 모으기!<br/>
+                    주가가 아무리 흔들려도 평온한 내 평단가를 지켜보세요.
+                </div>
+                <ul class="iconlist f18 lh24 c_9 mt30">
+                    <li data-icon="※" class="mb10"><i>주가 : 일자별 종가</i></li>
+                    <li data-icon="※" class="mb10"><i>내 평단가 : 모으고 있는 주식의 일자별 누적 평단가 (예시) 1회차 평단가 : 1회차 / 2회차 평단가 : 1~2회차 기준</i></li>
+                    <li data-icon="※"><i>해외주식은 2024년 3월 7일 이후 약정 건부터 기록돼요</i></li>
+                </ul>
             </div>
             <div class="pop_footer">
                 <button type="button" class="btn_pop2 popclose">확인</button> 
@@ -335,6 +457,109 @@
 	</div> 
 </div>
 
+<script>
+    $('#cht2').highcharts({		
+            chart: {
+                type: 'spline'
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: ''
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: [{
+                categories: ['','','','','','','','','','',''],                
+                lineColor:'#e6e6e6',
+                labels: {
+                    enabled: false
+                }
+            }],
+            yAxis: [{
+                title: {
+                    text: ''
+                },
+                labels: {
+                    enabled: false
+                },
+                plotLines: [{
+                    animation: {
+                        duration: 1000,
+                        defer: 4000
+                    }
+                }]
+            }, {
+                title: {
+                    text: ''
+                }
+            }],
+            tooltip: {
+                useHTML: true,
+                followPointer: false,
+                backgroundColor: null,
+                borderWidth: 0,
+                shadow: false
+            },
+            plotOptions: {
+                
+            },
+            series: [{
+                name: '내 평단가',
+                lineWidth: 2,
+                lineColor: '#FF5252',
+                fontSize: '1.5rem',
+                marker: {
+                    enabled: false,
+                   
+                },
+                states: {
+                    hover: {
+                        lineWidth: 2,
+                        marker: {
+                            enabled: true
+                           
+                        },
+                        
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<span class="box_smile">☺️',
+                    pointFormat: '',
+                    footerFormat: '</span>'
+                },
+                data: [15000,16000,14000,15000,13000,15000,16000,14000,15000,13000,14000],
+                showInLegend: false
+            }, {
+                events:{
+                    click:false
+                },
+                name: '주가',
+                lineWidth: 1,
+                lineColor: '#999',
+                fontSize: '1.5rem',
+                marker: {
+                    enabled: false
+                },
+                states: {
+                    hover: {
+                        lineWidth: 1
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<span>',
+                    pointFormat: '',
+                    footerFormat: '</span>'
+                },
+                data: [20000,25000,20000,26000,20000,25000,20000,24000,20000,25000,20000],
+                showInLegend: false
+            }],
+            
+            colors: ["#FF5252", "#999"]
+    });
+    </script>
 <script>
 </script>
 </body>
