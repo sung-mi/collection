@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <title>차트유의사항</title>    
     <link rel="stylesheet" href="css/icon.css">   
-    <link rel="stylesheet" href="css/contents_jsm.css?v7">   
+    <link rel="stylesheet" href="css/contents_jsm.css?v8">   
     <link rel="stylesheet" href="css/contents_ywg.css">   
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
@@ -44,126 +44,134 @@
    
     <script>
         $('#cht2').highcharts({		
-                chart: {
-                    type: 'spline'
-                },
-                credits: {
+            chart: {
+                type: 'spline'
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: ''
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: [{
+                categories: ['','','','','','','','','','',''],                
+                lineColor:'#e6e6e6',
+                labels: {
                     enabled: false
-                },
+                }
+            }],
+            yAxis: [{
                 title: {
                     text: ''
                 },
-                subtitle: {
+                labels: {
+                    enabled: false
+                },
+                plotLines: [{
+                    animation: {
+                        duration: 1000,
+                        defer: 4000
+                    }
+                }]
+            }, {
+                title: {
                     text: ''
-                },
-                xAxis: [{
-                    categories: ['','','','','','','','','','',''],                
-                    lineColor:'#e6e6e6',
-                    labels: {
-                        enabled: false
-                    }
-                }],
-                yAxis: [{
-                    title: {
-                        text: ''
-                    },
-                    labels: {
-                        enabled: false
-                    },
-                    plotLines: [{
-                        animation: {
-                            duration: 1000,
-                            defer: 4000
-                        }
-                    }]
-                }, {
-                    title: {
-                        text: ''
-                    }
-                }],
-                tooltip: {
-                    useHTML: true,
-                    followPointer: false,
-                    backgroundColor: null,
-                    borderWidth: 0,
-                    shadow: false
-                },
-                plotOptions: {
-                    
-                },
-                series: [{
-                    name: '내 평단가',
-                    lineWidth: 2,
-                    lineColor: '#FF5252',
-                    fontSize: '1.5rem',
-                    marker: {
-                        enabled: false,
-                    },
-                    label:{
-                        useHTML: true,
-                        style:{
-                            fontSize: '1.8rem',
-                            color: '#000',
-                            lineHeight: '2.4rem',
-                            fontWeight: '700',
-                            left: '100px !important'
-                        }
-                    },
-                    states: {
-                        hover: {
-                            lineWidth: 2,
-                            marker: {
-                                enabled: true
-                            },
-                        }
-                    },
-                    tooltip: {
-                        headerFormat: '<span class="box_smile">☺️',
-                        pointFormat: '',
-                        footerFormat: '</span>'
-                    },
-                    data: [15000,16000,14000,15000,13000,15000,16000,14000,15000,13000,14000],
-                    showInLegend: false
-                }, {
-                    label:{
-                        useHTML: true,
-                        style:{
-                            fontSize: '1.8rem',
-                            color: '#999',
-                            lineHeight: '2.4rem'
-                        }
-                    },
-                    name: '😵 주가',
-                    lineWidth: 1,
-                    lineColor: '#999',
-                    fontSize: '1.5rem',
-                    marker: {
-                        enabled: false,
-                        symbol: 'url()',
-                        lineColor: 'red',
-                        states: {
-                            hover: {
-                                enabled:false
-                            }
-                        }
-                    },
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    tooltip: {
-                        headerFormat: '<span>',
-                        pointFormat: '',
-                        footerFormat: '</span>'
-                    },
-                    data: [21000,24000,20000,23000,21000,26000,22000,24000,20000,25000,21000],
-                    showInLegend: false
-                }],
+                }
+            }],
+            tooltip: {
+                useHTML: true,
+                followPointer: false,
+                backgroundColor: null,
+                borderWidth: 0,
+                shadow: false
+            },
+            plotOptions: {
                 
-                colors: ["#FF5252", "#999"]
-        });
-        </script>
+            },
+            series: [{
+                name: '내 평단가',
+                lineWidth: 2,
+                lineColor: '#FF5252',
+                fontSize: '1.5rem',
+                marker: {
+                    enabled: false,
+                    states: {
+                        hover: {
+                            //fillColor: '',
+                            //lineColor: '',
+                            lineWidth: 1,
+                            radius: 4
+                        }
+                    }
+                },
+                label:{
+                    useHTML: true,
+                    style:{
+                        fontSize: '1.8rem',
+                        color: '#000',
+                        lineHeight: '2.4rem',
+                        fontWeight: '700',
+                        left: '100px !important'
+                    }
+                },
+                states: {
+                    hover: {
+                        lineWidth: 2,
+                        halo:{                               
+                            size:0
+                        }
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<span class="box_smile">☺️',
+                    pointFormat: '',
+                    footerFormat: '</span>'
+                },
+                data: [15000,16000,14000,15000,13000,15000,16000,14000,15000,13000,14000],
+                showInLegend: false
+            }, {
+                label:{
+                    useHTML: true,
+                    style:{
+                        fontSize: '1.8rem',
+                        color: '#999',
+                        lineHeight: '2.4rem'
+                    }
+                },
+                name: '😵 주가',
+                lineWidth: 1,
+                lineColor: '#999',
+                fontSize: '1.5rem',
+                marker: {
+                    enabled: false,
+                    symbol: 'url()',
+                    lineColor: 'red',
+                    states: {
+                        hover: {
+                            enabled:false
+                        }
+                    }
+                },
+                states: {
+                    hover: {
+                        lineWidth: 1
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<span>',
+                    pointFormat: '',
+                    footerFormat: '</span>'
+                },
+                data: [21000,24000,20000,23000,21000,26000,22000,24000,20000,25000,21000],
+                showInLegend: false
+            }],
+            
+            colors: ["#FF5252", "#999"]
+    });
+    </script>
     
 <script>
     pop.open('pop1')

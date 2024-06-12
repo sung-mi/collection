@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import url("font.css?v1");
-@import url("common.css?v13");
+@import url("common.css?v14");
 @import url("swiper.min.css");
 
 /* font-family weight
@@ -175,11 +175,8 @@
 .my_money_tx3{font-size: 2.1rem;font-weight: 500;line-height: 2.6rem;}
 .my_money_info>ul{display:flex;justify-content: space-between;}
 .my_money .inp_ck_w{position:absolute;top:-0.6rem;right:0}
-.my_money_info>ul>li>span{width:14rem}
-.my_money_info>ul>li:nth-child(1)>span{margin-right:2rem}
+.my_money_info>ul>li>span{width:14rem;margin:0 2rem}
 .my_money_info>ul>li:nth-child(2){border-left:0.1rem solid #E0E0E0;border-right:0.1rem solid #E0E0E0}
-.my_money_info>ul>li:nth-child(2)>span{margin:0 2rem}
-.my_money_info>ul>li:nth-child(3)>span{margin-left:2rem}
 .my_money_info>ul>li>span{display:flex;flex-direction: column;flex-wrap: wrap;align-items: center;}
 .myi_tx1{font-size:1.8rem;color: #999;line-height: 2rem;}
 .myi_tx2{font-size:2rem;color: #000;line-height: 2.4rem;letter-spacing: -0.05rem;margin-top:0.6rem;width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: center;}
@@ -205,7 +202,10 @@
 #cht1 .tooltipC_out{display: flex;flex-direction: column;}
 #cht1 .tooltipC_in{display: flex;justify-content: space-between;height:2.2rem;margin-bottom:0.4rem}
 #cht1 .tooltipC_in>span{display: flex;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;align-items: center;}
-#cht1 .highcharts-xaxis-labels>*{}  
+#cht1 .highcharts-point.highcharts-color-0{filter: drop-shadow(0px 0px 4px rgba(255, 82, 82, 0.50))}         
+#cht1 .highcharts-point.highcharts-color-1{filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.50))}
+#cht1 .highcharts-xaxis-labels{transform:translateY(-5px);}
+
 .icon_cht1{display:inline-flex;width:2.2rem;height:2.2rem;background:url(../img/icon_cht1.png) 0 0 no-repeat;background-size:2.2rem auto}
 .icon_cht2{display:inline-flex;width:2.2rem;height:2.2rem;background:url(../img/icon_cht2.png) 0 0 no-repeat;background-size:2.2rem auto}
 
@@ -213,3 +213,7 @@
 .box_smile{font-size:4rem;display:inline-flex;justify-content:center;align-items: center;width:10rem;height: 10rem;padding-bottom: 0.5rem;background:url(../img/img_cht_label_bg.png) 0 0 no-repeat;background-size:10rem auto;}
 #cht2 .highcharts-series-label-0{left:100% !important;margin-left:-10rem;margin-top:1rem}
 #cht2 .highcharts-series-label-1{left:100% !important;margin-left:-8.9rem}
+#cht2 .highcharts-point.highcharts-color-0{filter: drop-shadow(0px 0px 4px rgba(255, 82, 82, 0.50))}
+
+.no_data{display:flex;flex-direction: column;align-items: center}
+.no_data{color: #666;text-align: center;font-size: 2.1rem;line-height: 3rem}

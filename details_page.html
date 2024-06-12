@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <title>주식 모으기 > 목록 > 약정내역있음</title>    
-    <link rel="stylesheet" href="css/contents_jsm.css?v7" />
+    <link rel="stylesheet" href="css/contents_jsm.css?v8" />
     <!-- <link rel="stylesheet" href="css/contents_ywg.css?v2" />  -->
     <link rel="stylesheet" href="css/contents_cho.css?v2" /> 
     <script src="js/jquery-1.12.0.min.js"></script>
@@ -41,31 +41,31 @@
             </div>
         </section>
        
-        <section class="padd2 line_btm">
-            <div class="my_item_info">
-                <i class="my_item_info_icon"><i><img src="img/logo_ci.png"></i></i>
-                <span class="my_item_info_tx1">삼성전자</span>
-                <span class="my_item_info_tx2">9층가자고 · 125회차</span>
-            </div>
-            <style>
-               
-            </style>
-            <div class="box_line mt20">
-                <div class="my_money">
-                    
-                    <span class="my_money_tx1">모으기 평가금액</span>
-                    <span class="my_money_tx2 mt12">
-                        <i>3,456,789</i> 
-                        <i class="fwr">원</i>
-                    </span>
-                    <span class="my_money_tx3 mt6 up">
-                        <i>192,126</i> 
-                        <i>(1.13%)</i>
-                    </span>
-                    <span class="inp_ck_w"> 
-                        <input type="checkbox" id="inp_ck4">
-                        <label for="inp_ck4"></label>
-                    </span>
+        <section class="line_btm">
+            <div class="padd">
+                <div class="my_item_info">
+                    <i class="my_item_info_icon"><i><img src="img/logo_ci.png"></i></i>
+                    <span class="my_item_info_tx1">삼성전자</span>
+                    <span class="my_item_info_tx2">9층가자고 · 125회차</span>
+                </div>
+                
+                <div class="box_line mt20">
+                    <div class="my_money">
+                        
+                        <span class="my_money_tx1">모으기 평가금액</span>
+                        <span class="my_money_tx2 mt12">
+                            <i>3,456,789</i> 
+                            <i class="fwr">원</i>
+                        </span>
+                        <span class="my_money_tx3 mt6 up">
+                            <i>192,126</i> 
+                            <i>(1.13%)</i>
+                        </span>
+                        <span class="inp_ck_w"> 
+                            <input type="checkbox" id="inp_ck4">
+                            <label for="inp_ck4"></label>
+                        </span>
+                    </div>
                 </div>
             </div>
 
@@ -92,24 +92,43 @@
                 </ul>
             </div>
         </section>
-        <section class="padd2 line_btm">
+        <section class="padd line_btm">
             <h3 class="con_tit ac mt40"> 잘 모으고 있나요 👀 <button type="button" class="btn_q ml10" onclick="pop.open('pop2')"><i class="visualhide">?</i></button></h3>
             <div class="mb30 mt10">
-                <div id="cht1" style="height:38rem"></div>
-                <div class="cht1_legend">
-                    <span class="mr20">
-                        <i class="icon_cht1 mr5"></i>
-                        <i class="cht_legend_tx">내 평단가</i>
+                <div>
+                    <div id="cht1" style="height:38rem"></div>
+                    <div class="cht1_legend">
+                        <span class="mr20">
+                            <i class="icon_cht1 mr5"></i>
+                            <i class="cht_legend_tx">내 평단가</i>
+                        </span>
+                        <span> 
+                            <i class="icon_cht2 mr5"></i>
+                            <i class="cht_legend_tx">주가</i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="no_data mt60 pb20">
+                    <i class="icon_i"><i class="visualhide">!</i></i>
+                    <span class="mt20">
+                        아직 모은 기록이 없어요.<br/>
+                        곧 모으기를 시작할게요!
                     </span>
-                    <span> 
-                        <i class="icon_cht2 mr5"></i>
-                        <i class="cht_legend_tx">주가</i>
+                   
+                </div>
+                <div class="no_data mt60 pb20">
+                    <i class="icon_i"><i class="visualhide">!</i></i>
+                    <span class="mt20">
+                        기간 내 모은 기록이 없어요.<br/>
+                        기간을 설정해서 다른 기록들을 살펴보세요.
                     </span>
                 </div>
             </div>
         </section>
 
         <script>
+           
         $('#cht1').highcharts({		
                 chart: {
                     type: 'spline'
@@ -134,6 +153,14 @@
                             color: '#999',
                             fontFamily: 'Pretendard',
                         }
+                    },
+                    tickWidth: 1,
+                    tickColor: '#F0F0F0',
+                    tickmarkPlacement: 'left',
+                    crosshair: {
+                        width: 1,
+                        color: '#E0E0E0',
+                        dashStyle: 'dash'
                     }
                 }],
                 yAxis: [{
@@ -186,11 +213,23 @@
                     fontSize: '1.5rem',
                     marker: {
                         enabled: false,
-                        symbol:'diamond'
+                        symbol:'diamond',
+                        states: {
+                            hover: {
+                                //fillColor: '',
+                                //lineColor: '',
+                                lineWidth: 1,
+                                radius: 5,
+                                
+                            }
+                        }
                     },
                     states: {
                         hover: {
-                            lineWidth: 2
+                            lineWidth: 2,
+                            halo:{                               
+                               size:0
+                            }
                         }
                     },
                     tooltip: {
@@ -211,11 +250,22 @@
                     lineColor: '#999',
                     fontSize: '1.5rem',
                     marker: {
-                        enabled: false
+                        enabled: false,
+                        states: {
+                            hover: {
+                                //fillColor: '',
+                                //lineColor: '',
+                                lineWidth: 1,
+                                radius: 4
+                            }
+                        }
                     },
                     states: {
                         hover: {
-                            lineWidth: 1
+                            lineWidth: 1,
+                            halo:{                               
+                               size:0
+                            }
                         }
                     },
                     tooltip: {
@@ -228,7 +278,7 @@
                 
                 colors: ["#FF5252", "#999"]
         });
-        </script>
+        </script>       
         
         <section class="padd mt10">
             <div class="con_list type2 mt10">
@@ -526,6 +576,14 @@
                 fontSize: '1.5rem',
                 marker: {
                     enabled: false,
+                    states: {
+                        hover: {
+                            //fillColor: '',
+                            //lineColor: '',
+                            lineWidth: 1,
+                            radius: 4
+                        }
+                    }
                 },
                 label:{
                     useHTML: true,
@@ -540,9 +598,9 @@
                 states: {
                     hover: {
                         lineWidth: 2,
-                        marker: {
-                            enabled: true
-                        },
+                        halo:{                               
+                            size:0
+                        }
                     }
                 },
                 tooltip: {
