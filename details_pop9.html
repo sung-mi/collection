@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <title>주식 모으기</title>    
+    <link rel="stylesheet" href="css/icon.css">   
+    <link rel="stylesheet" href="css/contents_jsm.css">   
+    <link rel="stylesheet" href="css/contents_ywg.css">   
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <div class="popup_wrapper"id="pop">
+        <div class="pop_alert">
+            <div class="pop_in text-center">
+                <div class="pop_con">
+                    <div class="alert_tx1 ac">주식 모으기가 해지되었습니다.<br/>이용해주셔서 감사합니다.</div>
+                </div>
+                <div class="pop_footer">
+                    <button type="button" class="btn_pop2 popclose">확인</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    pop.open('pop')
+    tabHandler('#btn_tab3')
+</script>
+</body>
+</html>

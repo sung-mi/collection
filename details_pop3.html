@@ -45,7 +45,8 @@
     <script>
         $('#cht2').highcharts({		
             chart: {
-                type: 'spline'
+                type: 'spline',
+                margin: [10, 0, 10, 0]
             },
             credits: {
                 enabled: false
@@ -58,12 +59,13 @@
             },
             xAxis: [{
                 categories: ['','','','','','','','','','',''],                
-                lineColor:'#e6e6e6',
+                lineColor:'#f0f0f0',               
                 labels: {
                     enabled: false
                 }
             }],
             yAxis: [{
+                gridLineColor:'#f0f0f0',
                 title: {
                     text: ''
                 },

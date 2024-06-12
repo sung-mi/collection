@@ -3,36 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-    <title>주식 모으기</title>    
-    <link rel="stylesheet" href="css/contents_jsm.css">   
+    <title>주식 모으기 > 목록 > 약정내역없음</title>    
+    <link rel="stylesheet" href="css/contents_jsm.css?">   
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap top_bg1_1">
     <header class="header sticky_top">
-        <nav class="padd">
+        <nav class="padd2">
             <ul class="flex_between">
                 <li>
                     <h1 class="header_title">NH투자증권 제공 서비스</h1>
                 </li>
                 <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
+                    <a href="javascript:void(0)" class="btn_home_x">종료</a>
                 </li>
             </ul>
         </nav>
     </header>
     <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
+        <section class="padd2 con_top" style="height:36rem">
+            <div class="con_top_in">
+                <div class="con_top_tx1 pt40">모을 주식을<br/>선택해 주세요</div>
+                <div class="con_top_tx2 mt12">다양한 종목을 <br/>둘러보세요!</div>
+            </div>
         </section>
+
         <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
+            <span class="inp_srh">
+                <a href="javascript:void(0)" class="ico_srh"></a>
+                <input type="text" placeholder="모으고 싶은 종목을 찾아보세요!" title="종목검색" id="srh">
+                <button type="button" class="btn_delete" style="display: none;"><i class="visualhide">삭제</i></button>
+            </span>
+            <script>inputDelCtr();</script>
+        </section>
+
+        <section class="padd mt30">
+            <h3 class="con_tit">다른 투자자들이 많이 모은 종목 <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+            
+            <div id="main_tabs1" class="mt20">
+                <ul class="tab_ty2">
+                    <li class="on"><a href="javascript:void(0)" role="tab" aria-selected="true" >해외주식</a></li>
+                    <li class=""><a href="javascript:void(0)" role="tab" aria-selected="false" >국내주식</a></li>
+                </ul>
+            </div>
+            <script>
+            tabHandler('#main_tabs1')
+            </script>
+  
+            <div class="con_list mt10">
+                <ul>
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_num">1</i>
+                            <i class="cl_icon"><img src="img/logo_ci.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">애플</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국</i>
+                                    <i>AAPL</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">175.84</i>
+                            <i class="cl_p_tx2">USD</i>
+                        </span>    
+                    </li>
+                    
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_num">2</i>
+                            <i class="cl_icon"><img src="img/logo_ci_bh.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">SCHWAB US DIVIDEND EQUITY ETF</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국</i>
+                                    <i>BARK.A</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">175.84</i>
+                            <i class="cl_p_tx2">USD</i>
+                        </span>    
+                    </li>
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_num">3</i>
+                            <i class="cl_icon"><img src="img/ci_etc.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">아마존 닷컴</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국</i>
+                                    <i>AMZN</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">36.68</i>
+                            <i class="cl_p_tx2">USD</i>
+                        </span>    
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="padd mt40">
+                <h3 class="con_tit">최고의 브랜드를 보유한 기업 🏆 <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+            </div>
+            <div class="swiper-container con_silde mt20 " id="conS1">
+                <ul class="swiper-wrapper ">
+                    <li class="swiper-slide">
+                        <div class="con_slide_item">
+                            <i class="con_slide_icon"><img src="img/logo_ci.png"/></i>
+                            <i class="con_slide_tx1 mt12">애플</i> 
+                            <i class="con_slide_tx2 mt20">아이폰, 아이패드, 맥 하나하나가 TOP</i> 
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="con_slide_item">
+                            <i class="con_slide_icon"><img src="img/logo_ci_visa.png"/></i>
+                            <i class="con_slide_tx1 mt12">비자</i> 
+                            <i class="con_slide_tx2 mt20">국제 신용결제의 선두주자</i> 
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="con_slide_item">
+                            <i class="con_slide_icon"><img src="img/ci_etc.png"/></i>
+                            <i class="con_slide_tx1 mt12">코카콜라</i> 
+                            <i class="con_slide_tx2 mt20">자체 브랜드만 무려 200개..!</i> 
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                const conS1 = {
+                    on:function(){
+                        new Swiper('#conS1', {
+                            slidesPerView : 'auto',  
+                            freeMode: true,
+                            spaceBetween: 0,
+                            resistanceRatio: 0
+                        });
+                    }
+                }
+                conS1.on();
+            </script>
+        </section>
+
+        <section>
+            <div class="padd mt40">
+                <h3 class="con_tit">압도적인 경쟁력을 가진 기업 🔥 <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+            </div>
+            <div class="swiper-container con_silde mt20 " id="conS2">
+                <ul class="swiper-wrapper ">
+                    <li class="swiper-slide">
+                        <div class="con_slide_item">
+                            <i class="con_slide_icon"><img src="img/ci_etc.png"/></i>
+                            <i class="con_slide_tx1 mt12">TSMC</i> 
+                            <i class="con_slide_tx2 mt20">세계 최대의 반도체 파운드리 업체</i> 
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="con_slide_item">
+                            <i class="con_slide_icon"><img src="img/ci_etc.png"/></i>
+                            <i class="con_slide_tx1 mt12">3M</i> 
+                            <i class="con_slide_tx2 mt20">6만 가지의 리테일 포트폴리오 보유</i> 
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="con_slide_item">
+                            <i class="con_slide_icon"><img src="img/ci_etc.png"/></i>
+                            <i class="con_slide_tx1 mt12">코르테바</i> 
+                            <i class="con_slide_tx2 mt20">종자 로열티 및 작물보호의 강력한 마진</i> 
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                const conS2 = {
+                    on:function(){
+                        new Swiper('#conS2', {
+                            slidesPerView : 'auto',  
+                            freeMode: true,
+                            spaceBetween: 0,
+                            resistanceRatio: 0
+                        });
+                    }
+                }
+                conS2.on();
+            </script>
+        </section>
+        <section>
+            <div class="padd mt40">
+                <h3 class="con_tit">큰손들이 PICK한 종목은? <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+            </div>
+            <div class="swiper-container pick_silde mt20 " id="conS3">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <div class="pick_slide_item pick_bg1">
+                            <i class="pick_slide_icon"><img src="img/img_m1.png"/></i>
+                            <i class="pick_slide_tx1 mt10">워렌 버핏</i> 
+                            <i class="pick_slide_tx2 mt38">“10년 이상을 볼 것이 아니면 10분도 그 주식을 갖고 있지 마라”</i> 
+                            <span class="pick_slide_tx3 mt16">
+                                <i>#오마하의 현인</i>
+                                <i>#버크셔 헤서웨이</i> 
+                            </span> 
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="pick_slide_item pick_bg2">
+                            <i class="pick_slide_icon"><img src="img/img_m2.png"/></i>
+                            <i class="pick_slide_tx1 mt12">빌 애크먼</i> 
+                            <i class="pick_slide_tx2 mt38">“기업이 돈을 버는 방식을 이해하고, 이론상 영원히 존재할 기업에 투자하라”</i> 
+                            <span class="pick_slide_tx3 mt16">
+                                <i>#베이비 버핏</i>
+                                <i>#행동주의 투자</i> 
+                            </span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="pick_slide_item pick_bg3">
+                            <i class="pick_slide_icon"><img src="img/img_m3.png"/></i>
+                            <i class="pick_slide_tx1 mt12">마이클 버리</i> 
+                            <i class="pick_slide_tx2 mt38">“우리가 곤경에 빠지는 건 뭔가를 확실히 안다는 착각 때문이다.”</i>
+                            <span class="pick_slide_tx3 mt16">
+                                <i>#영화 빅쇼트 주인공</i>
+                                <i>#숏의 전설</i> 
+                            </span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="pick_slide_item pick_bg4">
+                            <i class="pick_slide_icon"><img src="img/img_m4.png"/></i>
+                            <i class="pick_slide_tx1 mt12">스탠리 드러켄밀러</i> 
+                            <i class="pick_slide_tx2 mt38">“30년간 손실없이 연평균 수익률 30.4%를 이뤄낸  월가의 돈버는 기계”</i>
+                            <span class="pick_slide_tx3 mt16">
+                                <i>#매크로 분석</i>
+                                <i>#월가의 돈버는 기계</i> 
+                            </span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="pick_slide_item pick_bg5">
+                            <i class="pick_slide_icon"><img src="img/img_m5.png"/></i>
+                            <i class="pick_slide_tx1 mt12">론 바론</i> 
+                            <i class="pick_slide_tx2 mt38">“장기적 관점은 우리가 다르게 생각할 수 있게 해준다.”</i>
+                            <span class="pick_slide_tx3 mt16">
+                                <i>#원조 테슬람</i>
+                                <i>#월가의 긍정왕</i> 
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                const conS3 = {
+                    on:function(){
+                        new Swiper('#conS3', {
+                            slidesPerView : 'auto',  
+                            freeMode: true,
+                            spaceBetween: 0,
+                            resistanceRatio: 0
+                        });
+                    }
+                }
+                conS3.on();
+            </script>
+        </section>
+
+        <section class="padd">
+            <h3 class="con_tit mt40">종목 하나로 아쉽다면 ETF <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+            <div class="con_list mt20 mb60">
+                <ul>
+                    <li>
+                        <span class="con_list_c">
+                            <i class="cl_icon"><img src="img/ci_etf.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">VOO</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국 S&P500 기업에 투자</i>
+                                </span>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="con_list_c">
+                            <i class="cl_icon"><img src="img/ci_etf.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">QQQ</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국 나스닥100 기업에 투자</i>
+                                </span>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="con_list_c">
+                            <i class="cl_icon"><img src="img/ci_etf.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">SCHD</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국 다우존스 배당+성장 기업에 투자</i>
+                                </span>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="con_list_c">
+                            <i class="cl_icon"><img src="img/ci_etf.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">MOAT</i>
+                                <span class="cl_info_tx2">
+                                    <i>강력한 경쟁력을 가진 미국기업에 투자</i>
+                                </span>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="con_list_c">
+                            <i class="cl_icon"><img src="img/ci_etf.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">VNQ</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국 리츠 부동산 기업에 투자</i>
+                                </span>
+                            </span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
         </section>
     </div>
-  
+</div>
+
+<div class="popup_wrapper" id="pop1">
+	<div class="pop_function">
+		<div class="pop_in text-center">
+			<button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+			<div class="pop_header">
+				<h3>계좌조회</h3>
+			</div>
+			<div class="pb40">
+                <div class="pop_sel_opt">
+                    <button type="button" name="" value="201-02-123456" selected onclick="popSelOpt.select(this,'selTx','pop1')"></button>
+                    <button type="button" name="" value="301-03-234561" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                    <button type="button" name="" value="401-04-345612" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                    <button type="button" name="" value="501-05-456123" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                    <button type="button" name="" value="601-06-561234" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                </div>
+                <!-- <script>
+                    const popSelOpt = {
+                        select:function(i,target,popid){
+                            $(i).attr('selected','true').siblings().removeAttr('selected');
+                            $('#'+target).attr('value', $(i).val());
+                            pop.close(popid);
+                        }
+                    }
+                </script>    -->
+            </div>
+		</div>
+	</div>
 </div>
 </body>
 </html>

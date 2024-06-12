@@ -18,7 +18,7 @@
             <div class="pop_in text-center">
                 <button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
                 <div class="pop_header ac">
-                    <h3>자동환전</h3>
+                    <h3>주식 모으기를 그만 둘까요?</h3>
                 </div>
                 
                 <div class="pop_con">
@@ -61,12 +61,24 @@
 
                 <div class="pop_footer">
                     <button type="button" class="btn_pop1 popclose">취소</button>
-                    <button type="button" class="btn_pop2">해지하기</button> 
+                    <button type="button" class="btn_pop2" onclick="pop.close('pop1');pop.open('pop');">해지하기</button> 
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="popup_wrapper"id="pop">
+        <div class="pop_alert">
+            <div class="pop_in text-center">
+                <div class="pop_con">
+                    <div class="alert_tx1 ac">주식 모으기가 해지되었습니다.<br/>이용해주셔서 감사합니다.</div>
+                </div>
+                <div class="pop_footer">
+                    <button type="button" class="btn_pop2 popclose">확인</button> 
+                </div>
+            </div>
+        </div>
+    </div>
 <script>
     pop.open('pop1')
     tabHandler('#btn_tab3')

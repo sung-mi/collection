@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <title>주식 모으기</title>    
+    <link rel="stylesheet" href="css/contents_jsm.css">   
+    <link rel="stylesheet" href="css/contents_ywg.css">   
+    <link rel="stylesheet" href="css/contents_cho.css">   
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <div class="popup_wrapper" id="pop1">
+        <div class="pop_function">
+            <div class="pop_in text-center">
+                <button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+                <div class="pop_header">
+                    <h3>계좌조회</h3>
+                </div>
+                <div class="pb40">
+                    <div class="pop_sel_opt">
+                        <button type="button" name="" value="201-02-123456" selected onclick="popSelOpt.select(this,'selTx','pop1')"></button>
+                        <button type="button" name="" value="301-03-234561" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                        <button type="button" name="" value="401-04-345612" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                        <button type="button" name="" value="501-05-456123" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                        <button type="button" name="" value="601-06-561234" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    pop.open('pop1')	
+</script>
+</body>
+</html>
