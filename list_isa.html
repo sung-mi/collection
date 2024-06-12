@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <title>주식 모으기 > 목록 > 약정내역없음</title>    
+    <link rel="stylesheet" href="css/contents_jsm.css?">   
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+<div class="wrap top_bg1_2">
+    <header class="header sticky_top">
+        <nav class="padd2">
+            <ul class="flex_between">
+                <li>
+                    <h1 class="header_title">NH투자증권 제공 서비스</h1>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="btn_home_x">종료</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="padd2 con_top">
+            <div class="con_top_in">
+                <span class="btn_top_sel mt15">
+                    <button type="button" name="" value="201-02-123456" onclick="pop.open('pop1')" id="selTx"></button>
+                </span>
+                <div class="con_top_tx1 mt40">모으고 있는<br/>종목이 없어요</div>
+                <div class="con_top_tx2 mt12">애정을 담은 주식을<br/>차곡차곡 모아보세요!</div>
+                <button type="button" class="btn_top_more mt16" onclick="location.href='list_service.html'">더 알아보기</button>
+                <!-- 
+                    <div class="con_top_tx1 mt40">모을 주식을<br/>선택해 주세요</div>
+                    <div class="con_top_tx2 mt12">다양한 종목을<br/>둘러보세요!</div> 
+                -->
+            </div>
+        </section>
+
+        <section class="padd">
+            <span class="inp_srh">
+                <a href="javascript:void(0)" class="ico_srh"></a>
+                <input type="text" placeholder="모으고 싶은 종목을 찾아보세요!" title="종목검색" id="srh">
+                <button type="button" class="btn_delete" style="display: none;"><i class="visualhide">삭제</i></button>
+            </span>
+            <script>inputDelCtr();</script>
+        </section>
+
+        <section class="padd mt30 mb40">
+            <h3 class="con_tit">중개형 ISA에서 주식 모으기<button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+            
+            <div id="main_tabs1" class="mt20">
+                <ul class="tab_ty2">
+                    <li class="on"><a href="javascript:void(0)" role="tab" aria-selected="true" >해외주식</a></li>
+                    <li class=""><a href="javascript:void(0)" role="tab" aria-selected="false" >국내주식</a></li>
+                </ul>
+            </div>
+            <script>
+            tabHandler('#main_tabs1')
+            </script>
+  
+            <div class="con_list mt10">
+                <ul>
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_num">1</i>
+                            <i class="cl_icon"><img src="img/logo_ci.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">애플</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국</i>
+                                    <i>AAPL</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">175.84</i>
+                            <i class="cl_p_tx2">USD</i>
+                        </span>    
+                    </li>
+                    
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_num">2</i>
+                            <i class="cl_icon"><img src="img/logo_ci_bh.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">SCHWAB US DIVIDEND EQUITY ETF</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국</i>
+                                    <i>BARK.A</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">175.84</i>
+                            <i class="cl_p_tx2">USD</i>
+                        </span>    
+                    </li>
+                    <li>
+                        <span class="con_list_l">
+                            <i class="cl_num">3</i>
+                            <i class="cl_icon"><img src="img/ci_etc.png"></i>
+                            <span class="cl_info">
+                                <i class="cl_info_tx1">아마존 닷컴</i>
+                                <span class="cl_info_tx2">
+                                    <i>미국</i>
+                                    <i>AMZN</i>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="con_list_r">
+                            <i class="cl_p_tx1">36.68</i>
+                            <i class="cl_p_tx2">USD</i>
+                        </span>    
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="popup_wrapper" id="pop1">
+	<div class="pop_function">
+		<div class="pop_in text-center">
+			<button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+			<div class="pop_header">
+				<h3>계좌조회</h3>
+			</div>
+			<div class="pb40">
+                <div class="pop_sel_opt">
+                    <button type="button" name="" value="201-02-123456" selected onclick="popSelOpt.select(this,'selTx','pop1')"></button>
+                    <button type="button" name="" value="301-03-234561" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                    <button type="button" name="" value="401-04-345612" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                    <button type="button" name="" value="501-05-456123" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                    <button type="button" name="" value="601-06-561234" onclick="popSelOpt.select(this,'selTx', 'pop1')"></button>
+                </div>
+                <!-- <script>
+                    const popSelOpt = {
+                        select:function(i,target,popid){
+                            $(i).attr('selected','true').siblings().removeAttr('selected');
+                            $('#'+target).attr('value', $(i).val());
+                            pop.close(popid);
+                        }
+                    }
+                </script>    -->
+            </div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

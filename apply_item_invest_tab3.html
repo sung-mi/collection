@@ -1,38 +1,206 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-    <title>주식 모으기</title>    
-    <link rel="stylesheet" href="css/contents_jsm.css">   
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"/>
+    <title>주식 모으기 > 목록 > 약정내역있음</title>
+    <link rel="stylesheet" href="css/contents_jsm.css?v2" />
+    <link rel="stylesheet" href="css/contents_cho.css?v2" />
+    <link rel="stylesheet" href="css/contents_ywg.css?v2" />
+    <link rel="stylesheet" href="../css/swiper.min.css"> 
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
-</head>
-<body>
-<div class="wrap">
-    <header class="header sticky_top">
-        <nav class="padd">
-            <ul class="flex_between">
-                <li>
-                    <h1 class="header_title">NH투자증권 제공 서비스</h1>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
+  </head>
+  <body>
+    <div class="fullpop top_bg2">
+      <header class="header_sub sticky_top">
+        <div class="padd2">
+          <ul class="flex_between">
+            <li> 
+              <!-- <a href="javascript:void(0)" class="btn_back"><i class="visualhide">뒤로</i></a> -->
+              <h1 class="header_title_sub">주식 모으기 큰손 PICK </h1>
+            </li>
+            <li>
+              <!-- <a href="javascript:void(0)" class="btn_home">홈</a> -->
+              <a href="javascript:void(0)" class="btn_x"><i class="visualhide">닫기</i></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="container">
+        <div id="tab1">
+            <div class="swiper-container swiper_tab swipe1" id="swipe1"> 
+                <ul class="swiper-wrapper"> 
+                    <li class="swiper-slide on" data-tab="tabox1"><a href="javascript:void(0)">워렌 버핏</a></li> 
+                    <li class="swiper-slide" data-tab="tabox2"><a href="javascript:void(0)">빌 애크먼</a></li>
+                    <li class="swiper-slide" data-tab="tabox3"><a href="javascript:void(0)">마이클 버리</a></li> 
+                    <li class="swiper-slide" data-tab="tabox4"><a href="javascript:void(0)">스탠리 드러켄밀러</a></li> 
+                    <li class="swiper-slide" data-tab="tabox5"><a href="javascript:void(0)">론 바론</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 워렌 버핏 -->
+        <div class="tab-content dp-block" id="tabox1" style="display: none">
+            <div class="box_pick">
+                <div class="pick_txt">
+                    <h3>워렌 버핏<br>
+                        포트폴리오</h3>
+                    <p class="mb10">오마하의 현인 워렌 버핏의<br>
+                        보유 비중별 종목입니다.</p>
+                    <span>2023.06.30 기준</span>
+                </div>
+                <div class="pick_pic">
+                    <img src="img/img_m1.png" alt="" /></div>
+            </div>
+            <div class="box_list2">
+                <ul>                    
+                    <li>
+                        <a href="javascript:void(0)" class="box_item">
+                            <i class="bxl_icon"><img src="img/logo_ci.png"></i>
+                            <span class="box_list_c flex1">
+                                <span class="bxl_info">
+                                    <span class="bxl2_info1">
+                                        <i class="bxl2_info1_tx1">애플</i>
+                                        <i class="bxl2_info1_tx2">50%</i>
+                                    </span>
+                                    <span class="bxl_info2">
+                                        <span class="bxl2_info2_tx1">
+                                            <i>미국</i>
+                                            <i>AAPL</i>
+                                        </span>
+                                        <i class="bxl2_info2_tx2">보유비중</i>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="box_item">
+                            <i class="bxl_icon"><img src="img/logo_ci_visa.png"></i>
+                            <span class="box_list_c flex1">
+                                <span class="bxl_info">
+                                    <span class="bxl2_info1">
+                                        <i class="bxl2_info1_tx1">애플</i>
+                                        <i class="bxl2_info1_tx2">50%</i>
+                                    </span>
+                                    <span class="bxl_info2">
+                                        <span class="bxl2_info2_tx1">
+                                            <i>미국</i>
+                                            <i>AAPL</i>
+                                        </span>
+                                        <i class="bxl2_info2_tx2">보유비중</i>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="box_item">
+                            <i class="bxl_icon"><img src="img/logo_ci_bh.png"></i>
+                            <span class="box_list_c flex1">
+                                <span class="bxl_info">
+                                    <span class="bxl2_info1">
+                                        <i class="bxl2_info1_tx1">SCHWAB US DIVIDEND EQUITY ETF</i>
+                                        <i class="bxl2_info1_tx2">50%</i>
+                                    </span>
+                                    <span class="bxl_info2">
+                                        <span class="bxl2_info2_tx1">
+                                            <i>미국</i>
+                                            <i>AAPL</i>
+                                        </span>
+                                        <i class="bxl2_info2_tx2">보유비중</i>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //워렌 버핏 -->
+        
+        <!-- 빌 애크먼 -->
+        <div class="tab-content" id="tabox2" style="display: none">            
+            <div class="box_pick">
+                <div class="pick_txt">
+                    <h3>빌 애크먼<br>
+                        포트폴리오</h3>
+                    <p class="mb10">행동주의 투자의 대가 빌 애크먼의<br>
+                        보유 비중별 종목입니다.</p>
+                    <span>2023.06.30 기준</span>
+                </div>
+                <div class="pick_pic">
+                    <img src="img/img_m2.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <!-- //빌 애크먼 -->
+        
+        <!-- 마이클 버리 -->
+        <div class="tab-content" id="tabox3" style="display: none">            
+            <div class="box_pick">
+                <div class="pick_txt">
+                    <h3>마이클 버리<br>
+                        포트폴리오</h3>
+                    <p class="mb10">영화 빅쇼트의 주인공 마이클 버리의<br>
+                        보유 비중별 종목입니다.</p>
+                    <span>2023.06.30 기준</span>
+                </div>
+                <div class="pick_pic">
+                    <img src="img/img_m3.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <!-- //마이클 버리 -->
+        
+        <!-- 스탠리 드러켄밀러 -->
+        <div class="tab-content" id="tabox4" style="display: none">            
+            <div class="box_pick">
+                <div class="pick_txt">
+                    <h3>스탠리 드러켄밀러<br>
+                        포트폴리오</h3>
+                    <p class="mb10">월가의 돈버는 기계 스탠리 드러켄밀러의<br>
+                        보유 비중별 종목입니다.</p>
+                    <span>2023.06.30 기준</span>
+                </div>
+                <div class="pick_pic">
+                    <img src="img/img_m4.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <!-- //스탠리 드러켄밀러 -->
+        
+        <!-- 론 바론 -->
+        <div class="tab-content" id="tabox5" style="display: none">
+            <div class="box_pick">
+                <div class="pick_txt">
+                    <h3>론 바론<br>
+                        포트폴리오</h3>
+                    <p class="mb10">월가의 긍정왕 론 바론의<br>
+                        보유 비중별 종목입니다.</p>
+                    <span>2023.06.30 기준</span>
+                </div>
+                <div class="pick_pic">
+                    <img src="img/img_m5.png" alt="" />
+                </div> 
+            </div>
+        </div>
+        <!-- //론 바론 -->
+      </div>
     </div>
-  
-</div>
-</body>
+    <script>
+        tabHandler("#tab1");
+        var swipe1 = new Swiper('#swipe1', {  
+            slidesPerView : 'auto',
+            // freeMode: true,
+            spaceBetween : 0,
+            slidesOffsetBefore: 24,
+            slidesOffsetAfter: -48,
+        })
+    </script>
+  </body>
 </html>
