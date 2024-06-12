@@ -10,6 +10,16 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
+    <script>
+      var url = location.href;
+      var tabIdx = url.indexOf('?');
+      var tabNum = url.slice(tabIdx+5);
+      $(function(){
+        if(tabNum){
+            $('#tab1>ul>li:nth-child('+tabNum+')>a').trigger('click');
+        }
+      })
+    </script>
   </head>
   <body>
     <div class="fullpop top_bg2" id="sub">
@@ -33,11 +43,11 @@
               <a href="javascript:void(0)" role="tab" aria-selected="true">서비스 안내</a>
             </li>
             <li class="flex1" data-tab="tabox2">
-              <a href="javascript:void(0)" role="tab" aria-selected="true">자주하는 질문</a>
+              <a href="javascript:void(0)" role="tab" aria-selected="true" onclick="accTab.reset()">자주하는 질문</a>
             </li>
           </ul>
         </div>
-
+        
         <!-- 서비스 인내 -->
         <div class="tab-content dp-block" id="tabox1" style="display: none">
           <section class="padd2 con_top" style="height: 36rem">
@@ -211,85 +221,85 @@
             <ul class="acc_menu">
               <li>
                 <div class="acc_cont">
-                  <button type="button" class="btn_acc">주식 모으기는 어떤 서비스인가요?</button>
+                  <button type="button" class="btn_acc" onclick="accTab.on(this)">주식 모으기는 어떤 서비스인가요?</button>
                   <div class="acc_txt">‘주식 모으기'는 자동 적립식 형태로 우량 주식을 저축하듯 모을 수 있는 서비스 입니다.</div>
                 </div>
               </li>
               <li>
                 <div class="acc_cont">
-                  <button type="button" class="btn_acc">어떤 주식을 모을 수 있나요?</button>
+                  <button type="button" class="btn_acc" onclick="accTab.on(this)">어떤 주식을 모을 수 있나요?</button>
                   <div class="acc_txt">어떤 주식을 모을 수 있나요? 어떤 주식을 모을 수 있나요? 어떤 주식을 모을 수 있나요? 어떤 주식을 모을 수 있나요?</div>
                 </div>
               </li>
               <li>
                 <div class="acc_cont">
-                  <button type="button" class="btn_acc">주문은 언제 들어가나요?</button>
+                  <button type="button" class="btn_acc" onclick="accTab.on(this)">주문은 언제 들어가나요?</button>
                   <div class="acc_txt">주문은 언제 들어가나요? 주문은 언제 들어가나요? 주문은 언제 들어가나요? 주문은 언제 들어가나요? 주문은 언제 들어가나요?</div>
                 </div>
               </li>
               <li>
                 <div class="acc_cont">
-                  <button type="button" class="btn_acc">수수료는 어떻게 되나요?</button>
+                  <button type="button" class="btn_acc" onclick="accTab.on(this)">수수료는 어떻게 되나요?</button>
                   <div class="acc_txt">수수료는 어떻게 되나요? 수수료는 어떻게 되나요? 수수료는 어떻게 되나요? 수수료는 어떻게 되나요? 수수료는 어떻게 되나요?</div>
                 </div>
               </li>
               <li>
                 <div class="acc_cont">
-                  <button type="button" class="btn_acc">주식 모으기 조건을 변경할 수 있나요?</button>
+                  <button type="button" class="btn_acc" onclick="accTab.on(this)">주식 모으기 조건을 변경할 수 있나요?</button>
                   <div class="acc_txt">주식 모으기 조건을 변경할 수 있나요? 주식 모으기 조건을 변경할 수 있나요? 주식 모으기 조건을 변경할 수 있나요? 주식 모으기 조건을 변경할 수 있나요?</div>
                 </div>
               </li>
               <li>
                 <div class="acc_cont">
-                  <button type="button" class="btn_acc">주식 모으기는 어떤 서비스인가요?</button>
+                  <button type="button" class="btn_acc" onclick="accTab.on(this)">주식 모으기는 어떤 서비스인가요?</button>
                   <div class="acc_txt">주식 모으기는 어떤 서비스인가요? 주식 모으기는 어떤 서비스인가요? 주식 모으기는 어떤 서비스인가요? 주식 모으기는 어떤 서비스인가요?</div>
                 </div>
               </li>
               <li>
                 <div class="acc_cont">
-                  <button type="button" class="btn_acc">해지는 어떻게 할 수 있나요?</button>
+                  <button type="button" class="btn_acc" onclick="accTab.on(this)">해지는 어떻게 할 수 있나요?</button>
                   <div class="acc_txt">해지는 어떻게 할 수 있나요? 해지는 어떻게 할 수 있나요? 해지는 어떻게 할 수 있나요? 해지는 어떻게 할 수 있나요? 해지는 어떻게 할 수 있나요? 해지는 어떻게 할 수 있나요?</div>
                 </div>
               </li>
               <li>
                 <div class="acc_cont">
-                  <button type="button" class="btn_acc">주식 모으기는 어떤 서비스인가요?</button>
+                  <button type="button" class="btn_acc" onclick="accTab.on(this)">주식 모으기는 어떤 서비스인가요?</button>
                   <div class="acc_txt">‘주식 모으기'는 자동 적립식 형태로 우량 주식을 저축하듯 모을 수 있는 서비스 입니다.</div>
                 </div>
               </li>
               <li>
                 <div class="acc_cont">
-                  <button type="button" class="btn_acc">어떤 주식을 모을 수 있나요?</button>
+                  <button type="button" class="btn_acc" onclick="accTab.on(this)">어떤 주식을 모을 수 있나요?</button>
                   <div class="acc_txt">어떤 주식을 모을 수 있나요? 어떤 주식을 모을 수 있나요? 어떤 주식을 모을 수 있나요? 어떤 주식을 모을 수 있나요?</div>
                 </div>
               </li>
               <li>
                 <div class="acc_cont">
-                  <button type="button" class="btn_acc">주문은 언제 들어가나요?</button>
+                  <button type="button" class="btn_acc" onclick="accTab.on(this)">주문은 언제 들어가나요?</button>
                   <div class="acc_txt">주문은 언제 들어가나요? 주문은 언제 들어가나요? 주문은 언제 들어가나요? 주문은 언제 들어가나요? 주문은 언제 들어가나요?</div>
                 </div>
               </li>
               <li>
                 <div class="acc_cont">
-                  <button type="button" class="btn_acc">수수료는 어떻게 되나요?</button>
+                  <button type="button" class="btn_acc" onclick="accTab.on(this)">수수료는 어떻게 되나요?</button>
                   <div class="acc_txt">수수료는 어떻게 되나요? 수수료는 어떻게 되나요? 수수료는 어떻게 되나요? 수수료는 어떻게 되나요? 수수료는 어떻게 되나요?</div>
                 </div>
               </li>
               <li>
                 <div class="acc_cont">
-                  <button type="button" class="btn_acc">주식 모으기 조건을 변경할 수 있나요?</button>
+                  <button type="button" class="btn_acc" onclick="accTab.on(this)">주식 모으기 조건을 변경할 수 있나요?</button>
                   <div class="acc_txt">주식 모으기 조건을 변경할 수 있나요? 주식 모으기 조건을 변경할 수 있나요? 주식 모으기 조건을 변경할 수 있나요? 주식 모으기 조건을 변경할 수 있나요?</div>
                 </div>
               </li>
               <li>
                 <div class="acc_cont">
-                  <button type="button" class="btn_acc">주식 모으기는 어떤 서비스인가요?</button>
+                  <button type="button" class="btn_acc" onclick="accTab.on(this)">주식 모으기는 어떤 서비스인가요?</button>
                   <div class="acc_txt">주식 모으기는 어떤 서비스인가요? 주식 모으기는 어떤 서비스인가요? 주식 모으기는 어떤 서비스인가요? 주식 모으기는 어떤 서비스인가요?</div>
                 </div>
               </li>
               <li>
                 <div class="acc_cont">
-                  <button type="button" class="btn_acc">해지는 어떻게 할 수 있나요?</button>
+                  <button type="button" class="btn_acc" onclick="accTab.on(this)">해지는 어떻게 할 수 있나요?</button>
                   <div class="acc_txt">해지는 어떻게 할 수 있나요? 해지는 어떻게 할 수 있나요? 해지는 어떻게 할 수 있나요? 해지는 어떻게 할 수 있나요? 해지는 어떻게 할 수 있나요? 해지는 어떻게 할 수 있나요?</div>
                 </div>
               </li>
@@ -299,44 +309,52 @@
         <!-- //자주하는질문 -->
       </div>
     </div>
+ 
     <script>
       tabHandler("#tab1");
-
-      $(function(){
-        var $PopTab =  $(".tab_ty1"); // 팝업 탭
+      const accTab = {
+        on:function(i){
+          $(i).parent().toggleClass('active').parents('li').siblings().find('.acc_cont').removeClass('active');
+        },
+        reset:function(){
+          $('.acc_cont').removeClass('active');
+        }
+      }
+      // $(function(){
+      //   var $PopTab =  $(".tab_ty1"); // 팝업 탭
         
-        var $PopTabBtn = $PopTab.find('> li > a'); // 팝업 버튼
-        $PopTabBtn.click(function(){
-          if($('.acc_menu').length){
-            $(this).parents('.container').find('.acc_cont').removeClass('active');
-          } // 자주하는 아코디언 메뉴가 있을때 초기화
-        }); // 탭 버튼 클릭시
+      //   var $PopTabBtn = $PopTab.find('> li > a'); // 팝업 버튼
+      //   $PopTabBtn.click(function(){
+      //     if($('.acc_menu').length){
+      //       $(this).parents('.container').find('.acc_cont').removeClass('active');
+      //     } // 자주하는 아코디언 메뉴가 있을때 초기화
+      //   }); // 탭 버튼 클릭시
         
-        var $PopHeader =  $(".header_sub"); // 팝업 헤더
-        var headerHeight = $PopHeader.outerHeight(); // 팝업 헤더 높이
-        var tabHeight =  $PopTab.outerHeight(); // 팝업 탭 높이
-        var accHeight = $(window).height() - headerHeight - tabHeight; // 해상도 대비 아코디언 메뉴 높이값을 구함
-        $('.accord').css("min-height", accHeight); // 아코디언 메뉴의 회색 배경색의 min-height
-       // 아코디언메뉴 컨텐츠 해상도에 맞게 리사이즈
+      //   var $PopHeader =  $(".header_sub"); // 팝업 헤더
+      //   var headerHeight = $PopHeader.outerHeight(); // 팝업 헤더 높이
+      //   var tabHeight =  $PopTab.outerHeight(); // 팝업 탭 높이
+      //   var accHeight = $(window).height() - headerHeight - tabHeight; // 해상도 대비 아코디언 메뉴 높이값을 구함
+      //   $('.accord').css("min-height", accHeight); // 아코디언 메뉴의 회색 배경색의 min-height
+      //  // 아코디언메뉴 컨텐츠 해상도에 맞게 리사이즈
 
-        var $accMenu = $('.acc_menu'); // 아코디언 메뉴
-        var $accBtn = $accMenu.find('.btn_acc'); // 아코디언 메뉴 버튼
-        var $accTxt = $accMenu.find('.acc_txt'); //아코디언 메뉴 답변
-        var $accCont = $('.acc_cont'); // 아코디언 메뉴 버튼과 텍스트를 감싼 영역
-        $accBtn.click(function(){
-          var accBtn = $(this); // 클릭 버튼
-          var accCont = accBtn.parents('.acc_cont'); // 클릭한 버튼과 텍스트를 감싼 영역
-          if(accCont.hasClass('active')){
-            accCont.removeClass('active'); // 클릭한 버튼과 텍스트를 감싼 영역에 removeClass
-            // 클릭한 버튼과 텍스트를 감싼 영역에 active class가 있을때
-          }else{
-            $accCont.removeClass('active'); // 아코디언 메뉴 버튼과 텍스트를 감싼 영역 removeClass
-            accCont.addClass('active') // 클릭한 버튼과 텍스트를 감싼 영역에 addClass
-            // 클릭한 버튼과 텍스트를 감싼 영역에 active class가 없을때
-          }
-        });
-       // 자주하는 질문 아코디언 메뉴
-      });
+      //   var $accMenu = $('.acc_menu'); // 아코디언 메뉴
+      //   var $accBtn = $accMenu.find('.btn_acc'); // 아코디언 메뉴 버튼
+      //   var $accTxt = $accMenu.find('.acc_txt'); //아코디언 메뉴 답변
+      //   var $accCont = $('.acc_cont'); // 아코디언 메뉴 버튼과 텍스트를 감싼 영역
+      //   $accBtn.click(function(){
+      //     var accBtn = $(this); // 클릭 버튼
+      //     var accCont = accBtn.parents('.acc_cont'); // 클릭한 버튼과 텍스트를 감싼 영역
+      //     if(accCont.hasClass('active')){
+      //       accCont.removeClass('active'); // 클릭한 버튼과 텍스트를 감싼 영역에 removeClass
+      //       // 클릭한 버튼과 텍스트를 감싼 영역에 active class가 있을때
+      //     }else{
+      //       $accCont.removeClass('active'); // 아코디언 메뉴 버튼과 텍스트를 감싼 영역 removeClass
+      //       accCont.addClass('active') // 클릭한 버튼과 텍스트를 감싼 영역에 addClass
+      //       // 클릭한 버튼과 텍스트를 감싼 영역에 active class가 없을때
+      //     }
+      //   });
+      //  // 자주하는 질문 아코디언 메뉴
+      // });
     
     </script>
   </body>

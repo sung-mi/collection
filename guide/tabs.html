@@ -174,9 +174,10 @@ tabHandler('#tab3')
 								on: {
 									slideChangeTransitionEnd: function () {
 										const bodyWd = $('html,body').outerWidth();
-										const lastL = $('#tab4>ul>li:last-child').offset().left;
-										const liWd = $('#tab4>ul>li').outerWidth();
-										const lastEnd = lastL+liWd;			
+										const lastLi = $('#tab4>ul>li:last-child');
+										const lastL = lastLi.offset().left;
+										const liWd = lastLi.outerWidth();
+										const lastEnd = lastL+liWd;	
 										if(lastEnd <= bodyWd){
 											$('#tab4').addClass('tab_end');
 										}else{
@@ -216,9 +217,10 @@ const tab4Slide = {
 			on: {
 				slideChangeTransitionEnd: function () {
 					const bodyWd = $('html,body').outerWidth();
-					const lastL = $('#tab4>ul>li:last-child').offset().left;
-					const liWd = $('#tab4>ul>li').outerWidth();
-					const lastEnd = lastL+liWd;			
+					const lastLi = $('#tab4>ul>li:last-child');
+					const lastL = lastLi.offset().left;
+					const liWd = lastLi.outerWidth();
+					const lastEnd = lastL+liWd;	
 					if(lastEnd <= bodyWd){
 						$('#tab4').addClass('tab_end');
 					}else{

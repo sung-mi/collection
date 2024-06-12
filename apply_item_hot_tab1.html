@@ -11,6 +11,16 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
+    <script>
+        var url = location.href;
+        var tabIdx = url.indexOf('?');
+        var tabNum = url.slice(tabIdx+5);
+        $(function(){
+          if(tabNum){
+              $('#tab1>ul>li:nth-child('+tabNum+')>a').trigger('click');
+          }
+        })
+      </script>
   </head>
   <body>
     <div class="fullpop top_bg2">

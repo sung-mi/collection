@@ -37,6 +37,7 @@
 .top_bg3_2 .con_top_in .btn_top_sel,
 .top_bg3_3 .con_top_in .btn_top_sel,
 .top_bg3_4 .con_top_in .btn_top_sel{margin-bottom:8.7rem}
+.top_bg1_1 .con_top{padding-bottom:13.4rem;}
 .top_bg1_2 .con_top{padding-bottom:8.5rem;}
 
 .header_title{font-size:1.8rem;color:#aaa}
@@ -61,7 +62,7 @@
 .con_top_sub{padding-bottom:3rem}
 .con_top_sub + section{position:relative;z-index:2;margin-top:-3rem;background-color:#fff;border-top-right-radius: 3rem;border-top-left-radius: 3rem;padding-top: 3rem}
 .con_top:before{content:'';z-index:1;position:absolute;top:0;left:0;width:100%;height:100%}
-.top_bg1_1 .con_top:before{background:url(../img/img_main_visual1.png) 0 calc(100% + 3.2rem) no-repeat;background-size:100% auto}
+.top_bg1_1 .con_top:before{background:url(../img/img_main_visual1.png) 0 0 no-repeat;background-size:100% auto}
 .top_bg1_2 .con_top:before{background:url(../img/img_main_visual2.png) 0 100% no-repeat;background-size:100% auto}
 .top_bg2 .con_top:before{background:url(../img/img_top_visual1.png) calc(100% - 2.9rem) calc(100% - 5.6rem) no-repeat;background-size:20rem auto}
 .top_bg3_1 .con_top:before{background:url(../img/img_top_visual2.png) calc(100% - 2rem) calc(100% - 5.9rem) no-repeat;background-size:22.3rem auto}
@@ -222,3 +223,8 @@
 
 .no_data{display:flex;flex-direction: column;align-items: center}
 .no_data{color: #666;text-align: center;font-size: 2.1rem;line-height: 3rem}
+
+/* service & qna */
+.accord{position:relative}
+.accord:before{content:"";z-index:1;display:block;width:100%;height:100%;position:fixed;left:0;background:#ebedf1}
+.accord>ul{position:relative;z-index:2}
