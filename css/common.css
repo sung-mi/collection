@@ -220,7 +220,7 @@ span,em,p,b,strong{font-size:inherit;line-height:inherit;color:inherit;font-fami
 }
 @keyframes tabE {
     0% {opacity:1}
-    100% {opacity:0}
+    100% {opacity:0;z-index:-1}
 }
 
 /* icon_list */
