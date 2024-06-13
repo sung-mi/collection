@@ -18,7 +18,10 @@
         var tabNum = url.slice(tabIdx+5);
         $(function(){
           if(tabNum){
-              $('#tab1 ul>li:nth-child('+tabNum+')>a').trigger('click');
+            $('#tab1 ul>li:nth-child('+tabNum+')>a').trigger('click');
+            if(tabNum >= 4){
+                $('.next').trigger('click').trigger('click');
+            }
           }
         })
       </script>
@@ -50,8 +53,9 @@
                     <li class="swiper-slide" data-tab="tabox5"><a href="javascript:void(0)" role="tab" role="tab" aria-selected="false" style="width:10.1rem">론 바론</a></li>
                 </ul>
              </div>
+             <div class="visualhide"><button class="next"></button></div>
         </div>
-
+      
         <!-- 워렌 버핏 -->
         <div class="tab-content dp-block" id="tabox1" style="display: none">
             <div class="box_pick">
@@ -211,21 +215,26 @@
                     freeMode: true,
                     spaceBetween: 0,
                     resistanceRatio: 0,
+                    navigation: { 
+                        nextEl: '.next',	
+                        prevEl: '.prev',
+                    },
                     //  autoplay: { 
                     //     delay: 2500, 
                     //     disableOnInteraction: true, 
                     // },   
                     on: {
                         slideChangeTransitionEnd: function () {
+                            const tabId = $('#tabS');
                             const bodyWd = $('html,body').outerWidth();
-                            const lastLi = $('#tabS>ul>li:last-child');
+                            const lastLi = tabId.find('ul>li:last-child');
                             const lastL = lastLi.offset().left;
                             const liWd = lastLi.outerWidth();
                             const lastEnd = lastL+liWd;			
                             if(lastEnd <= bodyWd){
-                                $('#tabS').addClass('tab_end');
+                                tabId.addClass('tab_end');
                             }else{
-                                $('#tabS').removeClass('tab_end');
+                                tabId.removeClass('tab_end');
                             }
                         }
                     }
@@ -233,6 +242,7 @@
             }
         }
         tabSlide.on();
+        $('.paging>a:last-child').click();
     </script>
   </body>
 </html>
