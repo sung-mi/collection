@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-    <title>주식 모으기</title>    
-    <link rel="stylesheet" href="css/contents_jsm.css">   
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"/>
+    <title>주식 모으기 > 목록 > 약정내역있음</title>
+    <link rel="stylesheet" href="css/contents_jsm.css?v2" />
+    <link rel="stylesheet" href="css/contents_cho.css?v2" />
+    <link rel="stylesheet" href="css/contents_ywg.css?v2" />
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
-    <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
-</head>
-<body>
-<div class="wrap">
-    <header class="header sticky_top">
-        <nav class="padd">
-            <ul class="flex_between">
-                <li>
-                    <h1 class="header_title">NH투자증권 제공 서비스</h1>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
+  </head>
+  <body>
+    <div class="fullpop top_bg2">
+      <header class="header_sub sticky_top">
+        <div class="padd2">
+          <ul class="flex_between">
+            <li>
+              <!-- <a href="javascript:void(0)" class="btn_back"><i class="visualhide">뒤로</i></a> -->
+              <h1 class="header_title_sub">국내주식 소수점 거래 서비스 이용동의</h1>
+            </li>
+            <li>
+              <!-- <a href="javascript:void(0)" class="btn_home">홈</a> -->
+              <a href="javascript:void(0)" class="btn_x"><i class="visualhide">닫기</i></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="cl_term_webview">
+            <iframe id="webview" src="" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+
+        <div class="pop_footer">
+            <button type="button" class="btn_pop2">다음</button> 
+        </div>
+      </div>
     </div>
-  
-</div>
-</body>
+    <script>        
+        // 웹뷰 영역 리사이즈 스크립트
+        window.addEventListener('resize', setWebviewSize);
+        setWebviewSize();
+        window.addEventListener('beforeunload', function() {
+            removeResizeListener();
+        });
+
+        function setWebviewSize() {
+            const headerTopHeight = document.querySelector('.header_sub')?.offsetHeight || 0;
+            const clTermHeaderHeight = document.querySelector('.cl_term_header')?.offsetHeight || 0;
+            const popFooterHeight = document.querySelector('.pop_footer')?.offsetHeight || 0;
+            const cl_term_webview = document.querySelector('.cl_term_webview');
+            cl_term_webview.style.height = window.innerHeight - (headerTopHeight + clTermHeaderHeight + popFooterHeight) + 'px';
+        }
+    </script>
+  </body>
 </html>

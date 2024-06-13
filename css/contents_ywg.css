@@ -55,6 +55,14 @@
 .bx_search_noti{margin-top: 10rem;color: #666;line-height: 3rem;text-align: center;}
 .matched{color: #3C9800;}
 
+.cl_term_header{display: flex;justify-content: space-between;padding: 2rem 2.4rem;background-color: #F9F9F9;}
+.cl_term_header h3{font-weight: 500; line-height: 3rem;}
+.cl_temr_dots{display: flex;align-items: center;}
+.cl_temr_dots .dot{width: 0.8rem;height: 0.8rem;display: inline-block;margin-left: 1.2rem;background-color: #B3B3B3;font-size: 0;border-radius: 50%;}
+.cl_temr_dots .dot.active{width: 2.8rem;height:2.8rem;background-color: #84C13D;color: #fff;font-size: 1.5rem; font-weight: 500;line-height: 2.8rem;text-align: center;}
+.cl_term_webview{background: rgba(255, 0, 0, 0.05);}
+.cl_term_webview #webview{display: block;}
+
 /* 공통 */
 button[disabled]{opacity: 0.6;}
 
