@@ -38,7 +38,7 @@
 
         <section class="padd">
             <span class="inp_srh">
-                <a href="javascript:void(0)" class="ico_srh"></a>
+                <a href="javascript:void(0)" class="ico_srh" onclick="location.href='apply_item_search_page.html'"></a>
                 <input type="text" placeholder="모으고 싶은 종목을 찾아보세요!" title="종목검색" id="srh">
                 <button type="button" class="btn_delete" style="display: none;"><i class="visualhide">삭제</i></button>
             </span>
@@ -46,7 +46,7 @@
         </section>
 
         <section class="padd mt30">
-            <h3 class="con_tit">다른 투자자들이 많이 모은 종목 <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+            <h3 class="con_tit">다른 투자자들이 많이 모은 종목 <button type="button" class="btn_con_tit"  onclick="location.href='apply_item_hot_tab1.html'"><i class="visualhide">더보기</i></button></h3>
             
             <div id="main_tabs1" class="mt20">
                 <ul class="tab_ty2">
@@ -118,7 +118,7 @@
 
         <section>
             <div class="padd mt40">
-                <h3 class="con_tit">최고의 브랜드를 보유한 기업 🏆 <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+                <h3 class="con_tit">최고의 브랜드를 보유한 기업 🏆 <button type="button" class="btn_con_tit" onclick="location.href='apply_item_rec_tab1.html'"><i class="visualhide">더보기</i></button></h3>
             </div>
             <div class="swiper-container con_silde mt20 " id="conS1">
                 <ul class="swiper-wrapper ">
@@ -162,7 +162,7 @@
 
         <section>
             <div class="padd mt40">
-                <h3 class="con_tit">압도적인 경쟁력을 가진 기업 🔥 <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+                <h3 class="con_tit">압도적인 경쟁력을 가진 기업 🔥 <button type="button" class="btn_con_tit" onclick="location.href='apply_item_rec_tab1.html?tab=2'"><i class="visualhide">더보기</i></button></h3>
             </div>
             <div class="swiper-container con_silde mt20 " id="conS2">
                 <ul class="swiper-wrapper ">
@@ -205,12 +205,12 @@
         </section>
         <section>
             <div class="padd mt40">
-                <h3 class="con_tit">큰손들이 PICK한 종목은? <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+                <h3 class="con_tit">큰손들이 PICK한 종목은? </h3>
             </div>
             <div class="swiper-container pick_silde mt20 " id="conS3">
                 <ul class="swiper-wrapper">
                     <li class="swiper-slide">
-                        <div class="pick_slide_item pick_bg1">
+                        <div class="pick_slide_item pick_bg1" onclick="location.href='apply_item_invest_tab1.html?tab=1'">
                             <i class="pick_slide_icon"><img src="img/img_m1.png"/></i>
                             <i class="pick_slide_tx1 mt10">워렌 버핏</i> 
                             <i class="pick_slide_tx2 mt38">“10년 이상을 볼 것이 아니면 10분도 그 주식을 갖고 있지 마라”</i> 
@@ -221,7 +221,7 @@
                         </div>
                     </li>
                     <li class="swiper-slide">
-                        <div class="pick_slide_item pick_bg2">
+                        <div class="pick_slide_item pick_bg2" onclick="location.href='apply_item_invest_tab1.html?tab=2'">
                             <i class="pick_slide_icon"><img src="img/img_m2.png"/></i>
                             <i class="pick_slide_tx1 mt12">빌 애크먼</i> 
                             <i class="pick_slide_tx2 mt38">“기업이 돈을 버는 방식을 이해하고, 이론상 영원히 존재할 기업에 투자하라”</i> 
@@ -232,7 +232,7 @@
                         </div>
                     </li>
                     <li class="swiper-slide">
-                        <div class="pick_slide_item pick_bg3">
+                        <div class="pick_slide_item pick_bg3" onclick="location.href='apply_item_invest_tab1.html?tab=3'">
                             <i class="pick_slide_icon"><img src="img/img_m3.png"/></i>
                             <i class="pick_slide_tx1 mt12">마이클 버리</i> 
                             <i class="pick_slide_tx2 mt38">“우리가 곤경에 빠지는 건 뭔가를 확실히 안다는 착각 때문이다.”</i>
@@ -243,7 +243,7 @@
                         </div>
                     </li>
                     <li class="swiper-slide">
-                        <div class="pick_slide_item pick_bg4">
+                        <div class="pick_slide_item pick_bg4" onclick="location.href='apply_item_invest_tab1.html?tab=4'">
                             <i class="pick_slide_icon"><img src="img/img_m4.png"/></i>
                             <i class="pick_slide_tx1 mt12">스탠리 드러켄밀러</i> 
                             <i class="pick_slide_tx2 mt38">“30년간 손실없이 연평균 수익률 30.4%를 이뤄낸  월가의 돈버는 기계”</i>
@@ -254,7 +254,7 @@
                         </div>
                     </li>
                     <li class="swiper-slide">
-                        <div class="pick_slide_item pick_bg5">
+                        <div class="pick_slide_item pick_bg5" onclick="location.href='apply_item_invest_tab1.html?tab=5'">
                             <i class="pick_slide_icon"><img src="img/img_m5.png"/></i>
                             <i class="pick_slide_tx1 mt12">론 바론</i> 
                             <i class="pick_slide_tx2 mt38">“장기적 관점은 우리가 다르게 생각할 수 있게 해준다.”</i>
@@ -282,7 +282,7 @@
         </section>
 
         <section class="padd">
-            <h3 class="con_tit mt40">종목 하나로 아쉽다면 ETF <button type="button" class="btn_con_tit"><i class="visualhide">더보기</i></button></h3>
+            <h3 class="con_tit mt40">종목 하나로 아쉽다면 ETF <button type="button" class="btn_con_tit" onclick="location.href='apply_item_rec_tab1.html?tab=3'"><i class="visualhide">더보기</i></button></h3>
             <div class="con_list mt20 mb60">
                 <ul>
                     <li>
@@ -342,7 +342,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section>ㄴㄴㄴ
     </div>
 </div>
 
