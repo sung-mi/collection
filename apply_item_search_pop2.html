@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <title>주식 모으기 > 조회설정</title>    
+    <link rel="stylesheet" href="css/contents_jsm.css?">   
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <div class="popup_wrapper" id="pop1">
+        <div class="pop_function">
+            <div class="pop_in text-center">
+                <button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+                <div class="pop_header">
+                    <h3>조회설정</h3>
+                </div>
+                
+                <div class="pop_con ">
+                    <h3 class="pop_tit ">유형</h3>
+                    <div id="cd1" class="mt12">
+                        <ul class="btns_cols2">
+                            <li><a href="javascript:void(0)" class="btn_line_m">전체</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m">국내주식</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m s_padd">국내주식소수점</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m">국내ETF</a></li>
+                        </ul>
+                    </div>
+                    <script>tabHandler('#cd1')</script>
+    
+                    
+                    <h3 class="pop_tit mt40">투자그룹</h3>
+                    <div id="cd2" class="mt12">
+                        <ul class="btns_cols3">
+                            <li><a href="javascript:void(0)" class="btn_line_m">전체</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m">주식</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m">주가지수ETF</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m">원자재ETF</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m">기타ETF</a></li>
+                        </ul>
+                    </div>
+                    <script>tabHandler('#cd2')</script>
+    
+                    <h3 class="pop_tit mt40">파생여부</h3>
+                    <div id="cd3" class="mt12">
+                        <ul class="btns_cols3">
+                            <li><a href="javascript:void(0)" class="btn_line_m">전체</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m">파생ETF</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m">파생ETF</a></li>
+                        </ul>
+                    </div>
+                    <script>tabHandler('#cd3')</script>
+    
+                    <h3 class="pop_tit mt40">배수</h3>
+                    <div id="cd4" class="mt12">
+                        <ul class="btns_cols4">
+                            <li><a href="javascript:void(0)" class="btn_line_m">전체</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m">1배수</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m">2배수</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m">3배수</a></li>
+                            <li> </li>
+                            <li><a href="javascript:void(0)" class="btn_line_m">-1배수</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m">-2배수</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m">-3배수</a></li>
+                        </ul>
+                    </div>
+                    <script>tabHandler('#cd4')</script>
+                   
+    
+                </div>
+                <div class="pop_footer">
+                    <button type="button" class="btn_pop1 popclose flex1">취소</button> 
+                    <button type="button" class="btn_pop2 flex2">조회</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+         pop.open('pop1');
+    </script>
+</body>
+</html>

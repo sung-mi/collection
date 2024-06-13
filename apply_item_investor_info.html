@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-    <title>주식 모으기</title>    
-    <link rel="stylesheet" href="css/contents_jsm.css">   
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"/>
+    <title>주식 모으기 > 투자자정보 확인서</title>
+    <link rel="stylesheet" href="css/contents_jsm.css?v2" />
+    <link rel="stylesheet" href="css/contents_cho.css?v2" />
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
-</head>
-<body>
-<div class="wrap">
-    <header class="header sticky_top">
-        <nav class="padd">
-            <ul class="flex_between">
-                <li>
-                    <h1 class="header_title">NH투자증권 제공 서비스</h1>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="btn_home">종료</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
-        <section class="padd">
-            <h3 class="con_tit mt40">aa</h3>
-        </section>
+  </head>
+  <body>
+    <div class="fullpop " id="sub">
+      <header class="header_sub sticky_top">
+        <div class="padd2">
+          <ul class="flex_between">
+            <li>
+              <h1 class="header_title_sub">투자자정보 확인서</h1>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="btn_x"  onclick="history.back()"><i class="visualhide">닫기</i></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="container">
+          <section class="padd">
+            홍길동님의 투자 성향은 
+            위험중립형 입니다.
+          </section>
+          <section class="footer flex">
+            <button type="button" class="btn2">확인</button>
+          </section>
+       
+      </div>
     </div>
-  
-</div>
-</body>
+ 
+   
+    
+    </script>
+  </body>
 </html>

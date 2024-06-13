@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/icon.css">   
     <link rel="stylesheet" href="css/contents_jsm.css">   
     <link rel="stylesheet" href="css/contents_ywg.css">   
+    <link rel="stylesheet" href="css/contents_cho.css">   
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
@@ -24,7 +25,7 @@
                 <div class="pop_con">
                     <div class="box_border flex_between">
                         <div>
-                            <h3 class="pop_tit">뭐라고 부를까요?<button type="button" class="btn_q ml10 mb2"><i class="visualhide">?</i></button></h3>
+                            <h3 class="pop_tit">뭐라고 부를까요?<button type="button" class="btn_q ml10 mb2" onclick="pop.open('pop2')"><i class="visualhide">?</i></button></h3>
                             <p class="info_txt mt4">원화로 편하게 모을수 있어요</p>
                         </div>
                         <span class="inp_ck_one flex0"> 
@@ -39,7 +40,32 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
+    
+    <div class="popup_wrapper popbg" id="pop2">
+        <div class="pop_function">
+            <div class="pop_in text-center">
+                <button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+                <div class="pop_header">
+                    <h3>자동환전 유의사항</h3>
+                </div>
+                
+                <div class="pop_con">
+                    <ul class="bullet_lst">
+                        <li>해외주식의 경우 자동환전을 신청할 수 있으며, 자동환전에 따른 환차손이 발생할 수 있습니다.
+                            <ul class="bullet_lst01">
+                                <li>예시 : 신청일(자동매수일) 오전 OO시 적용환율 1,200원, 투자금액이 600,000원일 경우, 신청일(자동매수일)에 외화예수금이 500달러 이하이면 부족한 금액만큼 자동 환전 처리</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pop_footer">
+                    <button type="button" class="btn_pop2 popclose">확인</button> 
+                </div>
+            </div>
+        </div>
+    </div>
 <script>
     pop.open('pop1')
     tabHandler('#btn_tab3')

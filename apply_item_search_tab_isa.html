@@ -18,12 +18,10 @@
         <div class="padd2">
           <ul class="flex_between">
             <li>
-              <!-- <a href="javascript:void(0)" class="btn_back"><i class="visualhide">뒤로</i></a> -->
               <h1 class="header_title_sub">주식 모으기 종목검색</h1>
             </li>
             <li>
-              <!-- <a href="javascript:void(0)" class="btn_home">홈</a> -->
-              <a href="javascript:void(0)" class="btn_x"><i class="visualhide">닫기</i></a>
+              <a href="javascript:void(0)" class="btn_x" onclick="history.back()"><i class="visualhide">닫기</i></a>
             </li>
           </ul>
         </div>
@@ -48,7 +46,7 @@
                     <button type="button" class="btn_delete" style="display: none;"><i class="visualhide">삭제</i></button>
                 </span>
                 <span class="btn_sel ">
-                    <button type="button" name="" value="해외ETF소수점"></button>
+                    <button type="button" name="" value="국내주식" id="popSel2" onclick="pop.open('pop2')"></button>
                 </span>
             </div>
         </div>
@@ -183,5 +181,35 @@
         tabHandler("#tab1");
         inputDelCtr('.inp_srh_s');//텍스트입력시 삭제버튼활성화
     </script>
+
+
+    <div class="popup_wrapper" id="pop2">
+        <div class="pop_function">
+            <div class="pop_in text-center">
+                <button type="button" class="btn_pop_close popclose"><i class="visualhide">팝업닫기</i></button>
+                <div class="pop_header">
+                    <h3>조회설정</h3>
+                </div>
+                
+                <div class="pop_con ">
+                    <h3 class="pop_tit ">유형</h3>
+                    <div id="cd2" class="mt12">
+                        <ul class="btns_cols2">
+                            <li><a href="javascript:void(0)" class="btn_line_m" onclick="$('#popSel2').attr('value','전체')">전체</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m" onclick="$('#popSel2').attr('value','국내주식')">국내주식</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m s_padd" onclick="$('#popSel2').attr('value','국내주식소수점')">국내주식소수점</a></li>
+                            <li><a href="javascript:void(0)" class="btn_line_m" onclick="$('#popSel2').attr('value','국내ETF')">국내ETF</a></li>
+                        </ul>
+                    </div>
+                    <script>tabHandler('#cd2')</script>
+                </div>
+                <div class="pop_footer">
+                    <button type="button" class="btn_pop1 popclose flex1">취소</button> 
+                    <button type="button" class="btn_pop2 popclose flex2">조회</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+
   </body>
 </html>

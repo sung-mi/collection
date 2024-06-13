@@ -11,7 +11,7 @@
     <script src="js/common.js"></script>
 </head>
 <body>
-<div class="wrap top_bg1_2">
+<div class="wrap top_bg1_1">
     <header class="header sticky_top">
         <nav class="padd2">
             <ul class="flex_between">
@@ -19,7 +19,7 @@
                     <h1 class="header_title">NH투자증권 제공 서비스</h1>
                 </li>
                 <li>
-                    <a href="javascript:void(0)" class="btn_home_x">종료</a>
+                    <a href="javascript:void(0)" class="btn_home_x" onclick="history.back()">종료</a>
                 </li>
             </ul>
         </nav>
@@ -27,26 +27,22 @@
     <div class="container">
         <section class="padd2 con_top">
             <div class="con_top_in">
-                <span class="btn_top_sel mt15">
-                    <button type="button" name="" value="201-02-123456" onclick="pop.open('pop1')" id="selTx"></button>
-                </span>
-                <div class="con_top_tx1 pt40">모으고 있는<br/>종목이 없어요</div>
-                <div class="con_top_tx2 mt12">애정을 담은 주식을<br/>차곡차곡 모아보세요!</div>
-                <button type="button" class="btn_top_more mt16" onclick="location.href='list_service.html'">더 알아보기</button>
+                <div class="con_top_tx1 pt40">모을 주식을<br/>선택해 주세요</div>
+                <div class="con_top_tx2 mt12">다양한 종목을 <br/>둘러보세요!</div>
             </div>
         </section>
 
         <section class="padd">
             <span class="inp_srh">
                 <a href="javascript:void(0)" class="ico_srh" onclick="location.href='apply_item_search_tab1.html?tab=1'"></a>
-                <input type="text" placeholder="모으고 싶은 종목을 찾아보세요!" title="종목검색" id="srh">
+                <input type="text" placeholder="모으고 싶은 종목을 찾아보세요!" title="종목검색" id="srh" >
                 <button type="button" class="btn_delete" style="display: none;"><i class="visualhide">삭제</i></button>
             </span>
             <script>inputDelCtr();</script>
         </section>
 
         <section class="padd mt30">
-            <h3 class="con_tit">다른 투자자들이 많이 모은 종목 <button type="button" class="btn_con_tit"  onclick="location.href='apply_item_hot_tab1.html'"><i class="visualhide">더보기</i></button></h3>
+            <h3 class="con_tit">다른 투자자들이 많이 모은 종목 <button type="button" class="btn_con_tit" onclick="location.href='apply_item_hot_tab1.html'"><i class="visualhide">더보기</i></button></h3>
             
             <div id="main_tabs1" class="mt20">
                 <ul class="tab_ty2">
@@ -162,7 +158,7 @@
 
         <section>
             <div class="padd mt40">
-                <h3 class="con_tit">압도적인 경쟁력을 가진 기업 🔥 <button type="button" class="btn_con_tit" onclick="location.href='apply_item_rec_tab1.html?tab=2'"><i class="visualhide">더보기</i></button></h3>
+                <h3 class="con_tit">압도적인 경쟁력을 가진 기업 🔥 <button type="button" class="btn_con_tit"  onclick="location.href='apply_item_rec_tab1.html?tab=2'"><i class="visualhide">더보기</i></button></h3>
             </div>
             <div class="swiper-container con_silde mt20 " id="conS2">
                 <ul class="swiper-wrapper ">
@@ -205,7 +201,7 @@
         </section>
         <section>
             <div class="padd mt40">
-                <h3 class="con_tit">큰손들이 PICK한 종목은? </h3>
+                <h3 class="con_tit">큰손들이 PICK한 종목은?</h3>
             </div>
             <div class="swiper-container pick_silde mt20 " id="conS3">
                 <ul class="swiper-wrapper">
@@ -282,7 +278,7 @@
         </section>
 
         <section class="padd">
-            <h3 class="con_tit mt40">종목 하나로 아쉽다면 ETF <button type="button" class="btn_con_tit" onclick="location.href='apply_item_rec_tab1.html?tab=3'"><i class="visualhide">더보기</i></button></h3>
+            <h3 class="con_tit mt40">종목 하나로 아쉽다면 ETF <button type="button" class="btn_con_tit"  onclick="location.href='apply_item_rec_tab1.html?tab=3'"><i class="visualhide">더보기</i></button></h3>
             <div class="con_list mt20 mb60">
                 <ul>
                     <li>

@@ -11,16 +11,6 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/common.js"></script>
-    <script>
-        var url = location.href;
-        var tabIdx = url.indexOf('?');
-        var tabNum = url.slice(tabIdx+5);
-        $(function(){
-          if(tabNum){
-              $('#tab1>ul>li:nth-child('+tabNum+')>a').trigger('click');
-          }
-        })
-      </script>
   </head>
   <body>
     <div class="fullpop top_bg2">
@@ -28,10 +18,10 @@
         <div class="padd2">
           <ul class="flex_between">
             <li>
-              <h1 class="header_title_sub">주식 모으기 인기종목</h1>
+              <h1 class="header_title_sub">주식모으기 추천종목</h1>
             </li>
             <li>
-              <a href="javascript:void(0)" class="btn_x"  onclick="history.back()"><i class="visualhide">닫기</i></a>
+              <a href="javascript:void(0)" class="btn_x" onclick="history.back()"><i class="visualhide">닫기</i></a>
             </li>
           </ul>
         </div>
@@ -41,15 +31,15 @@
         <div id="tab1">
           <ul class="tab_ty1">
             <li class="flex1 on" data-tab="tabox1">
-              <a href="javascript:void(0)" role="tab" aria-selected="true">해외주식/ETF</a>
+              <a href="javascript:void(0)" role="tab" aria-selected="true">국내주식</a>
             </li>
             <li class="flex1" data-tab="tabox2">
-              <a href="javascript:void(0)" role="tab" aria-selected="true">국내주식/ETF</a>
+              <a href="javascript:void(0)" role="tab" aria-selected="true">국내ETF</a>
             </li>
           </ul>
         </div>
 
-        <!-- 국내주식/ETF -->
+        <!-- 국내주식 -->
         <div class="tab-content dp-block" id="tabox1" style="display: none">
           <div class="box_list2">
             <ul>
@@ -59,15 +49,13 @@
                         <span class="box_list_c flex1">
                             <span class="bxl_info">
                                 <span class="bxl2_info1">
-                                    <i class="bxl2_info1_tx1">애플</i>
-                                    <i class="bxl2_info1_tx2">175.84</i>
+                                    <i class="bxl2_info1_tx1">LG화학</i>
+                                    <i class="bxl2_info1_tx2">789,000</i>
                                 </span>
                                 <span class="bxl_info2">
                                     <span class="bxl2_info2_tx1">
-                                        <i>미국</i>
-                                        <i>AAPL</i>
+                                        <i>005930</i>
                                     </span>
-                                    <i class="bxl2_info2_tx2">USD</i>
                                 </span>
                             </span>
                         </span>
@@ -79,15 +67,13 @@
                         <span class="box_list_c flex1">
                             <span class="bxl_info">
                                 <span class="bxl2_info1">
-                                    <i class="bxl2_info1_tx1">애플</i>
-                                    <i class="bxl2_info1_tx2">175.84</i>
+                                    <i class="bxl2_info1_tx1">LG화학</i>
+                                    <i class="bxl2_info1_tx2">789,000</i>
                                 </span>
                                 <span class="bxl_info2">
                                     <span class="bxl2_info2_tx1">
-                                        <i>미국</i>
-                                        <i>AAPL</i>
+                                        <i>005930</i>
                                     </span>
-                                    <i class="bxl2_info2_tx2">USD</i>
                                 </span>
                             </span>
                         </span>
@@ -99,15 +85,13 @@
                         <span class="box_list_c flex1">
                             <span class="bxl_info">
                                 <span class="bxl2_info1">
-                                    <i class="bxl2_info1_tx1">SCHWAB US DIVIDEND EQUITY ETF</i>
-                                    <i class="bxl2_info1_tx2">175.84</i>
+                                    <i class="bxl2_info1_tx1">LG화학</i>
+                                    <i class="bxl2_info1_tx2">789,000</i>
                                 </span>
                                 <span class="bxl_info2">
                                     <span class="bxl2_info2_tx1">
-                                        <i>미국</i>
-                                        <i>AAPL</i>
+                                        <i>005930</i>
                                     </span>
-                                    <i class="bxl2_info2_tx2">USD</i>
                                 </span>
                             </span>
                         </span>
@@ -116,9 +100,9 @@
             </ul>
           </div>
         </div>
-        <!-- //국내주식/ETF -->
+        <!-- //국내주식 -->
         
-        <!-- 국내주식/ETF -->
+        <!-- 국내ETF -->
         <div class="tab-content" id="tabox2" style="display: none">
           <div class="box_list2">
             <ul>
@@ -128,8 +112,8 @@
                         <span class="box_list_c flex1">
                             <span class="bxl_info">
                                 <span class="bxl2_info1">
-                                    <i class="bxl2_info1_tx1">LG화학</i>
-                                    <i class="bxl2_info1_tx2">789,000</i>
+                                    <i class="bxl2_info1_tx1">삼성전자</i>
+                                    <i class="bxl2_info1_tx2">77,000</i>
                                 </span>
                                 <span class="bxl_info2">
                                     <span class="bxl2_info2_tx1">
@@ -146,8 +130,8 @@
                         <span class="box_list_c flex1">
                             <span class="bxl_info">
                                 <span class="bxl2_info1">
-                                    <i class="bxl2_info1_tx1">LG화학</i>
-                                    <i class="bxl2_info1_tx2">789,000</i>
+                                    <i class="bxl2_info1_tx1">TIGER 미국S&P500</i>
+                                    <i class="bxl2_info1_tx2">40,200,000</i>
                                 </span>
                                 <span class="bxl_info2">
                                     <span class="bxl2_info2_tx1">
@@ -179,7 +163,7 @@
             </ul>
           </div>
         </div>
-        <!-- //국내주식/ETF -->
+        <!-- //국내ETF -->
       </div>
     </div>
     <script>
