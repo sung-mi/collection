@@ -199,7 +199,8 @@
     background-color: rgba(255, 255, 255, 0.70);
     border:0.1rem solid rgba(44, 54, 59, 0.20);
     filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.10));
-    backdrop-filter: blur(6px);color:#333}
+    backdrop-filter: blur(6px);color:#333;
+    -webkit-backdrop-filter: blur(6px);color:#333}
 #cht1 .tooltipH{display: flex;justify-content: space-between;height: 1.6rem;margin-bottom:1.4rem;color:#999}
 #cht1 .tooltipH>span{color:#333;font-weight:700}
 #cht1 .tooltipC_out{display: flex;flex-direction: column;}
