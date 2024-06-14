@@ -94,15 +94,6 @@
             </div>
         </section>
         <section class="padd line_btm">
-            <div class="ac mt20">
-                <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="red" d="M 10 10 H 90 V 90 H 10 L 10 10" style="-webkit-filter: drop-shadow(0px 0px 4px rgba(255, 82, 82, 0.50))"/>
-                </svg>
-              
-            </div>
-            <style>
-                #cht1 .highcharts-point.highcharts-color-0>*{-webkit-filter: drop-shadow(0px 0px 4px rgba(255, 82, 82, 0.50))}   
-            </style>
             <h3 class="con_tit ac mt20"> 잘 모으고 있나요 👀 <button type="button" class="btn_q ml10" onclick="pop.open('pop2')"><i class="visualhide">?</i></button></h3>
             <div class="mb30 mt10">
                 <div>
@@ -628,9 +619,10 @@ $('#cht1').highcharts({
         lineWidth: 2,
         lineColor: '#FF5252',
         fontSize: '1.5rem',
+        
         marker: {
             enabled: false,
-            symbol:'diamond',
+            symbol:'url(img/icon_marker1.png)',
             states: {
                 hover: {
                     //fillColor: '',
@@ -804,7 +796,6 @@ $('#cht2').highcharts({
         marker: {
             enabled: false,
             symbol: 'url()',
-            lineColor: 'red',
             states: {
                 hover: {
                     enabled:false
