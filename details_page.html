@@ -94,7 +94,10 @@
             </div>
         </section>
         <section class="padd line_btm">
-            <h3 class="con_tit ac mt40"> 잘 모으고 있나요 👀 <button type="button" class="btn_q ml10" onclick="pop.open('pop2')"><i class="visualhide">?</i></button></h3>
+            <div class="ac mt20">
+                <i class="btn_q" style="-webkit-filter: drop-shadow(0px 0px 4px rgba(255, 82, 82, 0.50))"></i>
+            </div>
+            <h3 class="con_tit ac mt20"> 잘 모으고 있나요 👀 <button type="button" class="btn_q ml10" onclick="pop.open('pop2')"><i class="visualhide">?</i></button></h3>
             <div class="mb30 mt10">
                 <div>
                     <div id="cht1" style="height:38rem"></div>
@@ -636,7 +639,7 @@ $('#cht1').highcharts({
             hover: {
                 lineWidth: 2,
                 halo:{                               
-                   // size:0
+                   size:0
                 }
             }
         },
@@ -644,7 +647,7 @@ $('#cht1').highcharts({
             valuePrefix: '<span class="tooltipC_in"><span><i class="icon_cht1 mr5"></i><span class="">{series.name}</span></span><span class="fwb">',
             valueSuffix: '원</span></span>'
         },
-        data: [24000,21000,17000,21000,19000,19500,21000],
+        data: [27000,20000,17000,20000,15000,17000,16000],
         showInLegend: false
     }, {
         label:{
@@ -680,7 +683,7 @@ $('#cht1').highcharts({
             valuePrefix: '<span class="tooltipC_in"><span><i class="icon_cht2 mr5"></i><span class="">{series.name}</span></span><span class="fwb">',
             valueSuffix: '원</span></span>'
         },
-        data: [22000,18000,22000,20000,21000,20000,22000],
+        data: [24000,19000,20000,18000,19000,18000,20000],
         showInLegend: false
     }],
     
@@ -777,7 +780,7 @@ $('#cht2').highcharts({
             pointFormat: '',
             footerFormat: '</span>'
         },
-        data: [15000,16000,14000,15000,13000,15000,16000,14000,15000,13000,14000],
+        data: [17000,18000,16000,17000,15000,17000,18000,16000,17000,15000,16000],
         showInLegend: false
     }, {
         label:{
