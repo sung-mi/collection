@@ -104,7 +104,7 @@
                             <i class="cht_legend_tx">내 평단가</i>
                         </span>
                         <span> 
-                            <i class="icon_cht2 mr5"></i>
+                            <i class="icon_cht2_1 mr5"></i>
                             <i class="cht_legend_tx">주가</i>
                         </span>
                     </div>
@@ -660,12 +660,10 @@ $('#cht1').highcharts({
         fontSize: '1.5rem',
         marker: {
             enabled: false,
+            symbol: 'url()',
             states: {
                 hover: {
-                    //fillColor: '',
-                    //lineColor: '',
-                    lineWidth: 1,
-                    radius: 4
+                    enabled:false
                 }
             }
         },
@@ -746,12 +744,14 @@ $('#cht2').highcharts({
         fontSize: '1.5rem',
         marker: {
             enabled: false,
+            symbol:'url(img/icon_marker1.png)',
             states: {
                 hover: {
                     //fillColor: '',
                     //lineColor: '',
                     lineWidth: 1,
-                    radius: 4
+                    radius: 5,
+                    
                 }
             }
         },
