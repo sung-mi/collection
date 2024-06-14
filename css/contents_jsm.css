@@ -206,8 +206,8 @@
 #cht1 .tooltipC_out{display: flex;flex-direction: column;}
 #cht1 .tooltipC_in{display: flex;justify-content: space-between;height:2.2rem;margin-bottom:0.4rem}
 #cht1 .tooltipC_in>span{display: flex;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;align-items: center;}
-#cht1 .highcharts-point.highcharts-color-0{filter: drop-shadow(0px 0px 4px rgba(255, 82, 82, 0.50))}         
-#cht1 .highcharts-point.highcharts-color-1{filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.50))}
+#cht1 .highcharts-point.highcharts-color-0{-webkit-filter: drop-shadow(0px 0px 4px rgba(255, 82, 82, 0.50))}         
+#cht1 .highcharts-point.highcharts-color-1{-webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.50))}
 #cht1 .highcharts-xaxis-labels{transform:translateY(-5px);}
 
 .icon_cht1{display:inline-flex;width:2.2rem;height:2.2rem;background:url(../img/icon_cht1.png) 0 0 no-repeat;background-size:2.2rem auto}
