@@ -116,6 +116,9 @@
             const cl_term_webview = document.querySelector('.cl_term_webview');
             cl_term_webview.style.height = window.innerHeight - (headerTopHeight + clTermHeaderHeight + popFooterHeight) + 'px';
         }
+        function removeResizeListener() {
+            window.removeEventListener('resize', setWebviewSize);
+        }
     </script>
   </body>
 </html>
