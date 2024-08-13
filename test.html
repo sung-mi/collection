@@ -1,0 +1,664 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>잔고 > 계좌별 거래내역</title>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<link rel="stylesheet" href="https://mtrade.nhqv.com/css/common/common.css">
+	<link rel="stylesheet" href="https://mtrade.nhqv.com/css/common/contents.css">
+	<link rel="stylesheet" href="https://mtrade.nhqv.com/css/common/swiper.min.css">
+	<link rel="stylesheet" href="https://mtrade.nhqv.com/publish/guide/guide.css?v1">
+	<!-- <link rel="stylesheet" href="/css/theme1.css">테마추가 -->
+	<script src="https://mtrade.nhqv.com/js/lib/jquery/jquery-1.12.0.min.js"></script>
+	<script src="https://mtrade.nhqv.com/js/lib/swiper.min.js"></script>
+	<script src="https://mtrade.nhqv.com/js/lib/datepicker.js"></script>
+	<script src="https://mtrade.nhqv.com/js_org/common/common.js"></script>
+</head>
+<body style="width:0;min-width:100%">
+<!-- wrap -->
+<div class="wrap">
+	<!-- header -->
+	<header class="header" role="presentation">
+		<nav role="presentation">
+			<ul class="align-between">
+				<li>
+					<a href="javascript:history.back();" class="back-btn">뒤로가기</a>
+				</li>
+				<li>
+					<a href="/publish/my.html" class="home-btn">홈</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- // header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content" data-role="content">
+			<section class="sub_con gap-pt60">
+				<div class="flex-between padd2">
+					<h2 class="menu_title">계좌별 거래내역</h2>
+				</div>
+				<div class="asset_cont_top gap-mt30 padd2 align-between">
+					<span class="inp_sel_asset" id="sel01">
+						<span class="sel_tx">220-01-123456</span>
+						<a href="javascript:void(0)" onclick="pop.open('sel_bank')"><i class="visualhide">셀렉팝업열기</i></a>
+					</span>
+					<a href="/publish/balance/invest.html" class="btn_link_invest">
+						투자금 가져오기
+						<i class="ico_more_arw"></i>
+					</a>	
+				</div>
+				<div class="line_1 gap-mt10"></div>
+				<div class="asset_cont_top date_sel_area padd gap-mt15">
+					<span class="inp_sel_asset" id="sel01">
+						<span class="sel_tx"><span class="date">1주</span><span class="date">최신순</span></span>
+						<a href="javascript:void(0)" onclick="pop.open('sel_date')"><i class="visualhide">셀렉팝업열기</i></a>
+					</span>
+				</div>
+				<div class="asset_box padd2">
+					<div class="col_2 gap-mt10">
+						<p>
+							<span>총입금액</span>
+							<span class="won">100,000,000원</span>
+						</p>
+						<p>
+							<span>총출금액</span>
+							<span class="won">100,000,000원</span>
+						</p>
+						<p>
+							<span>제세금합계</span>
+							<span class="won">2,304,352원</span>
+						</p>
+						<p>
+							<span>정산금액</span>
+							<span class="won">1,000원</span>
+						</p>
+					</div>
+				</div>
+				<div class="line_1 gap-mt20"></div>
+				<div class="account_cont_area">
+					<nav class="menu menu_sub tabs gap-mt20 padd2">
+						<ul class="menu-set">
+							<li class="item on" data-tab="tabox1"><a title="현재 탭" role="tab" aria-selected="true" href="#">전체</a></li>
+							<li class="item"  data-tab="tabox2"><a role="tab" aria-selected="false" href="#">입출금</a></li>
+							<li class="item"  data-tab="tabox3"><a role="tab" aria-selected="false" href="#">입출고</a></li>
+							<li class="item"  data-tab="tabox4"><a role="tab" aria-selected="false" href="#">매매</a></li>
+						</ul>
+					</nav>
+					<div class="tab-content dp-block gap-mt20 account_swiper_area" id="tabox1" style="display:none">
+						<div class="first_box">
+							<ul>
+								<li>
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>거래일자</span>
+											<span>거래유형</span>
+										</dt>
+										<dd>
+											<p class="ac">2022.02.03</p>
+											<p class="ac">코스피매도</p>
+										</dd>
+										<dd>
+											<p class="ac">2022.02.03</p>
+											<p class="ac">코스피매도</p>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<div class="swiper-container account_swp" id="swipe1"> 
+							<ul class="swiper-wrapper"> 
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>종목명</span>
+											<span>정산금액</span>
+										</dt>
+										<dd>
+											<p class="">자유약정형</p>
+											<p class="ar">345,432</p>
+										</dd>
+										<dd>
+											<p class="sf">NH QV 발행어음_개인(2~365일)</p>
+											<p class="ar">345,432</p>
+										</dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>수량</span>
+											<span>거래금액</span>
+										</dt>
+										<dd></dd>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>가격</span>
+											<span>수수료</span>
+										</dt>
+										<dd></dd>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>이자</span>
+											<span>세금</span>
+										</dt>
+										<dd></dd>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>잔고수량</span>
+											<span>예수금잔액</span>
+										</dt>
+										<dd></dd>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>상대계좌명</span>
+											<span>받는통장표시내역</span>
+										</dt>
+										<dd></dd>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>받는통장표시내역</span>
+											<span>비고</span>
+										</dt>
+										<dd></dd>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>실거래일</span>
+										</dt>
+										<dd></dd>
+										<dd></dd>
+									</dl>
+								</li>
+							</ul>
+				        </div>
+					</div>
+					<div class="tab-content gap-mt20 account_swiper_area" id="tabox2" style="display:none">
+						<div class="first_box">
+							<ul>
+								<li>
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>거래일자</span>
+											<span>거래유형</span>
+										</dt>
+										<dd>
+											<p class="ac">2022.02.03</p>
+											<p class="ac">코스피매도</p>
+										</dd>
+										<dd>
+											<p class="ac">2022.02.03</p>
+											<p class="ac">코스피매도</p>
+										</dd>
+										<dd>
+											<p class="ac">2022.02.03</p>
+											<p class="ac">코스피매도</p>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<div class="swiper-container account_swp" id="swipe1"> 
+							<ul class="swiper-wrapper"> 
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>종목명</span>
+											<span>정산금액</span>
+										</dt>
+										<dd>
+											<p class="">222LG에너지솔루션</p>
+											<p class="ar">345,432</p>
+										</dd>
+										<dd>
+											<p class="">222LG에너지솔루션</p>
+											<p class="ar">345,432</p>
+										</dd>
+										<dd>
+											<p class="">222LG에너지솔루션</p>
+											<p class="ar">345,432</p>
+										</dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>수량</span>
+											<span>거래금액</span>
+										</dt>
+										<dd></dd>
+										<dd></dd>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>가격</span>
+											<span>수수료</span>
+										</dt>
+										<dd></dd>
+										<dd></dd>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>이자</span>
+											<span>세금</span>
+										</dt>
+										<dd></dd>
+										<dd></dd>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>잔고수량</span>
+											<span>예수금잔액</span>
+										</dt>
+										<dd></dd>
+										<dd></dd>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>상대계좌명</span>
+											<span>받는통장표시내역</span>
+										</dt>
+										<dd></dd>
+										<dd></dd>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>받는통장표시내역</span>
+											<span>비고</span>
+										</dt>
+										<dd></dd>
+										<dd></dd>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>실거래일</span>
+										</dt>
+										<dd></dd>
+										<dd></dd>
+										<dd></dd>
+									</dl>
+								</li>
+							</ul>
+				        </div>
+					</div>
+					<div class="tab-content gap-mt20 account_swiper_area" id="tabox3" style="display:none">
+						<div class="first_box">
+							<ul>
+								<li>
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>거래일자</span>
+											<span>거래유형</span>
+										</dt>
+										<dd>
+											<p class="ac">2022.02.03</p>
+											<p class="ac">코스피매도</p>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<div class="swiper-container account_swp" id="swipe1"> 
+							<ul class="swiper-wrapper"> 
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>종목명</span>
+											<span>정산금액</span>
+										</dt>
+										<dd>
+											<p class="">333LG에너지솔루션</p>
+											<p class="ar">345,432</p>
+										</dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>수량</span>
+											<span>거래금액</span>
+										</dt>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>가격</span>
+											<span>수수료</span>
+										</dt>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>이자</span>
+											<span>세금</span>
+										</dt>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>잔고수량</span>
+											<span>예수금잔액</span>
+										</dt>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>상대계좌명</span>
+											<span>받는통장표시내역</span>
+										</dt>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>받는통장표시내역</span>
+											<span>비고</span>
+										</dt>
+										<dd></dd>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>실거래일</span>
+										</dt>
+										<dd></dd>
+									</dl>
+								</li>
+							</ul>
+				        </div>
+					</div>
+					<div class="tab-content gap-mt20 account_swiper_area" id="tabox4" style="display:none">
+						<div class="first_box">
+							<ul>
+								<li>
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>거래일자</span>
+											<span>거래유형</span>
+										</dt>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						
+						<div class="swiper-container account_swp" id="swipe1"> 
+							<ul class="swiper-wrapper"> 
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>종목명</span>
+											<span>정산금액</span>
+										</dt>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>수량</span>
+											<span>거래금액</span>
+										</dt>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>가격</span>
+											<span>수수료</span>
+										</dt>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>이자</span>
+											<span>세금</span>
+										</dt>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>잔고수량</span>
+											<span>예수금잔액</span>
+										</dt>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>상대계좌명</span>
+											<span>받는통장표시내역</span>
+										</dt>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>받는통장표시내역</span>
+											<span>비고</span>
+										</dt>
+									</dl>
+								</li>
+								<li class="swiper-slide">
+									<dl>
+										<dt class="ac fbox_dt_tx">
+											<span>실거래일</span>
+										</dt>
+									</dl>
+								</li>
+							</ul>
+				        </div>
+				       <div class="ac f14 gap-mt60 gap-pb30">거래내역이 없습니다.</div>
+					</div>
+					<div class="ac f14 gap-mt60 gap-pb30">거래내역이 없습니다.</div>
+				</div>
+			</section>
+		</div> 
+	</div>
+	<!-- // container -->
+</div>
+<!-- //wrap -->
+
+<!-- 팝업모음:start -->
+<div class="popup_wrapper" id="sel_bank">
+	<div class="pop_function">
+		<div class="pop_in text-center">
+			<div class="pop_header">
+				<h3>계좌선택</h3>
+			</div>
+			
+			<div class="pop_con gap-mb20">
+				<ul class="pop_acc_list">
+					<li>
+						<span class="acc_inp_rd">
+							<input type="radio" id="pop_acc1" name="pop_acc" checked/>
+							<label for="pop_acc1">
+								<span class="pop_acc_tx">
+									<span class="pop_acc_tx1">220-01-123456</span>
+									<span class="pop_acc_tx2">NH투자증권</span>
+								</span>
+							</label>
+						</span>
+					</li>
+					<li>
+						<span class="acc_inp_rd">
+							<input type="radio" id="pop_acc2" name="pop_acc"/>
+							<label for="pop_acc2">
+								<span class="pop_acc_tx">
+									<span class="pop_acc_tx1">220-01-123456</span>
+									<span class="pop_acc_tx2">NH투자증권</span>
+								</span>
+							</label>
+						</span>
+					</li>
+					<li>
+						<span class="acc_inp_rd">
+							<input type="radio" id="pop_acc3" name="pop_acc" disabled/>
+							<label for="pop_acc3">
+								<span class="pop_acc_tx">
+									<span class="pop_acc_tx1">220-01-123456</span>
+									<span class="pop_acc_tx2">NH투자증권</span>
+								</span>
+							</label>
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="pop_footer">
+				<button type="button" class="btn_pop3 popclose">확인</button> 
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="popup_wrapper" id="sel_date">
+	<div class="pop_function">
+		<div class="pop_in text-center">
+			<div class="pop_header">
+				<h3>조회 기간 설정</h3>
+			</div>
+			<div class="f14 al gap-mb40">
+				<div class="period_area gap-mt10">
+					<span class="fontfb c_1">조회기간</span>
+					<ul class="period_box gap-mt10 flex flex-between">
+						<li class="ac"  onclick="$('.period').hide()">
+							<input type="radio" id="cal_week" name="cal"  class="visualhide" checked/>
+							<label for="cal_week">
+								<span class="f14">1주</span>
+							</label>
+						</li>
+						<li class="ac"  onclick="$('.period').hide()">
+							<input type="radio" id="cal_month" name="cal" class="visualhide"/>
+							<label for="cal_month">
+								<span class="f14">1개월</span>
+							</label>
+						</li>
+						<li class="ac" onclick="$('.period').hide()">
+							<input type="radio" id="cal_month3" name="cal" class="visualhide"/>
+							<label for="cal_month3">
+								<span class="f14">3개월</span>
+							</label>
+						</li>
+						<li class="ac" onclick="$('.period').show()">
+							<input type="radio" id="cal_period" name="cal" class="visualhide"/>
+							<label for="cal_period">
+								<span class="f14">조회기간</span>
+							</label>
+						</li>
+					</ul>
+					<div class="period flex gap-mt10" style="display:none;">
+						<span class="inp_cal inp_start_end start">
+							<input type="text" title="달력 시작 날짜 선택"/>
+					   		<a href="javascript:void(0)" class="btn_date actbtn" role="button" data-target="cal3_start" data-link="start" data-min="2022.04.01" data-max="2022.04.30" onclick="calpop.on('cal3_start',this)"><span class="visualhide">시작 날짜 선택</span></a>
+						</span>
+						<i>~</i>
+						<span class="inp_cal inp_start_end end">
+							<input type="text" title="달력 종료 날짜 선택"/>
+							<a href="javascript:void(0)" class="btn_date actbtn" role="button" data-target="cal3_end" data-link="end" data-end="2022.04.30" data-min="2022.04.01" data-max="2022.04.30"  onclick="calpop.on('cal3_end',this)"><span class="visualhide">종료 날짜 선택</span></a>
+						</span>						
+					</div>
+				</div>
+				<div class="gap-mt30">
+					<span class="fontfb c_1">정렬순서</span>
+					<ul class="gap-mt10 fl_box">
+						<li class="acc_inp_rd_normal">
+							<input type="radio" id="rd_normal1" name="rd_normal" checked/>
+							<label for="rd_normal1">
+								<span class="c_1">최신순</span>
+							</label>
+						</li>
+						<li class="acc_inp_rd_normal">
+							<input type="radio" id="rd_normal2" name="rd_normal"/>
+							<label for="rd_normal2">
+								<span class="c_1">과거순</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pop_footer cols2">
+				<button type="button" class="btn_gray popclose">취소</button> 
+				<button type="button" class="btn_pop3 popclose">조회</button> 
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="popup_wrapper cal_pop"></div>
+<!-- 팝업모음:end -->
+<script>
+tabHandler('.tabs')
+
+var swipe1 = {
+	on:function(){
+		new Swiper('.account_swp', {  
+			slidesPerView : 'auto',  
+			spaceBetween : 0,
+			resistanceRatio: 0
+		});
+	},
+	init:function(){
+		$('#tabox2,#tabox3,#tabox4').addClass('dp-block').show();
+		swipe1.on();
+		$('#tabox2,#tabox3,#tabox4').removeClass('dp-block').hide();
+	}
+}
+
+swipe1.init();
+</script>
+</body>
+</html>
