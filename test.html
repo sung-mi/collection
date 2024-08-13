@@ -69,18 +69,24 @@ var pop = {
             $('.pop_function').animate({bottom: '-100vh'},'slow',function(){
                 _id.removeClass('opened');
                 _id.find('.popbg_close').remove();
+
+                if(popsize <= 1){
+                    _id.removeClass('popbg');			
+                    $('body,.wrap').removeClass('modalOn'); 
+                }
             });
         }else{
             _id.removeClass('opened');
 		    _id.find('.popbg_close').remove();
+
+            if(popsize <= 1){
+                _id.removeClass('popbg');			
+                $('body,.wrap').removeClass('modalOn'); 
+            }
         }
 		
      
-		if(popsize <= 1){
-			_id.removeClass('popbg');
-			
-			$('body,.wrap').removeClass('modalOn'); 
-		}
+		
 	}
 }
         </script>
