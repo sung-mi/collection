@@ -68,6 +68,9 @@ var pop1 = {
 		var popsize = $('.popup_wrapper.opened').size();
 		_id.removeClass('opened');
 		_id.find('.popbg_close').remove();
+        if(_id.find(">div").hasClass('pop_function')){
+            $('.pop_function').animate({bottom: '-100vh'});
+        }
 		if(popsize <= 1){
 			_id.removeClass('popbg');
 			
