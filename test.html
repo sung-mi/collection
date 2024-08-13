@@ -48,7 +48,7 @@ var pop1 = {
 		_id.addClass('opened').css('z-index',_zindex);//�˾�����
 		_id.find(">div").attr("tabindex","0").focus();
         if(_id.find(">div").hasClass('pop_function')){
-            $('.pop_function').animate({bottom: '0px'},'slow');
+            $('.opened .pop_function').animate({bottom: '0px'},'slow');
         }
 		$('body,.wrap').addClass('modalOn');
 		_id.find(".popclose").unbind('click').bind('click',function(){
@@ -65,11 +65,12 @@ var pop1 = {
 	close:function(id){
 		var _id = $('#'+id);
 		var popsize = $('.popup_wrapper.opened').size();
+        if(_id.find(">div").hasClass('pop_function')){
+            $('opened .pop_function').animate({bottom: '-100vh'});
+        }
 		_id.removeClass('opened');
 		_id.find('.popbg_close').remove();
-        if(_id.find(">div").hasClass('pop_function')){
-            $('.pop_function').animate({bottom: '-100vh'});
-        }
+     
 		if(popsize <= 1){
 			_id.removeClass('popbg');
 			
