@@ -29,6 +29,53 @@
 
 
     </style>
+    <script>
+/*popup*/
+var pop1 = {
+	open:function(id,i){
+		var _id = $('#'+id);
+		var popsize = parseInt($('.popup_wrapper.opened').size());
+        var popFunsize = _id.find('.pop_function').size();
+		var _zindex = 10000+popsize;
+		$(i).addClass('backfocu'+popsize);
+		if(popsize == 0){
+			_id.addClass('popbg');
+			if(_id.find('>div').hasClass('pop_alert')){
+				_id.find('.pop_alert').prepend('<i class="popbg_close popclose"></i>');
+			}else{
+				_id.prepend('<i class="popbg_close popclose"></i>');
+			}
+		}
+		_id.addClass('opened').css('z-index',_zindex);//�˾�����
+		_id.find(">div").attr("tabindex","0").focus();
+        if(_id.find(">div").hasClass('pop_function')){
+            $('.pop_function').animate({bottom: '0'});
+        }
+		$('body,.wrap').addClass('modalOn');
+		_id.find(".popclose").unbind('click').bind('click',function(){
+			pop.close(id);
+			$('.backfocu'+popsize).focus().removeClass('backfocu'+popsize);
+		});
+		_id.find('a,input,button,[tabindex=0]').last().unbind('keydown').bind('keydown', function(e){
+			var code = (e.keyCode ? e.keyCode : e.which);
+			if(code == 9){
+				_id.find('>div').focus();
+			}
+		});
+	},
+	close:function(id){
+		var _id = $('#'+id);
+		var popsize = $('.popup_wrapper.opened').size();
+		_id.removeClass('opened');
+		_id.find('.popbg_close').remove();
+		if(popsize <= 1){
+			_id.removeClass('popbg');
+			
+			$('body,.wrap').removeClass('modalOn'); 
+		}
+	}
+}
+        </script>
 </head>
 <body style="width:0;min-width:100%">
 <!-- wrap -->
@@ -58,7 +105,7 @@
 				<div class="asset_cont_top gap-mt30 padd2 align-between">
 					<span class="inp_sel_asset" id="sel01">
 						<span class="sel_tx">220-01-123456</span>
-						<a href="javascript:void(0)" onclick="pop.open('sel_bank')"><i class="visualhide">셀렉팝업열기</i></a>
+						<a href="javascript:void(0)" onclick="pop1.open('sel_bank')"><i class="visualhide">셀렉팝업열기</i></a>
 					</span>
 					<a href="javascript:void(0)" class="btn_link_invest" onclick="pop.open('pop1')">
 						투자금 가져오기
