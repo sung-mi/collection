@@ -30,7 +30,7 @@
     </style>
     <script>
 /*popup*/
-var pop1 = {
+var pop = {
 	open:function(id,i){
 		var _id = $('#'+id);
 		var popsize = parseInt($('.popup_wrapper.opened').size());
@@ -66,7 +66,7 @@ var pop1 = {
 		var _id = $('#'+id);
 		var popsize = $('.popup_wrapper.opened').size();
         if(_id.find(">div").hasClass('pop_function')){
-            $('opened .pop_function').animate({bottom: '-100vh'});
+            $('.pop_function').animate({bottom: '-100vh'});
         }
 		_id.removeClass('opened');
 		_id.find('.popbg_close').remove();
@@ -108,7 +108,7 @@ var pop1 = {
 				<div class="asset_cont_top gap-mt30 padd2 align-between">
 					<span class="inp_sel_asset" id="sel01">
 						<span class="sel_tx">220-01-123456</span>
-						<a href="javascript:void(0)" onclick="pop1.open('sel_bank')"><i class="visualhide">셀렉팝업열기</i></a>
+						<a href="javascript:void(0)" onclick="pop.open('sel_bank')"><i class="visualhide">셀렉팝업열기</i></a>
 					</span>
 					<a href="javascript:void(0)" class="btn_link_invest" onclick="pop.open('pop1')">
 						투자금 가져오기
