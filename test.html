@@ -51,7 +51,7 @@
 						<span class="sel_tx">220-01-123456</span>
 						<a href="javascript:void(0)" onclick="pop.open('sel_bank')"><i class="visualhide">셀렉팝업열기</i></a>
 					</span>
-					<a href="/publish/balance/invest.html" class="btn_link_invest">
+					<a href="javascript:void(0)" class="btn_link_invest" onclick="pop.open('pop1')">
 						투자금 가져오기
 						<i class="ico_more_arw"></i>
 					</a>	
@@ -643,6 +643,21 @@
 	</div>
 </div>
 
+
+<div class="popup_wrapper" id="pop1">
+	<div class="pop_alert">
+		<div class="pop_in text-center">
+			<div class="pop_con">
+				<div class="alert_tx1 gap-mt20"><strong class="c_theme">주문이 완료</strong>  되었습니다.</div>
+				<div class="alert_tx2 gap-mb10">오늘 15:30 까지 주문이 진행 됩니다.</div>
+			</div>
+			<div class="pop_footer">
+				<button type="button" class="btn_pop1 popclose">취소</button> 
+				<button type="button" class="btn_pop2">주문내역 보러가기</button> 
+			</div>
+		</div>
+	</div>
+</div>
 <div class="popup_wrapper cal_pop"></div>
 <!-- 팝업모음:end -->
 <script>
