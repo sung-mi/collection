@@ -23,7 +23,6 @@
  .pop_function {position:absolute}
 .opened .pop_function {
     animation: none;
-    bottom:0;
     
 } 
 
@@ -49,7 +48,7 @@ var pop1 = {
 		_id.addClass('opened').css('z-index',_zindex);//�˾�����
 		_id.find(">div").attr("tabindex","0").focus();
         if(_id.find(">div").hasClass('pop_function')){
-            $('.pop_function').animate({bottom: '0'});
+            $('.pop_function').animate({bottom: '0'},100000);
         }
 		$('body,.wrap').addClass('modalOn');
 		_id.find(".popclose").unbind('click').bind('click',function(){
