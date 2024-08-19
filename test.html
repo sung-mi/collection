@@ -21,11 +21,11 @@
  .popup_wrapper.popbg:before{position:absolute}
  .popbg_close{position:absolute}
  .pop_function {position:absolute} */
-.opened .pop_function {
+/* .opened .pop_function {
     animation: none;
     
-} 
-
+}  */
+.popup_wrapper {overflow:hidden}
 
     </style>
     <script>
@@ -48,9 +48,9 @@ var pop = {
 		}
 		_id.addClass('opened').css('z-index',_zindex);//�˾�����
 		_id.find(">div").attr("tabindex","0").focus();
-        if(_id.find(">div").hasClass('pop_function')){
-            $('.opened .pop_function').animate({bottom: '0px'},'fast');
-        }
+        // if(_id.find(">div").hasClass('pop_function')){
+        //     $('.opened .pop_function').animate({bottom: '0px'},'fast');
+        // }
 		$('body,.wrap').addClass('modalOn');
 		_id.find(".popclose").unbind('click').bind('click',function(){
 			pop.close(id);
@@ -66,26 +66,13 @@ var pop = {
 	close:function(id){
 		var _id = $('#'+id);
 		var popsize = $('.popup_wrapper.opened').size();
-        if(_id.find(">div").hasClass('pop_function')){
-            $('.pop_function').animate({bottom: '-100vh'},'fast',function(){
-                _id.removeClass('opened');
-                _id.find('.popbg_close').remove();
+		_id.removeClass('opened');
+		    _id.find('.popbg_close').remove();
 
-                if(popsize <= 1){
+		if(popsize <= 1){
                     _id.removeClass('popbg');			
                     $('body,.wrap').removeClass('modalOn'); 
                 }
-            });
-        }else{
-            _id.removeClass('opened');
-		    _id.find('.popbg_close').remove();
-
-            if(popsize <= 1){
-                _id.removeClass('popbg');			
-                $('body,.wrap').removeClass('modalOn'); 
-            }
-        }
-		
      
 		
 	}
