@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>잔고 > 계좌별 거래내역</title>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<link rel="stylesheet" href="https://mtrade.nhqv.com/css/common/common.css">
+	<link rel="stylesheet" href="https://mtrade.nhqv.com/css/common/contents.css">
+	<link rel="stylesheet" href="https://mtrade.nhqv.com/css/common/swiper.min.css">
+	<link rel="stylesheet" href="https://mtrade.nhqv.com/publish/guide/guide.css?v1">
+	<!-- <link rel="stylesheet" href="/css/theme1.css">테마추가 -->
+	<script src="https://mtrade.nhqv.com/js/lib/jquery/jquery-1.12.0.min.js"></script>
+	<script src="https://mtrade.nhqv.com/js/lib/swiper.min.js"></script>
+	<script src="https://mtrade.nhqv.com/js/lib/datepicker.js"></script>
+	<script src="https://mtrade.nhqv.com/js_org/common/common.js"></script>
+    <style>
+        
+
+    </style>
+    <script>
+
+        </script>
+</head>
+<body style="width:0;min-width:100%">
+<!-- wrap -->
+<div class="wrap">
+	<!-- header -->
+	<header class="header" role="presentation">
+		<nav role="presentation">
+			<ul class="align-between">
+				<li>
+					<a href="javascript:history.back();" class="back-btn">뒤로가기</a>
+				</li>
+				<li>
+					<a href="/publish/my.html" class="home-btn">홈</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- // header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content" data-role="content">
+			<section class="sub_con gap-pt60">
+				<div class="flex-between padd2">
+					<h2 class="menu_title">계좌별 거래내역</h2>
+				</div>
+				<div class="asset_cont_top gap-mt30 padd2 align-between">
+					<span class="inp_sel_asset" id="sel01">
+						<span class="sel_tx">220-01-123456</span>
+						<a href="javascript:void(0)" onclick="pop.open('sel_bank')"><i class="visualhide">셀렉팝업열기</i></a>
+					</span>
+					<a href="javascript:void(0)" class="btn_link_invest" onclick="pop.open('pop1')">
+						투자금 가져오기
+						<i class="ico_more_arw"></i>
+					</a>	
+				</div>
+				<div class="line_1 gap-mt10"></div>
+				<div class="asset_cont_top date_sel_area padd gap-mt15">
+					<span class="inp_sel_asset" id="sel01">
+						<span class="sel_tx"><span class="date">1주</span><span class="date">최신순</span></span>
+						<a href="javascript:void(0)" onclick="pop.open('sel_date')"><i class="visualhide">셀렉팝업열기</i></a>
+					</span>
+				</div>
+				
+			</section>
+		</div> 
+	</div>
+	<!-- // container -->
+</div>
+<!-- //wrap -->
+<style>
+.aa{background:rgba(0,0,0,0.2);position:absolute;top:0;left:0;width:100%;height:100%}
+
+</style>
+<div class="aa" >
+
+</div>
+<!-- 팝업모음:start -->
+<div class="popup_wrapper" id="sel_bank">
+	<div class="pop_function">
+		<div class="pop_in text-center">
+			<div class="pop_header">
+				<h3>계좌선택</h3>
+			</div>
+			
+			<div class="pop_con gap-mb20">
+				<ul class="pop_acc_list">
+					<li>
+						<span class="acc_inp_rd">
+							<input type="radio" id="pop_acc1" name="pop_acc" checked/>
+							<label for="pop_acc1">
+								<span class="pop_acc_tx">
+									<span class="pop_acc_tx1">220-01-123456</span>
+									<span class="pop_acc_tx2">NH투자증권</span>
+								</span>
+							</label>
+						</span>
+					</li>
+					<li>
+						<span class="acc_inp_rd">
+							<input type="radio" id="pop_acc2" name="pop_acc"/>
+							<label for="pop_acc2">
+								<span class="pop_acc_tx">
+									<span class="pop_acc_tx1">220-01-123456</span>
+									<span class="pop_acc_tx2">NH투자증권</span>
+								</span>
+							</label>
+						</span>
+					</li>
+					<li>
+						<span class="acc_inp_rd">
+							<input type="radio" id="pop_acc3" name="pop_acc" disabled/>
+							<label for="pop_acc3">
+								<span class="pop_acc_tx">
+									<span class="pop_acc_tx1">220-01-123456</span>
+									<span class="pop_acc_tx2">NH투자증권</span>
+								</span>
+							</label>
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="pop_footer">
+				<button type="button" class="btn_pop3 popclose">확인</button> 
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="popup_wrapper" id="sel_date">
+	<div class="pop_function">
+		<div class="pop_in text-center">
+			<div class="pop_header">
+				<h3>조회 기간 설정</h3>
+			</div>
+			<div class="f14 al gap-mb40">
+				<div class="period_area gap-mt10">
+					<span class="fontfb c_1">조회기간</span>
+					<ul class="period_box gap-mt10 flex flex-between">
+						<li class="ac"  onclick="$('.period').hide()">
+							<input type="radio" id="cal_week" name="cal"  class="visualhide" checked/>
+							<label for="cal_week">
+								<span class="f14">1주</span>
+							</label>
+						</li>
+						<li class="ac"  onclick="$('.period').hide()">
+							<input type="radio" id="cal_month" name="cal" class="visualhide"/>
+							<label for="cal_month">
+								<span class="f14">1개월</span>
+							</label>
+						</li>
+						<li class="ac" onclick="$('.period').hide()">
+							<input type="radio" id="cal_month3" name="cal" class="visualhide"/>
+							<label for="cal_month3">
+								<span class="f14">3개월</span>
+							</label>
+						</li>
+						<li class="ac" onclick="$('.period').show()">
+							<input type="radio" id="cal_period" name="cal" class="visualhide"/>
+							<label for="cal_period">
+								<span class="f14">조회기간</span>
+							</label>
+						</li>
+					</ul>
+					<div class="period flex gap-mt10" style="display:none;">
+						<span class="inp_cal inp_start_end start">
+							<input type="text" title="달력 시작 날짜 선택"/>
+					   		<a href="javascript:void(0)" class="btn_date actbtn" role="button" data-target="cal3_start" data-link="start" data-min="2022.04.01" data-max="2022.04.30" onclick="calpop.on('cal3_start',this)"><span class="visualhide">시작 날짜 선택</span></a>
+						</span>
+						<i>~</i>
+						<span class="inp_cal inp_start_end end">
+							<input type="text" title="달력 종료 날짜 선택"/>
+							<a href="javascript:void(0)" class="btn_date actbtn" role="button" data-target="cal3_end" data-link="end" data-end="2022.04.30" data-min="2022.04.01" data-max="2022.04.30"  onclick="calpop.on('cal3_end',this)"><span class="visualhide">종료 날짜 선택</span></a>
+						</span>						
+					</div>
+				</div>
+				<div class="gap-mt30">
+					<span class="fontfb c_1">정렬순서</span>
+					<ul class="gap-mt10 fl_box">
+						<li class="acc_inp_rd_normal">
+							<input type="radio" id="rd_normal1" name="rd_normal" checked/>
+							<label for="rd_normal1">
+								<span class="c_1">최신순</span>
+							</label>
+						</li>
+						<li class="acc_inp_rd_normal">
+							<input type="radio" id="rd_normal2" name="rd_normal"/>
+							<label for="rd_normal2">
+								<span class="c_1">과거순</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pop_footer cols2">
+				<button type="button" class="btn_gray popclose">취소</button> 
+				<button type="button" class="btn_pop3 popclose">조회</button> 
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="popup_wrapper" id="pop1">
+	<div class="pop_alert">
+		<div class="pop_in text-center">
+			<div class="pop_con">
+				<div class="alert_tx1 gap-mt20"><strong class="c_theme">주문이 완료</strong>  되었습니다.</div>
+				<div class="alert_tx2 gap-mb10">오늘 15:30 까지 주문이 진행 됩니다.</div>
+			</div>
+			<div class="pop_footer">
+				<button type="button" class="btn_pop1 popclose">취소</button> 
+				<button type="button" class="btn_pop2">주문내역 보러가기</button> 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup_wrapper cal_pop"></div>
+<!-- 팝업모음:end -->
+<script>
+tabHandler('.tabs')
+
+var swipe1 = {
+	on:function(){
+		new Swiper('.account_swp', {  
+			slidesPerView : 'auto',  
+			spaceBetween : 0,
+			resistanceRatio: 0
+		});
+	},
+	init:function(){
+		$('#tabox2,#tabox3,#tabox4').addClass('dp-block').show();
+		swipe1.on();
+		$('#tabox2,#tabox3,#tabox4').removeClass('dp-block').hide();
+	}
+}
+
+swipe1.init();
+</script>
+</body>
+</html>

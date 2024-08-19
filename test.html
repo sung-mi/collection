@@ -25,64 +25,11 @@
     animation: none;
     
 }  */
-.popup_wrapper {overflow:hidden;height:90vh}
 
-@keyframes popfun {
-    100% {
-        bottom: 0
-    }
-}
 
     </style>
     <script>
-/*popup*/
-var pop = {
-	open:function(id,i){
-		
-		var _id = $('#'+id);
-		var popsize = parseInt($('.popup_wrapper.opened').size());
-        var popFunsize = _id.find('.pop_function').size();
-		var _zindex = 10000+popsize;
-		$(i).addClass('backfocu'+popsize);
-		if(popsize == 0){
-			_id.addClass('popbg');
-			if(_id.find('>div').hasClass('pop_alert')){
-				_id.find('.pop_alert').prepend('<i class="popbg_close popclose"></i>');
-			}else{
-				_id.prepend('<i class="popbg_close popclose"></i>');
-			}
-		}
-		_id.addClass('opened').css('z-index',_zindex);//�˾�����
-		_id.find(">div").attr("tabindex","0").focus();
-        // if(_id.find(">div").hasClass('pop_function')){
-        //     $('.opened .pop_function').animate({bottom: '0px'},'fast');
-        // }
-		$('body,.wrap').addClass('modalOn');
-		_id.find(".popclose").unbind('click').bind('click',function(){
-			pop.close(id);
-			$('.backfocu'+popsize).focus().removeClass('backfocu'+popsize);
-		});
-		_id.find('a,input,button,[tabindex=0]').last().unbind('keydown').bind('keydown', function(e){
-			var code = (e.keyCode ? e.keyCode : e.which);
-			if(code == 9){
-				_id.find('>div').focus();
-			}
-		});
-	},
-	close:function(id){
-		var _id = $('#'+id);
-		var popsize = $('.popup_wrapper.opened').size();
-		_id.removeClass('opened');
-		    _id.find('.popbg_close').remove();
 
-		if(popsize <= 1){
-                    _id.removeClass('popbg');			
-                    $('body,.wrap').removeClass('modalOn'); 
-                }
-     
-		
-	}
-}
         </script>
 </head>
 <body style="width:0;min-width:100%">
@@ -584,7 +531,19 @@ var pop = {
 
 <!-- 팝업모음:start -->
 <div class="popup_wrapper" id="sel_bank">
-	<div class="pop_function">
+	<div class="pop_alert">
+		<div class="pop_in text-center">
+			<div class="pop_con">
+				<div class="alert_tx1 gap-mt20"><strong class="c_theme">주문이 완료</strong>  되었습니다.</div>
+				<div class="alert_tx2 gap-mb10">오늘 15:30 까지 주문이 진행 됩니다.</div>
+			</div>
+			<div class="pop_footer">
+				<button type="button" class="btn_pop1 popclose">취소</button> 
+				<button type="button" class="btn_pop2">주문내역 보러가기</button> 
+			</div>
+		</div>
+	</div>
+	<!-- <div class="pop_function">
 		<div class="pop_in text-center">
 			<div class="pop_header">
 				<h3>계좌선택</h3>
@@ -631,7 +590,7 @@ var pop = {
 				<button type="button" class="btn_pop3 popclose">확인</button> 
 			</div>
 		</div>
-	</div>
+	</div> -->
 </div>
 
 <div class="popup_wrapper" id="sel_date">
